@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ae867be5-5942-4bb9-800b-0335980f3af6" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.4" />
+  <component name="ProjectId" id="1jq6Vw4ezLLttDZgDKoDOtA5oZM" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mariadb" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../postTest" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="database.main" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/lib" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="test" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" document_root="$PROJECT_DIR$" port="8080">
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ae867be5-5942-4bb9-800b-0335980f3af6" name="Default Changelist" comment="" />
+      <created>1604519301752</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1604519301752</updated>
+      <workItem from="1604519302773" duration="6514000" />
+      <workItem from="1604671477654" duration="1643000" />
+      <workItem from="1604673309601" duration="48000" />
+      <workItem from="1604673435996" duration="9284000" />
+      <workItem from="1604846862618" duration="4984000" />
+      <workItem from="1604999004108" duration="15177000" />
+      <workItem from="1605103200242" duration="1257000" />
+      <workItem from="1605107633773" duration="24000" />
+      <workItem from="1605107779804" duration="11731000" />
+      <workItem from="1605171085895" duration="19742000" />
+      <workItem from="1605275419494" duration="2157000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2524" y="148" width="698" height="762" key="#PHP" timestamp="1604521542313">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2524" y="148" width="698" height="762" key="#PHP/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1604521542313" />
+    <state x="2641" y="295" width="464" height="430" key="#Web_Browsers" timestamp="1605193520546">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2641" y="295" width="464" height="430" key="#Web_Browsers/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605193520546" />
+    <state x="2334" y="174" width="1084" height="722" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605275877126">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2334" y="174" width="1084" height="722" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605275877126" />
+    <state x="2670" y="211" width="410" height="630" key="#com.intellij.ide.util.MemberChooser" timestamp="1605195329300">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2670" y="211" width="410" height="630" key="#com.intellij.ide.util.MemberChooser/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605195329300" />
+    <state x="2611" y="280" width="528" height="491" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605190982645">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2611" y="280" width="528" height="491" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605190982645" />
+    <state x="2659" y="274" width="428" height="472" key="FileChooserDialogImpl" timestamp="1605195333473">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2659" y="274" width="428" height="472" key="FileChooserDialogImpl/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605195333473" />
+    <state width="1263" height="273" key="GridCell.Tab.0.bottom" timestamp="1605277572744">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1263" height="273" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605277572744" />
+    <state width="1263" height="273" key="GridCell.Tab.0.center" timestamp="1605277572744">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1263" height="273" key="GridCell.Tab.0.center/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605277572744" />
+    <state width="1263" height="273" key="GridCell.Tab.0.left" timestamp="1605277572744">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1263" height="273" key="GridCell.Tab.0.left/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605277572744" />
+    <state width="1263" height="273" key="GridCell.Tab.0.right" timestamp="1605277572744">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1263" height="273" key="GridCell.Tab.0.right/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605277572744" />
+    <state x="2637" y="216" width="499" height="556" key="NewPhpClassDialog" timestamp="1605191050335">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2637" y="216" width="499" height="556" key="NewPhpClassDialog/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605191050335" />
+    <state x="2638" y="168" width="401" height="139" key="NewPhpFileDialog" timestamp="1605213808158">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2638" y="168" width="401" height="139" key="NewPhpFileDialog/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605213808158" />
+    <state x="2367" y="167" key="SettingsEditor" timestamp="1605276078818">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2367" y="167" key="SettingsEditor/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605276078818" />
+    <state x="2810" y="480" key="com.intellij.database.run.ParametersPanel.Standalone" timestamp="1605275933029">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2810" y="480" key="com.intellij.database.run.ParametersPanel.Standalone/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605275933029" />
+    <state x="2490" y="145" width="766" height="730" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1605192660113">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2490" y="145" width="766" height="730" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605192660113" />
+  </component>
+</project>
