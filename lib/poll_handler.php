@@ -33,10 +33,10 @@ switch ($_POST['req']) {
         // CHECK IF USER HAS VOTED
         // SWITCH TO VOTE OPTIONS IF USER HAS NOT VOTED
         $voted = false;
-        //if (is_array($_SESSION['user'])) {
+        if (isset($_SESSION['username'])) {
             $voted = $pollDB->hasVoted($_POST['poll_id'], $_SESSION['ID']);
             if (!$voted) { $mode = "O"; }
-        //}
+        }
 
         // USER CHOOSES TO SEE THE RESULTS
         if ($_POST['show']==1) { $mode = "R"; }
@@ -50,7 +50,7 @@ switch ($_POST['req']) {
             echo "<div class='poll-question'>" . $poll['question'] . "</div>";
 
             // SHOW VOTING FORM - ONLY FOR REGISTERED USERS
-            if (is_array($_SESSION['user']) && $mode=="O") {
+            if (isset($_SESSION['username']) && $mode=="O") {
                 echo "<form class='poll-options' onsubmit='return polljs.save();'>";
                 foreach ($poll['options'] as $oid=>$o) {
                     printf("<div class='poll-option'><input type='radio' name='poll' id='poll-%u' value='%u'/> <label for='poll-%u'>%s</label></div>", $oid, $oid, $oid, $o);

@@ -5,6 +5,10 @@ require __DIR__ . DIRECTORY_SEPARATOR . "config.php";
 require PATH_LIB . "Comment.php";
 $pdo = new Comments();
 
+if(!isset($_SESSION['username'])){
+    header("location: login.php");
+}
+
 /* [HANDLE AJAX REQUESTS] */
 switch ($_POST['req']) {
     /* [INVALID REQUEST] */
@@ -23,6 +27,9 @@ switch ($_POST['req']) {
                 </div>
                 <div class="cmessage"><?=$message?></div>
                 <input type="button" class="cbutton" value="Reply" onclick="comments.reply(<?=$cid?>, <?=$rid?>)"/>
+                <?php if($_SESSION['admin'] == 1)
+                    echo '<input type="button" class="cbutton" value="Delete" onclick="comments.del('.$cid.')"/>';
+                ?>
                 <div id="reply-<?=$cid?>"></div>
             </div>
         <?php }
@@ -49,6 +56,14 @@ switch ($_POST['req']) {
     /* [ADD COMMENT] */
     case "add":
         echo $pdo->add($_POST['post_id'], $_SESSION['username'], $_POST['message'], $_POST['reply_id']) ? "OK" : "ERR";
+        break;
+
+    case "del":
+        echo $pdo->delete($_POST['comment_id']) ? "OK" : "ERR";
+        break;
+
+    case "edit":
+        echo $pdo->edit($_POST['comment_id'], $_POST['name'], $_POST['message']) ? "OK" : "ERR";
         break;
 }
 ?>

@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ae867be5-5942-4bb9-800b-0335980f3af6" name="Default Changelist" comment="" />
+    <list default="true" id="ae867be5-5942-4bb9-800b-0335980f3af6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/lib/group.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/44e7474d-dfca-44eb-aa3d-6728d01c2878.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/44e7474d-dfca-44eb-aa3d-6728d01c2878.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comments.js" beforeDir="false" afterPath="$PROJECT_DIR$/comments.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/add.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/add.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/admin_comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/admin_comment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/admin_poll.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/admin_poll.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/comment_handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/comment_handler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/poll_handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/poll_handler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view_post.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view_post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/welcome.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/welcome.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/poll.html" beforeDir="false" afterPath="$PROJECT_DIR$/poll.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post.html" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,6 +37,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.4" />
   <component name="ProjectId" id="1jq6Vw4ezLLttDZgDKoDOtA5oZM" />
   <component name="ProjectViewState">
@@ -26,11 +47,12 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mariadb" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../postTest" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Question 3" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="database.main" />
@@ -38,8 +60,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/lib" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager">
@@ -65,7 +87,10 @@
       <workItem from="1605107633773" duration="24000" />
       <workItem from="1605107779804" duration="11731000" />
       <workItem from="1605171085895" duration="19742000" />
-      <workItem from="1605275419494" duration="2157000" />
+      <workItem from="1605275419494" duration="23613000" />
+      <workItem from="1605455913214" duration="14118000" />
+      <workItem from="1605533972956" duration="664000" />
+      <workItem from="1605535399415" duration="8270000" />
     </task>
     <servers />
   </component>
@@ -77,6 +102,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2524" y="148" width="698" height="762" key="#PHP/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1604521542313" />
+    <state x="2194" y="367" width="1362" height="318" key="#SQL_Dialects" timestamp="1605535636053">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2194" y="367" width="1362" height="318" key="#SQL_Dialects/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605535636053" />
     <state x="2641" y="295" width="464" height="430" key="#Web_Browsers" timestamp="1605193520546">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -93,45 +122,57 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2611" y="280" width="528" height="491" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605190982645" />
-    <state x="2659" y="274" width="428" height="472" key="FileChooserDialogImpl" timestamp="1605195333473">
+    <state x="2653" y="226" width="428" height="472" key="FileChooserDialogImpl" timestamp="1605297181619">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2659" y="274" width="428" height="472" key="FileChooserDialogImpl/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605195333473" />
-    <state width="1263" height="273" key="GridCell.Tab.0.bottom" timestamp="1605277572744">
+    <state x="2653" y="226" width="428" height="472" key="FileChooserDialogImpl/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605297181619" />
+    <state width="1834" height="272" key="GridCell.Tab.0.bottom" timestamp="1605537673572">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1263" height="273" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605277572744" />
-    <state width="1263" height="273" key="GridCell.Tab.0.center" timestamp="1605277572744">
+    <state width="1834" height="272" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605537673572" />
+    <state width="1834" height="272" key="GridCell.Tab.0.center" timestamp="1605537673572">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1263" height="273" key="GridCell.Tab.0.center/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605277572744" />
-    <state width="1263" height="273" key="GridCell.Tab.0.left" timestamp="1605277572744">
+    <state width="1834" height="272" key="GridCell.Tab.0.center/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605537673572" />
+    <state width="1834" height="272" key="GridCell.Tab.0.left" timestamp="1605537673572">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1263" height="273" key="GridCell.Tab.0.left/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605277572744" />
-    <state width="1263" height="273" key="GridCell.Tab.0.right" timestamp="1605277572744">
+    <state width="1834" height="272" key="GridCell.Tab.0.left/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605537673572" />
+    <state width="1834" height="272" key="GridCell.Tab.0.right" timestamp="1605537673572">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1263" height="273" key="GridCell.Tab.0.right/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605277572744" />
+    <state width="1834" height="272" key="GridCell.Tab.0.right/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605537673572" />
     <state x="2637" y="216" width="499" height="556" key="NewPhpClassDialog" timestamp="1605191050335">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2637" y="216" width="499" height="556" key="NewPhpClassDialog/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605191050335" />
-    <state x="2638" y="168" width="401" height="139" key="NewPhpFileDialog" timestamp="1605213808158">
+    <state x="2636" y="152" width="401" height="139" key="NewPhpFileDialog" timestamp="1605466193914">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2638" y="168" width="401" height="139" key="NewPhpFileDialog/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605213808158" />
-    <state x="2367" y="167" key="SettingsEditor" timestamp="1605276078818">
+    <state x="2636" y="152" width="401" height="139" key="NewPhpFileDialog/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605466193914" />
+    <state x="2365" y="151" key="SettingsEditor" timestamp="1605292265078">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2367" y="167" key="SettingsEditor/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605276078818" />
+    <state x="2365" y="151" key="SettingsEditor/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605292265078" />
     <state x="2810" y="480" key="com.intellij.database.run.ParametersPanel.Standalone" timestamp="1605275933029">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2810" y="480" key="com.intellij.database.run.ParametersPanel.Standalone/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605275933029" />
+    <state x="2377" y="192" width="983" height="572" key="com.intellij.execution.console.ConsoleHistoryController$MyBrowseAction$1" timestamp="1605475237171">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2377" y="192" width="983" height="572" key="com.intellij.execution.console.ConsoleHistoryController$MyBrowseAction$1/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605475237171" />
     <state x="2490" y="145" width="766" height="730" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1605192660113">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2490" y="145" width="766" height="730" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605192660113" />
+    <state x="2661" y="446" width="427" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605462939460">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2661" y="446" width="427" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605462939460" />
+    <state x="2883" y="34" width="939" height="1028" key="dock-window-1" timestamp="1605474358839">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2883" y="34" width="939" height="1028" key="dock-window-1/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605474358839" />
   </component>
 </project>

@@ -87,6 +87,28 @@ var comments = {
             }
         });
         return false;
+    },
+
+    del : function(id) {
+
+        if (confirm("Delete comment?")) {
+            // FETCH DATA
+            var data = new FormData();
+            data.append('req', "del");
+            data.append('comment_id', id);
+
+            // AJAX
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', "lib/comment_handler.php", true);
+            xhr.onload = function() {
+                if (this.response=="OK") {
+                    comments.load();
+                } else {
+                    alert("Error deleting comment!");
+                }
+            };
+            xhr.send(data);
+        }
     }
 };
 

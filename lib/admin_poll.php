@@ -3,6 +3,7 @@
 require __DIR__ . DIRECTORY_SEPARATOR . "config.php";
 require PATH_LIB . "Poll.php";
 session_start();
+
 $pollDB = new Poll();
 
 // DUMMY USER SESSION

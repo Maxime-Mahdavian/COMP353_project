@@ -1035,193 +1035,256 @@ ALL PRIVILEGES|post_test:null
     <table id="330" parent="3" name="comments">
       <Collation>utf8_general_ci</Collation>
     </table>
-    <table id="331" parent="3" name="poll_main">
+    <table id="331" parent="3" name="group_membership"/>
+    <table id="332" parent="3" name="groups"/>
+    <table id="333" parent="3" name="poll_main">
       <Collation>utf8_general_ci</Collation>
     </table>
-    <table id="332" parent="3" name="poll_options">
+    <table id="334" parent="3" name="poll_options">
       <Collation>utf8_general_ci</Collation>
     </table>
-    <table id="333" parent="3" name="poll_votes">
+    <table id="335" parent="3" name="poll_votes">
       <Collation>utf8_general_ci</Collation>
     </table>
-    <table id="334" parent="3" name="post"/>
-    <column id="335" parent="329" name="userID">
+    <table id="336" parent="3" name="post"/>
+    <column id="337" parent="329" name="userID">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="336" parent="329" name="name">
+    <column id="338" parent="329" name="name">
       <Position>2</Position>
       <DataType>varchar(100)|0s</DataType>
     </column>
-    <column id="337" parent="329" name="password">
+    <column id="339" parent="329" name="password">
       <Position>3</Position>
       <DataType>varchar(100)|0s</DataType>
     </column>
-    <column id="338" parent="329" name="email">
+    <column id="340" parent="329" name="email">
       <Position>4</Position>
       <DataType>varchar(100)|0s</DataType>
     </column>
-    <column id="339" parent="329" name="primary_address">
+    <column id="341" parent="329" name="primary_address">
       <Position>5</Position>
       <DataType>varchar(100)|0s</DataType>
     </column>
-    <column id="340" parent="329" name="administrator">
+    <column id="342" parent="329" name="administrator">
       <Position>6</Position>
       <DataType>tinyint(1)|0s</DataType>
     </column>
-    <column id="341" parent="329" name="status">
+    <column id="343" parent="329" name="status">
       <Position>7</Position>
       <DataType>varchar(100)|0s</DataType>
     </column>
-    <column id="342" parent="329" name="condoAssociationID">
+    <column id="344" parent="329" name="condoAssociationID">
       <Position>8</Position>
       <DataType>int(11)|0s</DataType>
     </column>
-    <column id="343" parent="329" name="condoClassification">
+    <column id="345" parent="329" name="condoClassification">
       <Position>9</Position>
       <DataType>varchar(100)|0s</DataType>
     </column>
-    <key id="344" parent="329" name="PRIMARY">
+    <key id="346" parent="329" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>userID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="345" parent="330" name="comment_id">
+    <column id="347" parent="330" name="comment_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="346" parent="330" name="reply_id">
+    <column id="348" parent="330" name="reply_id">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
     </column>
-    <column id="347" parent="330" name="post_id">
+    <column id="349" parent="330" name="post_id">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="348" parent="330" name="timestamp">
+    <column id="350" parent="330" name="timestamp">
       <Position>4</Position>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>current_timestamp()</DefaultExpression>
     </column>
-    <column id="349" parent="330" name="name">
+    <column id="351" parent="330" name="name">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="350" parent="330" name="message">
+    <column id="352" parent="330" name="message">
       <Position>6</Position>
       <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="351" parent="330" name="PRIMARY">
+    <key id="353" parent="330" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>comment_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="352" parent="331" name="poll_id">
+    <column id="354" parent="331" name="gID">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+    </column>
+    <column id="355" parent="331" name="uID">
+      <Position>2</Position>
+      <DataType>int(11)|0s</DataType>
+    </column>
+    <index id="356" parent="331" name="groupID">
+      <ColNames>gID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="357" parent="331" name="userID">
+      <ColNames>uID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <foreign-key id="358" parent="331" name="group_membership_ibfk_1">
+      <ColNames>gID</ColNames>
+      <RefTableName>groups</RefTableName>
+      <RefColNames>groupID</RefColNames>
+    </foreign-key>
+    <foreign-key id="359" parent="331" name="group_membership_ibfk_2">
+      <ColNames>uID</ColNames>
+      <RefTableName>Users</RefTableName>
+      <RefColNames>userID</RefColNames>
+    </foreign-key>
+    <column id="360" parent="332" name="groupID">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="361" parent="332" name="name">
+      <Position>2</Position>
+      <DataType>varchar(50)|0s</DataType>
+    </column>
+    <column id="362" parent="332" name="description">
+      <Position>3</Position>
+      <DataType>varchar(200)|0s</DataType>
+    </column>
+    <column id="363" parent="332" name="owner">
+      <Position>4</Position>
+      <DataType>int(11)|0s</DataType>
+    </column>
+    <index id="364" parent="332" name="owner">
+      <ColNames>owner</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="365" parent="332" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>groupID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="366" parent="332" name="groups_ibfk_1">
+      <ColNames>owner</ColNames>
+      <RefTableName>Users</RefTableName>
+      <RefColNames>userID</RefColNames>
+    </foreign-key>
+    <column id="367" parent="333" name="poll_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="353" parent="331" name="poll_question">
+    <column id="368" parent="333" name="poll_question">
       <Position>2</Position>
       <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="354" parent="331" name="PRIMARY">
+    <key id="369" parent="333" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>poll_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="355" parent="332" name="poll_id">
+    <column id="370" parent="334" name="poll_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="356" parent="332" name="option_id">
+    <column id="371" parent="334" name="option_id">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="357" parent="332" name="option_text">
+    <column id="372" parent="334" name="option_text">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="358" parent="332" name="PRIMARY">
+    <key id="373" parent="334" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>poll_id
 option_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="359" parent="333" name="poll_id">
+    <column id="374" parent="335" name="poll_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="360" parent="333" name="option_id">
+    <column id="375" parent="335" name="option_id">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="361" parent="333" name="user_id">
+    <column id="376" parent="335" name="user_id">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="362" parent="333" name="poll_id">
+    <index id="377" parent="335" name="poll_id">
       <ColNames>poll_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="363" parent="333" name="option_id">
+    <index id="378" parent="335" name="option_id">
       <ColNames>option_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="364" parent="333" name="user_id">
+    <index id="379" parent="335" name="user_id">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <column id="365" parent="334" name="postID">
+    <column id="380" parent="336" name="postID">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="366" parent="334" name="userID">
+    <column id="381" parent="336" name="userID">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
     </column>
-    <column id="367" parent="334" name="groupID">
+    <column id="382" parent="336" name="groupID">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
     </column>
-    <column id="368" parent="334" name="img">
+    <column id="383" parent="336" name="img">
       <Position>4</Position>
       <DataType>varchar(100)|0s</DataType>
     </column>
-    <column id="369" parent="334" name="title">
+    <column id="384" parent="336" name="title">
       <Position>5</Position>
       <DataType>varchar(100)|0s</DataType>
     </column>
-    <column id="370" parent="334" name="body">
+    <column id="385" parent="336" name="body">
       <Position>6</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="371" parent="334" name="timestamp">
+    <column id="386" parent="336" name="timestamp">
       <Position>7</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>current_timestamp()</DefaultExpression>
       <OnUpdate>current_timestamp()</OnUpdate>
     </column>
-    <key id="372" parent="334" name="PRIMARY">
+    <column id="387" parent="336" name="perm">
+      <Position>8</Position>
+      <DataType>varchar(10)|0s</DataType>
+    </column>
+    <key id="388" parent="336" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>postID</ColNames>
       <Primary>1</Primary>

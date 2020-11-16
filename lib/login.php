@@ -21,7 +21,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['username'] = $myusername;
         $_SESSION['admin'] = $row['administrator'];
         $_SESSION['ID'] = $row['userID'];
-        $_SESSION['groupID'] = $row['condoAssociationID'];
+
+        $sql = "SELECT groupID FROM groups g, group_membership m WHERE g.groupID = m.gID AND m.uID=". $_SESSION['ID'];
+        $result2 = mysqli_query($db,$sql);
+        $listofGroups = [];
+        while($answer = mysqli_fetch_array($result2)){
+            array_push($listofGroups,$answer['groupID']);
+        }
+        $_SESSION['groupID'] = $listofGroups;
 
         header("location: welcome.php");
 

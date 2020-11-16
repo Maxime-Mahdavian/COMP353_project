@@ -1,6 +1,9 @@
 <?php
 include ("config.php");
 session_start();
+if(!isset($_SESSION['username'])){
+    header("location: login.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,11 +14,11 @@ session_start();
 <body>
 <?php
 $isFormSet = false;
+$hasFileBeenUploaded = false;
 
 function isNullOrEmpty($str){
     return (!isset($str) || trim($str) === '');
 }
-
 
 $target = "../img/";
 $target = $target . basename($_FILES['img']['name']);
@@ -24,19 +27,36 @@ $target = $target . basename($_FILES['img']['name']);
 $title = mysqli_real_escape_string($db, $_POST['title']);
 $body = mysqli_real_escape_string($db, $_POST['body']);
 $target = mysqli_real_escape_string($db, $target);
+$perm = mysqli_real_escape_string($db, $_POST['perm']);
 
+$result = null;
+$sql = '';
 if(isNullOrEmpty($title) || isNullOrEmpty($body))
     $isFormSet = false;
 else {
     $isFormSet = true;
-    $sql = "INSERT INTO post (userID, groupID, img, title, body) VALUES (" . $_SESSION['ID'] . "," . $_SESSION['groupID'] . ",'$target','$title', '$body')";
-    $result = mysqli_query($db, $sql);
+    if(is_numeric($perm)){
+        $sql = "INSERT INTO post (userID,groupID,img, title, body, perm) VALUES(". $_SESSION['ID'] .",'$perm', '$target', '$title','$body','group')";
+        $result = mysqli_query($db, $sql);
+    }
+    else{
+        $sql = "INSERT INTO post (userID, img, title, body, perm) VALUES (" . $_SESSION['ID'] . ",'$target','$title', '$body','$perm')";
+        $result = mysqli_query($db, $sql);
+    }
 }
 
 ?>
 <h1>Submission</h1>
 <?php
-if(move_uploaded_file($_FILES['img']['tmp_name'],$target) and $result and $isFormSet)
+if(empty($_FILES['img']['tmp_name'])){
+    $hasFileBeenUploaded = true;
+}
+else{
+    $hasFileBeenUploaded = move_uploaded_file($_FILES['img']['tmp_name'],$target);
+}
+
+
+if($hasFileBeenUploaded and $result and $isFormSet)
 {
     echo "<h2>The file ". basename( $_FILES['uploadedfile']
         ['name']). " has been uploaded, and your information has been added to the directory</h2>";
@@ -55,8 +75,8 @@ else {
 }
 ?>
 
-<a href="view_post.php">You can view post here</a>
-<a href="../post.html">Go back</a>
+<a href="view_post.php">You can view post here</a><br>
+<a href="post.php">Go back</a>
 </body>
 </html>
 <?php
