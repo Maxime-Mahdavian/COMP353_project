@@ -44,7 +44,7 @@ Edit User:
 			if (mysqli_query($db, $sql)) echo "user successfully updated"."<br><br>";
 			else echo "error: ".mysqli_error($db);
 			
-			header("Location: " . $_SERVER['PHP_SELF']);
+			header("Location: " . "manage_users.php");
 		
 		} else echo "please fill out all input fields to create a user<br><br>";
 	
