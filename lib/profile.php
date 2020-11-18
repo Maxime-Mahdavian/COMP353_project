@@ -12,6 +12,7 @@ session_start();
 	
 	
 	if(isset($_POST['cancel'])) header("Location: " . $_SERVER['PHP_SELF']);
+	else if(isset($_POST['back'])) header("Location: " . "welcome.php");
 	else if(isset($_POST['confirm'])) {
 	
 		$valid = true;
@@ -101,6 +102,7 @@ session_start();
 		<br>
 		<br>
 		<input type="submit" name="editProfile" value="edit">
+		<input type="submit" name="back" value="back">
 	</form>';
 	
 	}
