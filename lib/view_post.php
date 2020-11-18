@@ -16,10 +16,21 @@ if(!isset($_SESSION['username']))
 <body>
 <?php
 //$db = mysqli_connect('localhost', 'dummy', 'something', 'post_test') or die("Cannot connect to db");
-$sql = "SELECT * FROM post WHERE ((perm='public') or(perm='private' and userID=" . $_SESSION['ID'] . ") or".
-        "(perm='group' and groupID in(select gID from group_membership where uID=".$_SESSION['ID'] ."))) ORDER BY timestamp DESC;";
-$result = mysqli_query($db, $sql);
 
+if(isset($_POST['post_group'])){
+    $sql = "SELECT * FROM post WHERE groupID=" .$_POST['post_group'] . " ORDER BY timestamp DESC;";
+    $result = mysqli_query($db, $sql);
+}
+else {
+    $sql = "SELECT * FROM post WHERE ((perm='public') or(perm='private' and userID=" . $_SESSION['ID'] . ") or" .
+        "(perm='group' and groupID in(select gID from group_membership where uID=" . $_SESSION['ID'] . "))) ORDER BY timestamp DESC;";
+    $result = mysqli_query($db, $sql);
+}
+
+if(mysqli_num_rows($result) == 0){
+    echo "<h1>THERE ARE NO POST</h1>";
+    echo "<a href='group.php'>Back</a>";
+}
 
 while($temp = mysqli_fetch_array($result)){
     /*if($_SESSION['groupID'] != $temp['groupID'])

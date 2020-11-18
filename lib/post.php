@@ -31,7 +31,10 @@ if(!isset($_SESSION['username']))
                 $sql = "SELECT name FROM groups WHERE groupID=" . $group;
                 $row = mysqli_query($db, $sql);
                 $result = mysqli_fetch_array($row);
-                echo "<option value='" . $group ."'>". $result['name'] . "</option>";
+                if(isset($_POST['post_group']) and $_POST['post_group'] == $result['name'])
+                    echo "<option selected value='" . $group ."'>". $result['name']  . "</option>";
+                else
+                    echo "<option value='" . $group ."'>". $result['name'] . "</option>";
             }
         ?>
     </select><br>

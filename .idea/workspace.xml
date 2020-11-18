@@ -2,23 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae867be5-5942-4bb9-800b-0335980f3af6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/group.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/post.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/group_functions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/owner_functions.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/44e7474d-dfca-44eb-aa3d-6728d01c2878.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/44e7474d-dfca-44eb-aa3d-6728d01c2878.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin_page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comments.js" beforeDir="false" afterPath="$PROJECT_DIR$/comments.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/add.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/add.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/admin_comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/admin_comment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/admin_poll.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/admin_poll.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/comment_handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/comment_handler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/poll_handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/poll_handler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/group.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/group.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/post.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/post.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/view_post.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view_post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/welcome.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/welcome.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/poll.html" beforeDir="false" afterPath="$PROJECT_DIR$/poll.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,12 +80,27 @@
       <workItem from="1605275419494" duration="23613000" />
       <workItem from="1605455913214" duration="14118000" />
       <workItem from="1605533972956" duration="664000" />
-      <workItem from="1605535399415" duration="8270000" />
+      <workItem from="1605535399415" duration="22510000" />
+      <workItem from="1605621878796" duration="8000" />
+      <workItem from="1605621919737" duration="15566000" />
+      <workItem from="1605707292089" duration="21407000" />
     </task>
+    <task id="LOCAL-00001" summary="client side group functionality added, as well as permission on posts">
+      <created>1605544185286</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1605544185286</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="client side group functionality added, as well as permission on posts" />
+    <option name="LAST_COMMIT_MESSAGE" value="client side group functionality added, as well as permission on posts" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2524" y="148" width="698" height="762" key="#PHP" timestamp="1604521542313">
@@ -122,57 +127,80 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2611" y="280" width="528" height="491" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605190982645" />
+    <state x="2421" y="53" width="904" height="914" key="CommitChangelistDialog2" timestamp="1605544185203">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2421" y="53" width="904" height="914" key="CommitChangelistDialog2/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605544185203" />
     <state x="2653" y="226" width="428" height="472" key="FileChooserDialogImpl" timestamp="1605297181619">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2653" y="226" width="428" height="472" key="FileChooserDialogImpl/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605297181619" />
-    <state width="1834" height="272" key="GridCell.Tab.0.bottom" timestamp="1605537673572">
+    <state width="1573" height="255" key="GridCell.Tab.0.bottom" timestamp="1605721856615">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1834" height="272" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605537673572" />
-    <state width="1834" height="272" key="GridCell.Tab.0.center" timestamp="1605537673572">
+    <state width="1573" height="255" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605721856615" />
+    <state width="1573" height="255" key="GridCell.Tab.0.center" timestamp="1605721856615">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1834" height="272" key="GridCell.Tab.0.center/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605537673572" />
-    <state width="1834" height="272" key="GridCell.Tab.0.left" timestamp="1605537673572">
+    <state width="1573" height="255" key="GridCell.Tab.0.center/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605721856615" />
+    <state width="1573" height="255" key="GridCell.Tab.0.left" timestamp="1605721856614">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1834" height="272" key="GridCell.Tab.0.left/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605537673572" />
-    <state width="1834" height="272" key="GridCell.Tab.0.right" timestamp="1605537673572">
+    <state width="1573" height="255" key="GridCell.Tab.0.left/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605721856614" />
+    <state width="1573" height="255" key="GridCell.Tab.0.right" timestamp="1605721856615">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1834" height="272" key="GridCell.Tab.0.right/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605537673572" />
+    <state width="1573" height="255" key="GridCell.Tab.0.right/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605721856615" />
     <state x="2637" y="216" width="499" height="556" key="NewPhpClassDialog" timestamp="1605191050335">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2637" y="216" width="499" height="556" key="NewPhpClassDialog/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605191050335" />
-    <state x="2636" y="152" width="401" height="139" key="NewPhpFileDialog" timestamp="1605466193914">
+    <state x="2632" y="120" width="401" height="139" key="NewPhpFileDialog" timestamp="1605627290103">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2636" y="152" width="401" height="139" key="NewPhpFileDialog/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605466193914" />
+    <state x="2632" y="120" width="401" height="139" key="NewPhpFileDialog/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605627290103" />
+    <state x="2656" y="204" width="437" height="643" key="RollbackChangesDialog" timestamp="1605731928277">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2656" y="204" width="437" height="643" key="RollbackChangesDialog/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605731928277" />
     <state x="2365" y="151" key="SettingsEditor" timestamp="1605292265078">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2365" y="151" key="SettingsEditor/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605292265078" />
+    <state x="2473" y="268" width="804" height="516" key="Vcs.Push.Dialog.v2" timestamp="1605544193413">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2473" y="268" width="804" height="516" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605544193413" />
     <state x="2810" y="480" key="com.intellij.database.run.ParametersPanel.Standalone" timestamp="1605275933029">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2810" y="480" key="com.intellij.database.run.ParametersPanel.Standalone/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605275933029" />
-    <state x="2377" y="192" width="983" height="572" key="com.intellij.execution.console.ConsoleHistoryController$MyBrowseAction$1" timestamp="1605475237171">
+    <state x="2371" y="144" width="983" height="572" key="com.intellij.execution.console.ConsoleHistoryController$MyBrowseAction$1" timestamp="1605725251308">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2377" y="192" width="983" height="572" key="com.intellij.execution.console.ConsoleHistoryController$MyBrowseAction$1/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605475237171" />
+    <state x="2371" y="144" width="983" height="572" key="com.intellij.execution.console.ConsoleHistoryController$MyBrowseAction$1/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605725251308" />
     <state x="2490" y="145" width="766" height="730" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1605192660113">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2490" y="145" width="766" height="730" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605192660113" />
-    <state x="2661" y="446" width="427" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605462939460">
+    <state x="2653" y="382" width="433" height="172" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605732709217">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2661" y="446" width="427" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605462939460" />
+    <state x="2653" y="382" width="433" height="172" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605732709217" />
     <state x="2883" y="34" width="939" height="1028" key="dock-window-1" timestamp="1605474358839">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2883" y="34" width="939" height="1028" key="dock-window-1/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605474358839" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/lib/manage_users.php</url>
+          <line>52</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
