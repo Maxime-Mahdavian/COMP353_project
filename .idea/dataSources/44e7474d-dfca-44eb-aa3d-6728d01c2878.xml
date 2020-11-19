@@ -2,7 +2,7 @@
 <dataSource name="MariaDB - poll@localhost">
   <database-model serializer="dbm" dbms="MARIADB" family-id="MARIADB" format-version="4.19">
     <root id="1">
-      <ServerVersion>10.5.7</ServerVersion>
+      <ServerVersion>10.5.8</ServerVersion>
       <DefaultEngine>InnoDB</DefaultEngine>
       <DefaultCasing>exact</DefaultCasing>
     </root>
@@ -1225,97 +1225,102 @@ requested_userID</ColNames>
       <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="376" parent="334" name="PRIMARY">
+    <column id="376" parent="334" name="close_time">
+      <Position>3</Position>
+      <DataType>datetime|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="377" parent="334" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>poll_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="377" parent="335" name="poll_id">
+    <column id="378" parent="335" name="poll_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="378" parent="335" name="option_id">
+    <column id="379" parent="335" name="option_id">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="379" parent="335" name="option_text">
+    <column id="380" parent="335" name="option_text">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="380" parent="335" name="PRIMARY">
+    <key id="381" parent="335" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>poll_id
 option_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="381" parent="336" name="poll_id">
+    <column id="382" parent="336" name="poll_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="382" parent="336" name="option_id">
+    <column id="383" parent="336" name="option_id">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="383" parent="336" name="user_id">
+    <column id="384" parent="336" name="user_id">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="384" parent="336" name="poll_id">
+    <index id="385" parent="336" name="poll_id">
       <ColNames>poll_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="385" parent="336" name="option_id">
+    <index id="386" parent="336" name="option_id">
       <ColNames>option_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="386" parent="336" name="user_id">
+    <index id="387" parent="336" name="user_id">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <column id="387" parent="337" name="postID">
+    <column id="388" parent="337" name="postID">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="388" parent="337" name="userID">
+    <column id="389" parent="337" name="userID">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
     </column>
-    <column id="389" parent="337" name="groupID">
+    <column id="390" parent="337" name="groupID">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
     </column>
-    <column id="390" parent="337" name="img">
+    <column id="391" parent="337" name="img">
       <Position>4</Position>
       <DataType>varchar(100)|0s</DataType>
     </column>
-    <column id="391" parent="337" name="title">
+    <column id="392" parent="337" name="title">
       <Position>5</Position>
       <DataType>varchar(100)|0s</DataType>
     </column>
-    <column id="392" parent="337" name="body">
+    <column id="393" parent="337" name="body">
       <Position>6</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="393" parent="337" name="timestamp">
+    <column id="394" parent="337" name="timestamp">
       <Position>7</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>current_timestamp()</DefaultExpression>
       <OnUpdate>current_timestamp()</OnUpdate>
     </column>
-    <column id="394" parent="337" name="perm">
+    <column id="395" parent="337" name="perm">
       <Position>8</Position>
       <DataType>varchar(10)|0s</DataType>
     </column>
-    <key id="395" parent="337" name="PRIMARY">
+    <key id="396" parent="337" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>postID</ColNames>
       <Primary>1</Primary>

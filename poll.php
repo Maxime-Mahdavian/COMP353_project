@@ -1,3 +1,8 @@
+<?php
+include ("lib/config.php");
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,15 +15,11 @@
     Poll Demo Page
 </header>
 <div id="page-body">
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Praesent faucibus libero nisl, eget elementum risus bibendum nec.
-        Aliquam vel ex blandit, sollicitudin nibh nec,
-    </p>
+
 
     <!-- [THE POLL DOCKET] -->
     <!-- CHANGE THE POLL ID BELOW TO SET YOUR DESIRED QUESTION -->
-    <input type="hidden" id="poll_id" value="4"/>
+    <input type="hidden" id="poll_id" value="<?php echo $_POST['poll_id'];?>"/>
     <div id="container"></div>
 </div>
 <footer id="page-foot">

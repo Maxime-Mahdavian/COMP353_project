@@ -241,4 +241,23 @@ class Poll
         $voted = $this->stmt->fetchAll();
         return count($voted)==0 ? false : true ;
     }
+
+    function hasEnded($pollID){
+
+        date_default_timezone_set('America/Toronto');
+
+        $sql = "SELECT close_time from `poll_main` WHERE `poll_id`=?";
+        $this->stmt = $this->pdo->prepare($sql);
+        $this->stmt->execute([$pollID]);
+        $time = $this->stmt->fetchAll();
+
+        $closeTime = new DateTime($time[0]['close_time']);
+        $currentTime = new DateTime('now');
+
+
+        return ($closeTime < $currentTime);
+
+
+
+    }
 }
