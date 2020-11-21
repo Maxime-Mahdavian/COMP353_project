@@ -65,9 +65,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <div class="ui left labeled icon input">
                                     <input type="text" placeholder="Username" name = "username" class = "box">
                                     <i class="user icon"></i>
-                                    <div class="ui corner label">
-                                        <i class="asterisk icon"></i>
-                                    </div>
                                 </div>
                             </div>
                             <div class="field">
@@ -75,9 +72,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <div class="ui left labeled icon input">
                                     <input type="password" name = "password" class = "box" >
                                     <i class="lock icon"></i>
-                                    <div class="ui corner label">
-                                        <i class="asterisk icon"></i>
-                                    </div>
                                 </div>
                             </div>
                             <input class="ui blue submit button" type = "submit" value = " Login "/><br />
