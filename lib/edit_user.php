@@ -4,6 +4,9 @@
 ?>
 
 <html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+</head>
 <body>
 
 Edit User:
@@ -72,7 +75,66 @@ Edit User:
 	
 	echo $admin;
 
-echo '<form action="edit_user.php" method="post">
+echo '<div style = "background-color:#aca3ec; color:#4D39D6; padding:3px;"><b>Edit</b></div>
+<form action="edit_user.php" method="post">
+ <div class="ui two column middle aligned relaxed grid basic segment">
+                    <div class="column">
+                        <div class="ui form segment AVAST_PAM_loginform">
+                            <div class="field">
+                                <label>Name</label>
+                                <div class="ui left labeled icon input">
+                                    <input type="text" placeholder="Name" name = "name" value="'.$name.'">
+                                    <i class="user icon"></i>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label>Password</label>
+                                <div class="ui left labeled icon input">
+                                    <input type="password" name = "password" value="'.$password.'">
+                                    <i class="lock icon"></i>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label>Email</label>
+                                <div class="ui left labeled icon input">
+                                    <input type="text" placeholder="email" name = "email" value="'.$email.'">
+                                    <i class="at icon"></i>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label>Address</label>
+                                <div class="ui left labeled icon input">
+                                    <input type="text" placeholder="Address" name = "address" value="'.$address.'">
+                                    <i class="building icon"></i>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label>Status</label>
+                                <div class="ui left labeled icon input">
+                                    <input type="text" placeholder="Status" name = "status" value="'.$status.'">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label>Condo Classification</label>
+                                <div class="ui left labeled icon input">
+                                    <input type="text" placeholder="condoClassification" name = "condoClassification" value="'.$condoClass.'">
+                                    <i class="building outline icon"></i>
+                                </div>
+                            </div>
+                            <div class="ui checkbox">
+                                <label for="admin">Administrator </label>
+                                <input type="checkbox" id="admin" name="admin" '.$admin.'>
+                            </div>
+                            <br>
+		                    <br>
+                            
+		                    <input type="hidden" id="editNum" name="editNum" value="'.$editID.'">
+		                    <input class="ui positive button" type="submit" name="confirm" value="confirm">  
+		                    <input class="ui negative button" type="submit" name="delete" value="delete">  
+		                    <input class="ui black button" type="submit" name="cancel" value="cancel">
+                        </div>
+                    </div>
+                    <!--
 		<label for="name">Name:</label>
 		<br>
 		<input type="text" name="name" value="'.$name.'">
@@ -102,9 +164,10 @@ echo '<form action="edit_user.php" method="post">
 		<br>
 		<br>
 		<input type="hidden" id="editNum" name="editNum" value="'.$editID.'">
-		<input type="submit" name="confirm" value="confirm">  
-		<input type="submit" name="delete" value="delete">  
-		<input type="submit" name="cancel" value="cancel">
+		<input class="ui positive button" type="submit" name="confirm" value="confirm">  
+		<input class="ui negative button" type="submit" name="delete" value="delete">  
+		<input class="ui black button" type="submit" name="cancel" value="cancel">
+		-->
 </form>'
 
 ?>
