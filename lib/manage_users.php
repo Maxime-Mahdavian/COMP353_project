@@ -7,22 +7,23 @@ session_start();
 <html>
 
 <head>
-<style>
-
-table, th, td {
-  border: 1px solid black;
-  border-collapse: collapse;
-}
-
-th, td {
-  padding: 5px;
-}
-
-th {
-  text-align: left;
-}
-
-</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+<!--<style>-->
+<!---->
+<!--table, th, td {-->
+<!--  border: 1px solid black;-->
+<!--  border-collapse: collapse;-->
+<!--}-->
+<!---->
+<!--th, td {-->
+<!--  padding: 5px;-->
+<!--}-->
+<!---->
+<!--th {-->
+<!--  text-align: left;-->
+<!--}-->
+<!---->
+<!--</style>-->
 </head>
 
 
@@ -74,8 +75,73 @@ if(isset($_POST['create_user'])) {	//handle create user button press
 
 
 ?>
+<div style = "background-color:#aca3ec; color:#4D39D6; padding:3px;"><b>Create User</b></div>
+<br>
+<form action="../admin_page.html" method="post">
+    <button class="ui blue left labeled icon button" type="submit" name="back" >
+        <i class="left arrow icon"></i>
+        Back to admin page
+    </button>
+</form>
 
 <form action="manage_users.php" method="post">
+    <div class="ui two column middle aligned relaxed grid basic segment">
+        <div class="column">
+            <div class="ui form segment AVAST_PAM_loginform">
+                <div class="field">
+                    <label>Name</label>
+                    <div class="ui left labeled icon input">
+                        <input type="text" placeholder="Name" name = "name">
+                        <i class="user icon"></i>
+                    </div>
+                </div>
+                <div class="field">
+                    <label>Password</label>
+                    <div class="ui left labeled icon input">
+                        <input type="password" name = "password">
+                        <i class="lock icon"></i>
+                    </div>
+                </div>
+                <div class="field">
+                    <label>Email</label>
+                    <div class="ui left labeled icon input">
+                        <input type="text" placeholder="email" name = "email">
+                        <i class="at icon"></i>
+                    </div>
+                </div>
+                <div class="field">
+                    <label>Address</label>
+                    <div class="ui left labeled icon input">
+                        <input type="text" placeholder="Address" name = "address">
+                        <i class="building icon"></i>
+                    </div>
+                </div>
+                <div class="field">
+                    <label>Status</label>
+                    <div class="ui left labeled icon input">
+                        <input type="text" placeholder="Status" name = "status">
+                    </div>
+                </div>
+                <div class="field">
+                    <label>Condo Classification</label>
+                    <div class="ui left labeled icon input">
+                        <input type="text" placeholder="condoClassification" name = "condoClassification">
+                        <i class="building outline icon"></i>
+                    </div>
+                </div>
+                <div class="ui checkbox">
+                    <label for="admin">Administrator </label>
+                    <input type="checkbox" id="admin" name="admin" >
+                </div>
+                <br>
+                <br>
+
+                <input class="ui positive button" type="submit" name="create_user" value="confirm">
+            </div>
+        </div>
+    </div>
+
+    <!--
 		<label for="name">Name:</label>
 		<br>
 		<input type="text" name="name">
@@ -105,23 +171,39 @@ if(isset($_POST['create_user'])) {	//handle create user button press
 		<br>
 		<br>
 		<input type="submit" name="create_user" value="submit">
+		-->
 </form>
 
+<!--
 <form action="../admin_page.html" method="post">
-		<input type="submit" name="back" value="return to admin page">
+    <input class="ui small blue button" type="submit" name="back" value="return to admin page">
 </form>
-	
-<table style = "width:100%">
-	<tr>
-		<th></th>
-		<th> name </th>
-		<th> password </th>
-		<th> email </th>
-		<th> address </th>
-		<th> admin </th>
-		<th> status </th>
-		<th> condoClass </th>
-	</tr>
+-->
+
+<table class="ui selectable inverted table">
+    <thead>
+    <tr>
+        <th></th>
+        <th>Name</th>
+        <th> password </th>
+        <th> email </th>
+        <th> address </th>
+        <th> admin </th>
+        <th> status </th>
+        <th> condoClass </th>
+
+
+<!--<table style = "width:100%">-->
+<!--	<tr>-->
+<!--		<th></th>-->
+<!--		<th> name </th>-->
+<!--		<th> password </th>-->
+<!--		<th> email </th>-->
+<!--		<th> address </th>-->
+<!--		<th> admin </th>-->
+<!--		<th> status </th>-->
+<!--		<th> condoClass </th>-->
+<!--	</tr>-->
 	
 	
 <?php

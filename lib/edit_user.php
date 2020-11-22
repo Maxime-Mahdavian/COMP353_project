@@ -75,9 +75,9 @@ Edit User:
 	
 	echo $admin;
 
-echo '<div style = "background-color:#aca3ec; color:#4D39D6; padding:3px;"><b>Edit</b></div>
+echo '<div style = "background-color:#aca3ec; color:#4D39D6; padding:3px;"><b>Edit User</b></div>
 <form action="edit_user.php" method="post">
- <div class="ui two column middle aligned relaxed grid basic segment">
+            <div class="ui two column middle aligned relaxed grid basic segment">
                     <div class="column">
                         <div class="ui form segment AVAST_PAM_loginform">
                             <div class="field">
@@ -123,7 +123,7 @@ echo '<div style = "background-color:#aca3ec; color:#4D39D6; padding:3px;"><b>Ed
                             </div>
                             <div class="ui checkbox">
                                 <label for="admin">Administrator </label>
-                                <input type="checkbox" id="admin" name="admin" '.$admin.'>
+                                <input type="checkbox" id="admin" name="admin" value="'.$admin.'">
                             </div>
                             <br>
 		                    <br>
@@ -134,6 +134,7 @@ echo '<div style = "background-color:#aca3ec; color:#4D39D6; padding:3px;"><b>Ed
 		                    <input class="ui black button" type="submit" name="cancel" value="cancel">
                         </div>
                     </div>
+            </div>
                     <!--
 		<label for="name">Name:</label>
 		<br>

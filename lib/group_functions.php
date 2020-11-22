@@ -8,9 +8,14 @@ session_start();
 <html>
 <head>
     <title>Group functions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
     <!--<script src="owner.js"></script>-->
 </head>
 <body>
+<div style = "background-color:#aca3ec; color:#4D39D6; padding:3px;"><b>Group Functions</b></div>
+<br>
+
+<br>
 
 <?php
 
@@ -81,7 +86,7 @@ if($_POST['submitButton'] == 'join'){
 
 
         ?>
-        <table border="1">
+        <table class="ui inverted green table">
             <tr>
                 <th>Member</th>
                 <th>Kick</th>
@@ -122,7 +127,11 @@ if($_POST['submitButton'] == 'join'){
 
 ?>
         </table>
-
-    <a href="group.php">Back</a>
+<button class="ui blue left labeled icon button" type="submit" name="back" onclick="window.location.href='welcome.php';">
+    <i class="left arrow icon"></i>
+    Back to Main Page
+</button>
+<!---->
+<!--    <a href="group.php">Back</a>-->
 </body>
 </html>

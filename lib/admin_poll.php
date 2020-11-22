@@ -1,3 +1,16 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+</head>
+<body>
+<div style = "background-color:#aca3ec; height:100px; color:#4d39d6; padding:3px;"><b><br><i class="huge building icon"></i></b></div>
+<br>
+<br>
+<a style="margin:30px; font-size: 40px;" class="item">
+    Admin Options<i class="wrench icon"></i>
+</a>
+</body>
+
 <?php
 // INIT
 require __DIR__ . DIRECTORY_SEPARATOR . "config.php";
@@ -23,11 +36,12 @@ switch ($_POST['req']) {
     // YOU MIGHT WANT TO PROPERLY PAGINATE THIS
     case "list":
         $polls = $pollDB->getAll(); ?>
-        <h1>MANAGE POLLS</h1>
-        <input type="button" value="Add Poll" onclick="polljs.addEdit()"/>
+        <h1 style="margin:30px; color:#533fe2;">MANAGE POLLS</h1>
+        <input style="margin:40px;" class="ui blue button" value="Add Poll" onclick="polljs.addEdit()"/>
+
         <?php if (is_array($polls)) {
         foreach ($polls as $p) {
-            printf("<div>%s <input type='button' value='Delete' onclick='polljs.del(%u)'/> <input type='button' value='Edit' onclick='polljs.addEdit(%u)'/></div>", $p['poll_question'], $p['poll_id'], $p['poll_id']);
+            printf("<div style='margin:40px; font-size:20px;'>-%s <input class='ui red button' value='Delete' onclick='polljs.del(%u)'/> <input class='ui black button' value='Edit' onclick='polljs.addEdit(%u)'/></div>", $p['poll_question'], $p['poll_id'], $p['poll_id']);
         }
     } else {
         echo "No polls found";
@@ -45,22 +59,32 @@ switch ($_POST['req']) {
         if ($edit) {
             $poll = $pollDB->get($_POST['poll_id']);
         } ?>
-        <h1><?=$edit?"EDIT":"ADD"?> POLL</h1>
-        <h3>QUESTION</h3>
+        <h1 style="margin-left:40px; color:#533fe2;"><?=$edit?"EDIT":"ADD"?> POLL</h1>
+        <div style="margin-left:50px;"><p style="font-weight:bold; font-size:20.8px;">QUESTION</p>
         <input type="hidden" id="ae-poll-id" value="<?=$_POST['poll_id']?>"/>
-        <input type="text" id="ae-poll-text" value="<?=$poll['question']?>"/>
-        <h3>OPTIONS</h3>
-        <div id="ae-poll-opt"><?php
+        <input style="margin-left:15px;" class='ui big input' id="ae-poll-text" value="<?=$poll['question']?>"/>
+        </div>
+        <h3 style="margin-left:50px;">OPTIONS</h3>
+        <div style="margin-left:60px;" id="ae-poll-opt"><?php
             if (is_array($poll['options'])) {
                 foreach ($poll['options'] as $o) {
-                    printf("<div><input type='text' class='ae-poll-opt' value='%s'> <input type='button' value='Remove' onclick='polljs.remove(this)'/></div>", $o);
+                    printf("<div><input style='margin-left:5px;' class='ui big input' class='ae-poll-opt' value='%s'> <input style='margin:5px;' class='ui tiny red button' value='Remove' onclick='polljs.remove(this)'/></div>", $o);
                 }
             }
             ?></div>
-        <input type="button" value="Add option" onclick="polljs.create()"/>
-        <hr>
-        <input type="button" value="Back" onclick="polljs.list()"/>
-        <input type="button" value="Save" onclick="polljs.save()"/>
+        <input style='margin-left:40px;' class="ui teal button" value="Add option" onclick="polljs.create()"/>
+        <br>
+        <button style="margin-left:30px;" class="ui blue left labeled icon button" type="submit" name="back" onclick="polljs.list();">
+            <i class="left arrow icon"></i>
+            Back
+        </button>
+<!--        <input type="button" value="Back" onclick="polljs.list()"/>-->
+        <button style="margin-left:10px;" class="ui green left labeled icon button" type="submit" name="Save" onclick="polljs.save();">
+            <i class="save outline icon"></i>
+            Save
+        </button>
+
+<!--        <input class="ui green button" value="Save" onclick="polljs.save()"/>-->
         <?php break;
 
     /* [ADD POLL] */
@@ -74,3 +98,5 @@ switch ($_POST['req']) {
         break;
 }
 ?>
+
+</html>

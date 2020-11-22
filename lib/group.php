@@ -5,15 +5,23 @@ session_start();
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Group page</title>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
 </head>
+
 <body>
-<h1>Group</h1>
-<table border="1">
-    <tr>
+<div style = "background-color:#aca3ec; height:100px; color:#4d39d6; padding:3px;"><b><br><i class="huge building icon"></i></b></div>
+<br><br>
+<a style="margin:30px; font-size: 40px;" class="item">
+    Groups<i class="users icon"></i>
+</a>
+<br>
+
+<table class="ui inverted purple table">
+    <thead>
         <th>Name</th>
         <th>Description</th>
         <th>Join/Withdraw</th>
@@ -47,13 +55,13 @@ session_start();
         $groupID = $result['groupID'];
         if($count == 1) {
             echo '<form action="group_functions.php" method="post">';
-            echo "<td><input type='submit' value='withdraw' name='submitButton'></td>";
+            echo "<td><input class='ui button' type='submit' value='Withdraw' name='submitButton'></td>";
             echo "<input type='hidden' name='withdraw_group' value='" . $groupID . "'>";
             echo "</form>";
         }
         else {
             echo '<form action="group_functions.php" method="post">';
-            echo "<td><input type='submit' value='join' name='submitButton'></td>";
+            echo "<td><input class='ui button' type='submit' value='Join' name='submitButton'></td>";
             echo "<input type='hidden' name='join_group' value='" . $groupID . "'>";
             echo "</form>";
         }
@@ -61,7 +69,7 @@ session_start();
         if($result['owner'] == $_SESSION['ID']){
             echo '<form action="group_functions.php" method="post">';
             echo "<input type='hidden' name='owner_group' value='" . $groupID . "'>";
-            echo "<td><input type='submit' value='owner' name='submitButton'></td>";
+            echo "<td><input class='ui button' type='submit' value='Owner' name='submitButton'></td>";
             echo "</form>";
         }
 
@@ -71,12 +79,12 @@ session_start();
         if($count == 1){
             echo '<form action="post.php" method="post">';
             echo "<input type='hidden' name='post_group' value='" . $result['name'] . "'>";
-            echo "<td><input type='submit' value='Post to group' name='Group_post'></td>";
+            echo "<td><input class='ui button' type='submit' value='Post to group' name='Group_post'></td>";
             echo "</form>";
 
             echo '<form action="view_post.php" method="post">';
             echo "<input type='hidden' name='post_group' value='" . $groupID . "'>";
-            echo "<td><input type='submit' value='View group post' name='Group_post'></td>";
+            echo "<td><input class='ui button' type='submit' value='View group post' name='Group_post'></td>";
             echo "</tr>";
             echo "</form>";
         }
@@ -91,6 +99,12 @@ session_start();
     }
 ?>
 </table>
-<a href="welcome.php">Back</a>
+
+<button style="margin:30px;" class="ui blue left labeled icon button" type="submit" name="back" onclick="window.location.href='welcome.php';">
+    <i class="left arrow icon"></i>
+    Back to Main Page
+</button>
+<div style = "background-color:#aca3ec; height:235px; color:#4d39d6; padding:3px;"></div>
+<!--<a href="welcome.php">Back</a>-->
 </body>
 </html>

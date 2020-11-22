@@ -47,36 +47,73 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
 </head>
 
-<body bgcolor = "#FFFFFF">
+<body bgcolor = "#ffc2c2">
 
 <div align = "center">
-    <div style = "width:3000px; border: transparent 1px ; " align = "left">
-        <div style = "background-color:#aca3ec; color:#4D39D6; padding:3px;"><b>Login</b></div>
+    <div style = "width:400px; border: transparent 1px ; " align = "middle center">
+<!--        <div style = "background-color:#aca3ec; height:100px; color:#4D39D6; padding:3px;"><b><br><i class="huge building icon"></i></b></div>-->
+<!---->
+<!--        <div style = "background-color:#aca3ec; color:#4D39D6; padding:3px;"><b>Login</b></div>-->
 
         <div style = "margin:30px">
 
-            <div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
+
+
             <form action = "login.php" method = "post">
-                <div class="ui two column middle aligned relaxed grid basic segment">
+                <div class="ui middle aligned center aligned grid">
                     <div class="column">
-                        <div class="ui form segment AVAST_PAM_loginform">
-                            <div class="field">
-                                <label>Username</label>
-                                <div class="ui left labeled icon input">
-                                    <input type="text" placeholder="Username" name = "username" class = "box">
-                                    <i class="user icon"></i>
-                                </div>
+                        <h2 class="ui purple image header">
+                            <i class="huge building icon"></i>
+                            <div class="content">
+                                Log-in
                             </div>
-                            <div class="field">
-                                <label>Password</label>
-                                <div class="ui left labeled icon input">
-                                    <input type="password" name = "password" class = "box" >
-                                    <i class="lock icon"></i>
+                        </h2>
+                        <form class="ui large form AVAST_PAM_loginform">
+                            <div class="ui stacked segment">
+                                <div class="field">
+                                    <label>Username</label>
+                                    <div class="ui left labeled icon input">
+                                        <input type="text" placeholder="Username" name = "username" class = "box">
+                                        <i class="user icon"></i>
+                                    </div>
                                 </div>
+                                <br>
+                                <div class="field">
+                                    <label>Password</label>
+                                    <div class="ui left labeled icon input">
+                                        <input type="password" name = "password" class = "box" >
+                                        <i class="lock icon"></i>
+                                    </div>
+                                </div>
+                                <br>
+                                <input class="ui fluid large blue submit button" type = "submit" value = " Login "/>
                             </div>
-                            <input class="ui blue submit button" type = "submit" value = " Login "/><br />
-                        </div>
+
+                            <div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
+
+                        </form>
                     </div>
+                </div>
+<!--                <div class="ui two column middle aligned relaxed grid basic segment">-->
+<!--                    <div class="column">-->
+<!--                        <div class="ui form segment AVAST_PAM_loginform">-->
+<!--                            <div class="field">-->
+<!--                                <label>Username</label>-->
+<!--                                <div class="ui left labeled icon input">-->
+<!--                                    <input type="text" placeholder="Username" name = "username" class = "box">-->
+<!--                                    <i class="user icon"></i>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="field">-->
+<!--                                <label>Password</label>-->
+<!--                                <div class="ui left labeled icon input">-->
+<!--                                    <input type="password" name = "password" class = "box" >-->
+<!--                                    <i class="lock icon"></i>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <input class="ui blue submit button" type = "submit" value = " Login "/><br />-->
+<!--                        </div>-->
+<!--                    </div>-->
             </form>
 
 
