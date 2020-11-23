@@ -9,7 +9,7 @@ include('session.php');
 </head>
 
 <body >
-<div style = "background-color:#aca3ec; height:100px; color:#4D39D6; padding:3px;"><b><br><i class="huge building icon"></i></b></div>
+<div style = "background-color:#aca3ec; height:100px; color:#4D39D6; padding:3px;"><b><br><i class="huge chess rook icon"></i></b></div>
 
 <div align="center">
     <h1 align="center" style="color:purple;">Welcome <?php echo $_SESSION['username']; ?>

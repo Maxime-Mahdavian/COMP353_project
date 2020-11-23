@@ -75,7 +75,8 @@ Edit User:
 	
 	echo $admin;
 
-echo '<div style = "background-color:#aca3ec; color:#4D39D6; padding:3px;"><b>Edit User</b></div>
+echo '<div style = "background-color:#aca3ec; height:100px; color:#4D39D6; padding:3px;"><b><br><i class="huge chess rook icon"></i></b><b align="middle" style="margin-bottom:10px; color:white; font-size:40px;">CON</b></div>
+
 <form action="edit_user.php" method="post">
             <div class="ui two column middle aligned relaxed grid basic segment">
                     <div class="column">

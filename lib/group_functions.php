@@ -12,6 +12,7 @@ session_start();
     <!--<script src="owner.js"></script>-->
 </head>
 <body>
+<div style = "background-color:#aca3ec; height:100px; color:#4D39D6; padding:3px;"><b><br><i class="huge chess rook icon"></i></b><b align="middle" style="margin-bottom:10px; color:white; font-size:40px;">CON</b></div>
 <div style = "background-color:#aca3ec; color:#4D39D6; padding:3px;"><b>Group Functions</b></div>
 <br>
 
