@@ -22,7 +22,7 @@ if(isset($_POST['post_group'])){
     $result = mysqli_query($db, $sql);
 }
 else {
-    $sql = "SELECT * FROM post WHERE ((perm='public') or(perm='private' and userID=" . $_SESSION['ID'] . ") or" .
+    $sql = "SELECT * FROM post WHERE ((perm='public') or (perm='Ad') or(perm='private' and userID=" . $_SESSION['ID'] . ") or" .
         "(perm='group' and groupID in(select gID from group_membership where uID=" . $_SESSION['ID'] . "))) ORDER BY timestamp DESC;";
     $result = mysqli_query($db, $sql);
 }
@@ -49,6 +49,9 @@ while($temp = mysqli_fetch_array($result)){
     }
     elseif ($temp['perm'] == "private"){
         echo "<h2>Private</h2>";
+    }
+    elseif($temp['perm'] == "Ad"){
+        echo "<h2>Ad</h2>";
     }
     else{
         echo "<h2> Group: " . $nameOfGroup['name'] . "</h2>";

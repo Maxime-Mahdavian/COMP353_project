@@ -16,6 +16,7 @@ include('session.php');
 <h2><a href = "post.php">post</a></h2>
 <h2><a href = "view_post.php">view post</a></h2>
 <h2><a href="group.php">View groups</a></h2>
+<h2><a href="meeting.php">Meetings</a></h2>
 
 </body>
 
