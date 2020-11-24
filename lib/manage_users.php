@@ -70,9 +70,6 @@ if(isset($_POST['create_user'])) {	//handle create user button press
 	} else echo "please fill out all input fields to create a user<br><br>";
 	
 }
-
-
-
 ?>
 
 <form action="manage_users.php" method="post">
