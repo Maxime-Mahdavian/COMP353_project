@@ -13,7 +13,6 @@ session_start();
 <body>
 <?php
 
-
 $sql = "SELECT userID from Users WHERE name='" . $_POST['receiver'] . "'";
 $receiver = mysqli_query($db, $sql) or die("Could not find the receiver");
 
@@ -24,7 +23,6 @@ $result = mysqli_query($db, $sql2) or die(mysqli_error($db));
 
 echo "<h1>Your message has been sent</h1>";
 echo "<a href='message.php'>Go back</a>";
-
 
 ?>
 

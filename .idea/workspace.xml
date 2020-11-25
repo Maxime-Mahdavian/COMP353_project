@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae867be5-5942-4bb9-800b-0335980f3af6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/add_message.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/create_message.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/edit_meeting.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/message.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/search_name.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/44e7474d-dfca-44eb-aa3d-6728d01c2878.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/44e7474d-dfca-44eb-aa3d-6728d01c2878.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/manage_users.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/manage_users.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/meeting.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/meeting.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/meeting_function.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/meeting_function.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/welcome.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/welcome.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/add_message.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/add_message.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/create_message.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/create_message.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/message.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/message.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +83,8 @@
       <workItem from="1605621919737" duration="15566000" />
       <workItem from="1605707292089" duration="21724000" />
       <workItem from="1605794670163" duration="13433000" />
-      <workItem from="1606226664402" duration="15548000" />
+      <workItem from="1606226664402" duration="16201000" />
+      <workItem from="1606329335337" duration="5332000" />
     </task>
     <task id="LOCAL-00001" summary="client side group functionality added, as well as permission on posts">
       <created>1605544185286</created>
@@ -105,7 +100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605733454755</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Meeting done and working on messages">
+      <created>1606254025189</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1606254025189</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,7 +116,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="client side group functionality added, as well as permission on posts" />
     <MESSAGE value="Client side group functionality done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Client side group functionality done" />
+    <MESSAGE value="Meeting done and working on messages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Meeting done and working on messages" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2524" y="148" width="698" height="762" key="#PHP" timestamp="1604521542313">
@@ -141,30 +144,30 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2611" y="280" width="528" height="491" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605190982645" />
-    <state x="2419" y="37" width="904" height="914" key="CommitChangelistDialog2" timestamp="1605733454688">
+    <state x="2417" y="21" width="904" height="914" key="CommitChangelistDialog2" timestamp="1606254025094">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2419" y="37" width="904" height="914" key="CommitChangelistDialog2/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605733454688" />
+    <state x="2417" y="21" width="904" height="914" key="CommitChangelistDialog2/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1606254025094" />
     <state x="2649" y="194" width="428" height="472" key="FileChooserDialogImpl" timestamp="1606228742528">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2649" y="194" width="428" height="472" key="FileChooserDialogImpl/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1606228742528" />
-    <state width="1834" height="272" key="GridCell.Tab.0.bottom" timestamp="1606228216474">
+    <state width="1834" height="272" key="GridCell.Tab.0.bottom" timestamp="1606329893889">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1834" height="272" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1606228216474" />
-    <state width="1834" height="272" key="GridCell.Tab.0.center" timestamp="1606228216473">
+    <state width="1834" height="272" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1606329893889" />
+    <state width="1834" height="272" key="GridCell.Tab.0.center" timestamp="1606329893889">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1834" height="272" key="GridCell.Tab.0.center/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1606228216473" />
-    <state width="1834" height="272" key="GridCell.Tab.0.left" timestamp="1606228216473">
+    <state width="1834" height="272" key="GridCell.Tab.0.center/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1606329893889" />
+    <state width="1834" height="272" key="GridCell.Tab.0.left" timestamp="1606329893889">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1834" height="272" key="GridCell.Tab.0.left/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1606228216473" />
-    <state width="1834" height="272" key="GridCell.Tab.0.right" timestamp="1606228216474">
+    <state width="1834" height="272" key="GridCell.Tab.0.left/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1606329893889" />
+    <state width="1834" height="272" key="GridCell.Tab.0.right" timestamp="1606329893889">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1834" height="272" key="GridCell.Tab.0.right/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1606228216474" />
+    <state width="1834" height="272" key="GridCell.Tab.0.right/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1606329893889" />
     <state x="2637" y="216" width="499" height="556" key="NewPhpClassDialog" timestamp="1605191050335">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -181,26 +184,26 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2365" y="151" key="SettingsEditor/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605292265078" />
-    <state x="2471" y="252" width="804" height="516" key="Vcs.Push.Dialog.v2" timestamp="1605733457125">
+    <state x="2469" y="236" width="804" height="516" key="Vcs.Push.Dialog.v2" timestamp="1606254026792">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2471" y="252" width="804" height="516" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605733457125" />
+    <state x="2469" y="236" width="804" height="516" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1606254026792" />
     <state x="2808" y="464" width="198" height="124" key="com.intellij.database.run.ParametersPanel.Standalone" timestamp="1606148814039">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2808" y="464" width="198" height="124" key="com.intellij.database.run.ParametersPanel.Standalone/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1606148814038" />
-    <state x="2361" y="64" width="983" height="572" key="com.intellij.execution.console.ConsoleHistoryController$MyBrowseAction$1" timestamp="1606148849333">
+    <state x="2357" y="32" width="983" height="572" key="com.intellij.execution.console.ConsoleHistoryController$MyBrowseAction$1" timestamp="1606330287768">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2361" y="64" width="983" height="572" key="com.intellij.execution.console.ConsoleHistoryController$MyBrowseAction$1/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1606148849333" />
+    <state x="2357" y="32" width="983" height="572" key="com.intellij.execution.console.ConsoleHistoryController$MyBrowseAction$1/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1606330287768" />
     <state x="2490" y="145" width="766" height="730" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1605192660113">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2490" y="145" width="766" height="730" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605192660113" />
-    <state x="2647" y="334" width="433" height="172" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606253976251">
+    <state x="2641" y="286" width="433" height="172" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606336605427">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2647" y="334" width="433" height="172" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1606253976251" />
+    <state x="2641" y="286" width="433" height="172" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1606336605427" />
     <state x="2883" y="34" width="939" height="1028" key="dock-window-1" timestamp="1605474358839">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>

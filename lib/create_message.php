@@ -23,6 +23,9 @@ session_start();
 
 <h1>Create Message</h1>
 <br /><br />
+<?php
+if(isset($_POST['create_message'])){
+?>
 <form action="add_message.php" method="post" id="form">
     <label>From:</label>
     <input type="text" value="<?php echo $_POST['username']?>" name="sender" readonly><br>
@@ -32,6 +35,23 @@ session_start();
     Body: <textarea form="form" type="text" name="body" class="bodyclass"></textarea><br>
     <input type="submit" name="create_message" value="Send">
 </form>
+<?php
+}
+elseif(isset($_POST['replyButton'])){
+    $msg = "\n\n\n\n------------------------------------\n". $_POST['receiver'] . ":\n" .$_POST['body'] . "\n";
+?>
+<form action="add_message.php" method="post" id="form">
+    <label>From:</label>
+    <input type="text" value="<?php echo $_SESSION['username']?>" name="sender" readonly><br>
+    <label>To:</label>
+    <input type="text" name="receiver" id="receiver" value="<?php echo $_POST['receiver'];?>" readonly/><br>
+    <div id="personList"></div>
+    Body: <textarea form="form" type="text" name="body" class="bodyclass" ><?php echo $msg; ?></textarea><br>
+    <input type="submit" name="reply" value="Send">
+</form>
+<?php
+}
+?>
 
 
 </body>
