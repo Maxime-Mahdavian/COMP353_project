@@ -47,8 +47,15 @@ if(isset($_POST['create_group'])) {	//handle create group button press
 		$owner = $_SESSION['ID'];
 		
 		$sql = "INSERT INTO groups (name, description, owner) VALUES ('$name', '$description', $owner)";
-		if (mysqli_query($db, $sql)) echo "new group created"."<br><br>";
-		else echo mysqli_error($db)."<br><br>";
+		if (mysqli_query($db, $sql)) {
+			$sql = "SELECT groupID FROM groups WHERE name='$name' AND description='$description' AND owner=$owner";
+			$group_query = mysqli_query($db, $sql);
+			$group = mysqli_fetch_array($group_query);
+			$groupID = $group['groupID'];
+			$sql = "INSERT INTO group_membership (gID, uID) VALUES ($groupID, $owner)";
+			mysqli_query($db, $sql);
+			echo mysqli_error($db)."<br><br>";
+		} else echo mysqli_error($db)."<br><br>";
 		
 		header("Location: " . $_SERVER['PHP_SELF']);
 	
