@@ -34,7 +34,7 @@ Create group:
 
 <?php
 
-if(isset($_POST['create_group'])) {	//handle create user button press
+if(isset($_POST['create_group'])) {	//handle create group button press
 	
 	//validate form
 	$valid = true;
