@@ -39,7 +39,7 @@ switch ($_POST['req']) {
         }
 
         // USER CHOOSES TO SEE THE RESULTS
-        if ($_POST['show']==1) { $mode = "R"; }
+        if ($_POST['show']==1 or $pollDB->hasEnded($_POST['poll_id'])) { $mode = "R"; }
 
         // GET POLL QUESTION + OPTIONS
         $poll = $pollDB->get($_POST['poll_id']);

@@ -23,6 +23,7 @@ if(!isset($_SESSION['username']))
     <select name="perm" id="perm">
         <option value="public">Public</option>
         <option value="private">Private</option>
+        <option value="Ad">Ad</option>
         <!--<option value="group">Group</option>-->
         <?php
 
