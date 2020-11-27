@@ -71,9 +71,6 @@ if(isset($_POST['create_user'])) {	//handle create user button press
 	} else echo "please fill out all input fields to create a user<br><br>";
 	
 }
-
-
-
 ?>
 <div style = "background-color:#aca3ec; color:#4D39D6; padding:3px;"><b>Create User</b></div>
 <br>
