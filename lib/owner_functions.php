@@ -7,9 +7,16 @@
 </head>
 <body>
 <?php
+//INIT
 include("config.php");
 session_start();
+
+//If the owner comes back when they decline deleting a user
 $ownerCameBack = true;
+
+//This is the block to handle requests to join group
+//If accept request, then we want to add the right rwo to group membership, and delete the row from group request
+//If refuse, then we just want to delete from group request
 if(isset($_POST['ownerButton'])){
     if($_POST['ownerButton'] == 'Accept'){
         $sql = "INSERT INTO group_membership VALUES(" . $_POST['Rgroup'] . "," . $_POST['Ruser'] . ")";
@@ -61,6 +68,9 @@ elseif (isset($_POST['Kick'])){
         echo "</form>";
     }
 }
+
+//Block to change ownership
+//Simple sql query to change update the row
 elseif(isset($_POST['Make_Owner']) or $ownerCameBack){
 
 

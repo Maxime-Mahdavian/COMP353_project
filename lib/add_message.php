@@ -1,6 +1,16 @@
 <?php
+
+//This file adds a message to the messsage table in the database
+
+
+//We need to include config.php for the database connection
+//session_start to pull session variables
+//We need to make sure we have a logged in user to display this page
 include ("config.php");
 session_start();
+if(!isset($_SESSION['username'])){
+    header("location: login.php");
+}
 ?>
 
 <!DOCTYPE html>
@@ -13,6 +23,7 @@ session_start();
 <body>
 <?php
 
+//Need to find the userID of the receiver, since the user only inputs the name of the user
 $sql = "SELECT userID from Users WHERE name='" . $_POST['receiver'] . "'";
 $receiver = mysqli_query($db, $sql) or die("Could not find the receiver");
 

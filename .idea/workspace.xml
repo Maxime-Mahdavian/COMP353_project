@@ -20,12 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c79632d8-bb1c-49a7-aa54-a77b20adaf07" name="Default Changelist" comment="changed UI">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/44e7474d-dfca-44eb-aa3d-6728d01c2878.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/manage_groups.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/manage_groups.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/meeting.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/meeting.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/meeting_function.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/meeting_function.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/welcome.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/welcome.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/add.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/add.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/add_message.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/add_message.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/logout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/owner_functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/owner_functions.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +71,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Database Script.instance.sql">
+  <component name="RunManager">
     <configuration name="test" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" document_root="$PROJECT_DIR$" port="8080">
       <method v="2" />
     </configuration>
@@ -241,7 +241,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/lib/manage_users.php</url>
-          <line>46</line>
+          <line>47</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
