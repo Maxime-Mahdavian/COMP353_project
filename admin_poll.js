@@ -29,7 +29,7 @@ var polljs = {
             var xhr = new XMLHttpRequest();
             xhr.open('POST', "lib/admin_poll.php", true);
             xhr.onload = function() {
-                if (this.response=="OK") {
+                if (this.response==="OK") {
                     polljs.list();
                 } else {
                     alert("Error deleting poll!");
@@ -45,7 +45,7 @@ var polljs = {
         // FETCH DATA
         var data = new FormData();
         data.append('req', "addEdit");
-        if (id != undefined) {
+        if (id !== undefined) {
             data.append('poll_id', id);
         }
 
@@ -82,7 +82,7 @@ var polljs = {
 
         // POLL ID
         var check = document.getElementById("ae-poll-id").value;
-        if (check=="") { data.append('req', "add"); }
+        if (check==="") { data.append('req', "add"); }
         else {
             data.append('req', "edit");
             data.append('poll_id', check);
@@ -90,7 +90,7 @@ var polljs = {
 
         // POLL QUESTION
         check = document.getElementById("ae-poll-text").value;
-        if (check=="") {
+        if (check==="") {
             error += "Please enter the question.\n";
         } else {
             data.append('poll_question', check);
@@ -98,12 +98,12 @@ var polljs = {
 
         // POLL OPTIONS
         check = document.getElementsByClassName("ae-poll-opt");
-        if (check.length==0) {
+        if (check.length===0) {
             error += "Please create at least one option.\n";
         } else {
             var pass = true;
             for (let i=0; i<check.length; i++) {
-                if (check[i].value=="") {
+                if (check[i].value==="") {
                     pass = false;
                 } else {
                     data.append('poll_options[]', check[i].value);
@@ -115,11 +115,11 @@ var polljs = {
         }
 
         // SAVE - AJAX
-        if (error=="") {
+        if (error==="") {
             var xhr = new XMLHttpRequest();
             xhr.open('POST', "lib/admin_poll.php", true);
             xhr.onload = function(){
-                if (this.response=="OK") {
+                if (this.response==="OK") {
                     polljs.list();
                 } else {
                     alert("ERROR SAVING POLL");
@@ -128,6 +128,28 @@ var polljs = {
             xhr.send(data);
         } else {
             alert(error);
+        }
+    },
+
+    close: function (id){
+
+        if (confirm("Close poll?")) {
+            var data = new FormData();
+            data.append('req', "close");
+            if (id !== undefined) {
+                data.append('poll_id', id);
+            }
+
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', "lib/admin_poll.php", true);
+            xhr.onload = function() {
+                if (this.response==="OK") {
+                    polljs.list();
+                } else {
+                    alert("Error closing poll!");
+                }
+            };
+            xhr.send(data);
         }
     }
 };

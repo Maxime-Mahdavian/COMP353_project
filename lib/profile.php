@@ -92,7 +92,7 @@ session_start();
 		
 	} else {
 
-		echo "Profile<br><br>";
+		//echo "Profile<br><br>";
 
 		echo '<form action="profile.php" method="post">
 		<div style="margin:30px;" class="ui two column middle aligned relaxed grid basic segment">

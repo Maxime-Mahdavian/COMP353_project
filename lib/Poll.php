@@ -246,18 +246,31 @@ class Poll
 
         date_default_timezone_set('America/Toronto');
 
-        $sql = "SELECT close_time from `poll_main` WHERE `poll_id`=?";
+        $sql = "SELECT close from `poll_main` WHERE `poll_id`=?";
         $this->stmt = $this->pdo->prepare($sql);
         $this->stmt->execute([$pollID]);
         $time = $this->stmt->fetchAll();
 
-        $closeTime = new DateTime($time[0]['close_time']);
-        $currentTime = new DateTime('now');
+        //$closeTime = new DateTime($time[0]['close_time']);
+        //$currentTime = new DateTime('now');
+
+        //echo $time[0]['close'];
+        return $time[0]['close'];
 
 
-        return ($closeTime < $currentTime);
 
+    }
+    function close($pollID){
 
+        $sql = "UPDATE poll_main SET close=1 WHERE poll_id=?";
+        $cond = [$pollID];
+        try {
+            $this->stmt = $this->pdo->prepare($sql);
+            $this->stmt->execute($cond);
+        } catch (Exception $ex) {
+            return false;
+        }
+        return true;
 
     }
 }

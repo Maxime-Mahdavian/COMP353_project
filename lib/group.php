@@ -28,7 +28,7 @@ session_start();
         <th>Owner</th>
         <th>Post to group</th>
         <th>View Group post</th>
-    </tr>
+    </thead>
 <?php
 /*    //echo "<h1>" . $_SESSION['groupID'] . "</h1>";
 

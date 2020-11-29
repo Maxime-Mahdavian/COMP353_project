@@ -49,6 +49,7 @@ session_start();
         }
         else{
             echo "<td>Closed</td>";
+            //echo $polldb->hasEnded($row['poll_id']);
             /*echo "<tr>";
             echo "<td>Poll closed</td>";
             echo "<form method='post' action='../poll.php'>";
