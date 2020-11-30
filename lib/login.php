@@ -45,22 +45,23 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
 
+    </style>
 </head>
 
-<body bgcolor = "#ffc2c2">
+<body >
+<div style="background-color: #d5e2ff; width:100%; height:100%; background-size: cover; ">
 
-<div align = "center">
+<div align = "center" >
     <div style = "width:400px; border: transparent 1px ; " align = "middle center">
 <!--        <div style = "background-color:#aca3ec; height:100px; color:#4D39D6; padding:3px;"><b><br><i class="huge building icon"></i></b></div>-->
 <!---->
 <!--        <div style = "background-color:#aca3ec; color:#4D39D6; padding:3px;"><b>Login</b></div>-->
 
-        <div style = "margin:30px">
 
-
+            <br><br><br><br><br><br><br><br>
 
             <form action = "login.php" method = "post">
-                <div class="ui middle aligned center aligned grid">
+                <div  class="ui middle aligned center aligned grid">
                     <div class="column">
                         <h2 class="ui purple image header">
                             <i class="huge building icon"></i>
@@ -68,20 +69,20 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                                 Log-in
                             </div>
                         </h2>
-                        <form class="ui large form AVAST_PAM_loginform">
-                            <div class="ui stacked segment">
+                        <form class="ui large form AVAST_PAM_loginform" >
+                            <div style=" background-color: #c9d3d8;" class="ui stacked segment">
                                 <div class="field">
                                     <label>Username</label>
-                                    <div class="ui left labeled icon input">
-                                        <input type="text" placeholder="Username" name = "username" class = "box">
+                                    <div style=" background-color: #d5e2ff;" class="ui left labeled icon input">
+                                        <input style=" background-color: #a0a8ac;" type="text" placeholder="Username" name = "username" class = "box">
                                         <i class="user icon"></i>
                                     </div>
                                 </div>
                                 <br>
                                 <div class="field">
                                     <label>Password</label>
-                                    <div class="ui left labeled icon input">
-                                        <input type="password" name = "password" class = "box" >
+                                    <div style=" background-color: #d5e2ff;" class="ui left labeled icon input">
+                                        <input style=" background-color: #a0a8ac;" type="password" name = "password" class = "box" >
                                         <i class="lock icon"></i>
                                     </div>
                                 </div>
@@ -121,6 +122,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
     </div>
 
+</div>>
 </div>
 </body>
 </html>
