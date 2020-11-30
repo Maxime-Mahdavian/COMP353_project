@@ -11,9 +11,8 @@ session_start();
     <title>Meeting page</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
 </head>
-<body>
+<body style="background-color: #d5e2ff;">
 <div style = "background-color:#aca3ec; height:100px; color:#4D39D6; padding:3px;"><b><br><i class="huge chess rook icon"></i></b><b align="middle" style="margin-bottom:10px; color:white; font-size:40px;">CON</b></div>
-<div style="background-color: #d5e2ff; width:100%; height:100%; background-size: cover; ">
     <br><br>
     <a style="margin:30px; font-size: 40px;" class="item">
         Meetings<i class="calendar alternate icon"></i>
@@ -74,6 +73,5 @@ session_start();
         <i class="left arrow icon"></i>
         Back to Main Page
     </button>
-</div>
 </body>
 </html>

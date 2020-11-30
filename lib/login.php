@@ -48,8 +48,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
 </head>
 
-<body >
-<div style="background-color: #d5e2ff; width:100%; height:100%; background-size: cover; ">
+<body style="background-color: #d5e2ff;">
 
 <div align = "center" >
     <div style = "width:400px; border: transparent 1px ; " align = "middle center">

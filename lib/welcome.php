@@ -8,17 +8,13 @@ include('session.php');
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
 </head>
 
-<body >
+<body style="background-color: #d5e2ff;">
 <div style = "background-color:#aca3ec; height:100px; color:#4D39D6; padding:3px;"><b><br><i class="huge chess rook icon"></i></b><b align="middle" style="margin-bottom:10px; color:white; font-size:40px;">CON</b></div>
-<div style="background-color: #d5e2ff; width:100%; height:100%; background-size: cover; ">
     <br><br>
     <a align="center" style="margin:475px; font-size: 40px; color:black;" class="item">
         Welcome <?php echo $_SESSION['username']; ?>  <i class="big green user circle icon"></i>
     </a>
     <br>
-<!--    <div align="center">-->
-        <!--        <h1 align="center" style="color:black;">Welcome --><?php //echo $_SESSION['username']; ?>
-        <!--    </div>>-->
 
     <div class="ui grid">
         <div class="four wide column">
@@ -85,7 +81,6 @@ include('session.php');
 <!--    <h2><a href="message.php">Message</a></h2>-->
 <!--    <h2><a href="contracts.php">Contracts</a></h2>-->
 <!--    <h2><a href = "logout.php">Sign Out</a></h2>-->
-</div>
 </body>
 
 </html>

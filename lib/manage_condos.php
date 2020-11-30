@@ -28,7 +28,7 @@ session_start();
 </head>
 
 
-<body>
+<body style="background-color: #d5e2ff;">
 <br>
 <br>
 	

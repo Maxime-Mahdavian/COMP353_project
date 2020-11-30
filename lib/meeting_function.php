@@ -10,7 +10,7 @@ session_start();
     <title>Meeting functions</title>
 
 </head>
-<body>
+<body style="background-color: #d5e2ff;">
 
 <?php
 //This is the form displayed if the user wants to create a meeting
