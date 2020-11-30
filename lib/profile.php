@@ -43,7 +43,7 @@ session_start();
         }
 
 
-        $user_query = mysqli_query($db, "SELECT * FROM Users WHERE userID = $userID UNION");
+        $user_query = mysqli_query($db, "SELECT * FROM Users WHERE userID = $userID");
         $user = mysqli_fetch_array($user_query);
 
         $name = $user['name']; $password = $user['password'];
