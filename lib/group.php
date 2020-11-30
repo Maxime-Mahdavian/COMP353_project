@@ -16,12 +16,12 @@ session_start();
 <div style = "background-color:#aca3ec; height:100px; color:#4D39D6; padding:3px;"><b><br><i class="huge chess rook icon"></i></b><b align="middle" style="margin-bottom:10px; color:white; font-size:40px;">CON</b></div>
 <div style="background-color: #d5e2ff; width:100%; height:100%; background-size: cover; ">
 <br><br>
-<a style="margin:30px; font-size: 40px;" class="item">
+<a style="margin:30px; font-size: 40px; color:black;" class="item">
     Groups<i class="users icon"></i>
 </a>
 <br>
 
-<table class="ui inverted purple table">
+<table class="ui inverted table">
     <thead>
         <th>Name</th>
         <th>Description</th>
@@ -105,7 +105,6 @@ session_start();
     <i class="left arrow icon"></i>
     Back to Main Page
 </button>
-<div style = "background-color:#aca3ec; height:235px; color:#4d39d6; padding:3px;"></div>
 <!--<a href="welcome.php">Back</a>-->
 </body>
 </html>
