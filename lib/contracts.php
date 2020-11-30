@@ -13,6 +13,11 @@ session_start();
 </head>
 <body>
 
+<h1 style="margin-left:35px;" >Create Contribution</h1>
+<form action="contract_functions.php" method="post">
+    <input style="margin-left:45px;" class="ui blue button" type="submit" value="Create" name="ContributionButton" >
+</form>
+
 <h1>Contribution List</h1>
 <table border="1">
     <tr>
@@ -24,7 +29,7 @@ session_start();
     <?php
 
     //Find all meetings then display them
-    $sql = "SELECT * FROM contribution ORDER BY date_payed DESC";
+    $sql = "SELECT * FROM contribution WHERE condoAssociationID=". $_SESSION['condoAssociationID'] ." ORDER BY date_payed DESC";
     $row = mysqli_query($db, $sql);
 
     while($result = mysqli_fetch_array($row)){
@@ -61,7 +66,7 @@ session_start();
     <?php
 
     //Find all meetings then display them
-    $sql = "SELECT * FROM maintenance ORDER BY date DESC";
+    $sql = "SELECT * FROM maintenance WHERE condoAssociationID=". $_SESSION['condoAssociationID'] ." ORDER BY date DESC";
     $row = mysqli_query($db, $sql);
 
     while($result = mysqli_fetch_array($row)){

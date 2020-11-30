@@ -20,8 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c79632d8-bb1c-49a7-aa54-a77b20adaf07" name="Default Changelist" comment="ui updated">
+      <change afterPath="$PROJECT_DIR$/lib/contract_functions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/edit_contract.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/manage_contract.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/welcome.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/welcome.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/contracts.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/contracts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/login.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +48,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.4" />
   <component name="ProjectId" id="1jq6Vw4ezLLttDZgDKoDOtA5oZM" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -68,7 +73,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Database Script.console_1.sql">
+  <component name="RunManager" selected="PHP Built-in Web Server.test">
     <configuration name="console_1.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
       <script-file value="$APPLICATION_CONFIG_DIR$/consoles/db/44e7474d-dfca-44eb-aa3d-6728d01c2878/console_1.sql" />
       <script-mode>FILE</script-mode>
@@ -230,11 +235,11 @@
     <option name="LAST_COMMIT_MESSAGE" value="ui updated" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="483" y="113" width="585" height="582" key="#PHP" timestamp="1606719708013">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="2522" y="132" width="585" height="582" key="#PHP" timestamp="1606763293039">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="483" y="113" width="585" height="582" key="#PHP/0.0.1536.824@0.0.1536.824" timestamp="1606719708013" />
-    <state x="2524" y="148" width="698" height="762" key="#PHP/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1604521542313" />
+    <state x="2522" y="132" width="698" height="762" key="#PHP/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1606763293039" />
     <state x="2194" y="367" width="1362" height="318" key="#SQL_Dialects" timestamp="1605535636053">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -269,26 +274,26 @@
     </state>
     <state x="566" y="14" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1606698295217" />
     <state x="2627" y="18" width="428" height="472" key="FileChooserDialogImpl/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1606677051660" />
-    <state width="1024" height="210" key="GridCell.Tab.0.bottom" timestamp="1606719882948">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1573" height="256" key="GridCell.Tab.0.bottom" timestamp="1606763296026">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1024" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1606719882948" />
-    <state width="1573" height="262" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1606679204010" />
-    <state width="1024" height="210" key="GridCell.Tab.0.center" timestamp="1606719882948">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1573" height="256" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1606763296026" />
+    <state width="1573" height="256" key="GridCell.Tab.0.center" timestamp="1606763296026">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1024" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1606719882948" />
-    <state width="1573" height="262" key="GridCell.Tab.0.center/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1606679204010" />
-    <state width="1024" height="210" key="GridCell.Tab.0.left" timestamp="1606719882947">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1573" height="256" key="GridCell.Tab.0.center/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1606763296026" />
+    <state width="1573" height="256" key="GridCell.Tab.0.left" timestamp="1606763296026">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1024" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1606719882947" />
-    <state width="1573" height="262" key="GridCell.Tab.0.left/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1606679204010" />
-    <state width="1024" height="210" key="GridCell.Tab.0.right" timestamp="1606719882948">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1573" height="256" key="GridCell.Tab.0.left/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1606763296026" />
+    <state width="1573" height="256" key="GridCell.Tab.0.right" timestamp="1606763296026">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1024" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1606719882948" />
-    <state width="1573" height="262" key="GridCell.Tab.0.right/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1606679204010" />
+    <state width="1573" height="256" key="GridCell.Tab.0.right/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1606763296026" />
     <state x="2637" y="216" width="499" height="556" key="NewPhpClassDialog" timestamp="1605191050335">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
