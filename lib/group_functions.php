@@ -38,7 +38,6 @@ session_start();
         if($count==1){
             echo "<h1>You cannot withdraw from the group, you are the owner</h1>";
             echo "<h1>Please change owner before withdrawing from the group</h1>";
-            echo "<button><a href='group.php'>Back</a></button>";
         }
         else{
             $sql = "DELETE FROM group_membership WHERE gID=".$_POST['withdraw_group']. " AND uID=" . $_SESSION['ID'];
