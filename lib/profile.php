@@ -43,7 +43,7 @@ session_start();
         }
 
 
-        $user_query = mysqli_query($db, "SELECT * FROM Users WHERE userID = $userID");
+        $user_query = mysqli_query($db, "SELECT * FROM Users WHERE userID = $userID UNION");
         $user = mysqli_fetch_array($user_query);
 
         $name = $user['name']; $password = $user['password'];
@@ -145,8 +145,13 @@ session_start();
                                 </div>
                                 <div class="field">
                                     <label for="Admin">Administrator: '.$admin.'</label>
-                                </div>
-                                <br>
+                                </div>';
+ 		                            $condo_query = mysqli_query($db, "SELECT condoID,floorspace FROM condos WHERE ownerID=$userID");
+        												while($condo = mysqli_fetch_array($condo_query)){
+																	echo '<div class="field">
+                                    			<label for="condoNum">Owner of condo number: '.$condo['condoID'].' (floorspace: '.$condo['floorspace'].'ft^2)</label>';
+																}   
+echo '                                <br>
                                 <br>
                                 
                                 <input class="ui black button" type="submit" name="editProfile" value="edit">
