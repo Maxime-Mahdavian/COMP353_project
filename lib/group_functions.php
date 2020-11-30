@@ -14,9 +14,10 @@ session_start();
 <body>
 <div style = "background-color:#aca3ec; height:100px; color:#4D39D6; padding:3px;"><b><br><i class="huge chess rook icon"></i></b><b align="middle" style="margin-bottom:10px; color:white; font-size:40px;">CON</b></div>
 <div style="background-color: #d5e2ff; width:100%; height:100%; background-size: cover; ">
-    <div style = "background-color:#aca3ec; color:#4D39D6; padding:3px;"><b>Group Functions</b></div>
-    <br>
-
+    <br><br>
+    <a style="margin:30px; font-size: 40px; color:black;" class="item">
+        Group Functions  <i class="users icon"></i>
+    </a>
     <br>
 
     <?php
@@ -52,7 +53,7 @@ session_start();
     if(mysqli_num_rows($result) == 0)
         echo "<h2>NO REQUESTS</h2>";
     else{
-        echo "<table border='1'>";
+        echo "<table class='ui inverted blue table''>";
         /*echo "<tr>";
         echo "<th>Name</th>";
         echo "<th>Accept</th>";
@@ -64,12 +65,12 @@ session_start();
             echo '<form action="owner_functions.php" method="post">';
             echo "<input type='hidden' name='Rgroup' value='" . $_POST['owner_group'] . "'>";
             echo "<input type='hidden' name='Ruser' value='" . $row['userID'] . "'>";
-            echo "<td><input type='submit' value='Accept' name='ownerButton'></td>";
+            echo "<td><input class='ui green button' type='submit' value='Accept' name='ownerButton'></td>";
             //echo "</form>";
             echo '<form action="owner_functions.php" method="post">';
             echo "<input type='hidden' name='Rgroup' value='" . $_POST['owner_group'] . "'>";
             echo "<input type='hidden' name='Ruser' value='" . $row['userID'] . "'>";
-            echo "<td><input type='submit' value='Refuse' name='ownerButton'></td>";
+            echo "<td><input class='ui red button' type='submit' value='Refuse' name='ownerButton'></td>";
 
 
             echo "</tr>";
@@ -85,7 +86,7 @@ session_start();
 
 
     ?>
-    <table class="ui inverted green table">
+    <table class="ui inverted table">
         <tr>
             <th>Member</th>
             <th>Kick</th>
@@ -107,12 +108,12 @@ session_start();
                 echo '<td><form action="owner_functions.php" method="post">';
                 echo '<input type="hidden" id="user" name="kick_user" value="' . $row['userID'] . '">';
                 echo "<input type='hidden' name='kick_group' value='" . $_POST['owner_group'] . "'>";
-                echo '<input type="submit" name="Kick" value="Kick">';
+                echo '<input class="ui button" type="submit" name="Kick" value="Kick">';
                 echo "</form></td>";
                 echo '<td><form onsubmit="return confirm(\'Do you really want to change owner\');" action="owner_functions.php" method="post">';
                 echo '<input type="hidden" id="user" name="owner_user" value="' . $row['userID'] . '">';
                 echo "<input type='hidden' name='owner_group' value='" . $_POST['owner_group'] . "'>";
-                echo '<input type="submit" name="Make_Owner" value="Make Owner">';
+                echo '<input class="ui button" type="submit" name="Make_Owner" value="Make Owner">';
                 echo "</form></td>";
                 echo "</tr>";
             }
@@ -126,7 +127,7 @@ session_start();
 
         ?>
     </table>
-    <button class="ui blue left labeled icon button" type="submit" name="back" onclick="window.location.href='group.php';">
+    <button style="margin:30px;" class="ui blue left labeled icon button" type="submit" name="back" onclick="window.location.href='group.php';">
         <i class="left arrow icon"></i>
         Back to Group
     </button>
