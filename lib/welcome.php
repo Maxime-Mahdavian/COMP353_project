@@ -11,10 +11,14 @@ include('session.php');
 <body >
 <div style = "background-color:#aca3ec; height:100px; color:#4D39D6; padding:3px;"><b><br><i class="huge chess rook icon"></i></b><b align="middle" style="margin-bottom:10px; color:white; font-size:40px;">CON</b></div>
 <div style="background-color: #d5e2ff; width:100%; height:100%; background-size: cover; ">
+    <br><br>
+    <a align="center" style="margin:475px; font-size: 40px; color:black;" class="item">
+        Welcome <?php echo $_SESSION['username']; ?>  <i class="big green user circle icon"></i>
+    </a>
     <br>
-    <div align="center">
-        <h1 align="center" style="color:purple;">Welcome <?php echo $_SESSION['username']; ?>
-    </div>
+<!--    <div align="center">-->
+        <!--        <h1 align="center" style="color:black;">Welcome --><?php //echo $_SESSION['username']; ?>
+        <!--    </div>>-->
 
     <div class="ui grid">
         <div class="four wide column">
@@ -54,17 +58,17 @@ include('session.php');
             </button>
         </div>
         <div class="four wide column">
-            <?php if($_SESSION['admin'] == 1){echo "<a style='margin:30px;' class='ui huge blue left labeled icon button' href='../admin_page.html'>
-                <i class='wrench icon'></i>
-                Admin Options
-            </a>";} else{echo "no";}?>
-            <!--            --><?php //if($_SESSION['admin'] == 1){echo "<a href = '../admin_page.html'>Admin options</a>";} else{echo "no";}?>
-        </div>
-        <div class="four wide column">
             <button style="margin:30px;" class="ui huge blue left labeled icon button" type="submit" name="contracts" onclick="window.location.href='contracts.php';">
                 <i class="file alternate icon"></i>
                 Contracts
             </button>
+        </div>
+        <div class="four wide column">
+            <?php if($_SESSION['admin'] == 1){echo "<a style='margin:30px;' class='ui huge blue left labeled icon button' href='../admin_page.html'>
+                <i class='wrench icon'></i>
+                Admin Options
+            </a>";} ?>
+            <!--            --><?php //if($_SESSION['admin'] == 1){echo "<a href = '../admin_page.html'>Admin options</a>";} else{echo "no";}?>
         </div>
     </div>
     <button style="margin:30px;" class="ui huge blue left labeled icon button" type="submit" name="signout" onclick="window.location.href='logout.php';">
