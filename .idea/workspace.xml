@@ -19,14 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c79632d8-bb1c-49a7-aa54-a77b20adaf07" name="Default Changelist" comment="ui updated">
-      <change afterPath="$PROJECT_DIR$/lib/contract_functions.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/edit_contract.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/manage_contract.php" afterDir="false" />
+    <list default="true" id="c79632d8-bb1c-49a7-aa54-a77b20adaf07" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin_page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/contracts.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/contracts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/meeting.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/meeting.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/profile.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606720983556</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="contract functions added">
+      <created>1606763336604</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1606763336604</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -232,7 +235,8 @@
     <MESSAGE value="poll fixed" />
     <MESSAGE value="Comments added" />
     <MESSAGE value="ui updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="ui updated" />
+    <MESSAGE value="contract functions added" />
+    <option name="LAST_COMMIT_MESSAGE" value="contract functions added" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2522" y="132" width="585" height="582" key="#PHP" timestamp="1606763293039">
@@ -265,35 +269,35 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2615" y="382" width="519" height="287" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1606661184226" />
-    <state x="2409" y="-43" width="904" height="914" key="CommitChangelistDialog2" timestamp="1606677900513">
+    <state x="2407" y="-59" width="904" height="914" key="CommitChangelistDialog2" timestamp="1606763336535">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2409" y="-43" width="904" height="914" key="CommitChangelistDialog2/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1606677900513" />
+    <state x="2407" y="-59" width="904" height="914" key="CommitChangelistDialog2/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1606763336535" />
     <state x="566" y="14" width="428" height="472" key="FileChooserDialogImpl" timestamp="1606698295217">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="566" y="14" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1606698295217" />
     <state x="2627" y="18" width="428" height="472" key="FileChooserDialogImpl/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1606677051660" />
-    <state width="1573" height="256" key="GridCell.Tab.0.bottom" timestamp="1606763296026">
+    <state width="1834" height="266" key="GridCell.Tab.0.bottom" timestamp="1606765045664">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1024" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1606719882948" />
-    <state width="1573" height="256" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1606763296026" />
-    <state width="1573" height="256" key="GridCell.Tab.0.center" timestamp="1606763296026">
+    <state width="1834" height="266" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1606765045664" />
+    <state width="1834" height="266" key="GridCell.Tab.0.center" timestamp="1606765045664">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1024" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1606719882948" />
-    <state width="1573" height="256" key="GridCell.Tab.0.center/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1606763296026" />
-    <state width="1573" height="256" key="GridCell.Tab.0.left" timestamp="1606763296026">
+    <state width="1834" height="266" key="GridCell.Tab.0.center/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1606765045664" />
+    <state width="1834" height="266" key="GridCell.Tab.0.left" timestamp="1606765045664">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1024" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1606719882947" />
-    <state width="1573" height="256" key="GridCell.Tab.0.left/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1606763296026" />
-    <state width="1573" height="256" key="GridCell.Tab.0.right" timestamp="1606763296026">
+    <state width="1834" height="266" key="GridCell.Tab.0.left/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1606765045664" />
+    <state width="1834" height="266" key="GridCell.Tab.0.right" timestamp="1606765045664">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1024" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1606719882948" />
-    <state width="1573" height="256" key="GridCell.Tab.0.right/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1606763296026" />
+    <state width="1834" height="266" key="GridCell.Tab.0.right/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1606765045664" />
     <state x="2637" y="216" width="499" height="556" key="NewPhpClassDialog" timestamp="1605191050335">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -310,11 +314,11 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2365" y="151" key="SettingsEditor/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605292265078" />
-    <state x="433" y="131" width="804" height="516" key="Vcs.Push.Dialog.v2" timestamp="1606721011534">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="2459" y="156" width="804" height="516" key="Vcs.Push.Dialog.v2" timestamp="1606763342008">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="433" y="131" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1606721011534" />
-    <state x="2461" y="172" width="804" height="516" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1606677903708" />
+    <state x="2459" y="156" width="804" height="516" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1606763342008" />
     <state x="663" y="300" width="312" height="243" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1606696537737">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

@@ -50,9 +50,10 @@ session_start();
         $name = $user['name']; $password = $user['password'];
         $email = $user['email']; $address = $user['primary_address'];
         $status = $user['status']; $condoClass = $user['condoClassification'];
+        $admin = $user['administrator'];
 
-        if($admin==1) $admin=yes;
-        else $admin=no;
+        if($admin==1) $admin="yes";
+        else $admin="no";
 
         if(isset($_POST['editProfile'])) {
 
