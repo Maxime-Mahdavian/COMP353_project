@@ -8,22 +8,6 @@ session_start();
 
 <head>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
-<!--<style>-->
-<!---->
-<!--table, th, td {-->
-<!--  border: 1px solid black;-->
-<!--  border-collapse: collapse;-->
-<!--}-->
-<!---->
-<!--th, td {-->
-<!--  padding: 5px;-->
-<!--}-->
-<!---->
-<!--th {-->
-<!--  text-align: left;-->
-<!--}-->
-<!---->
-<!--</style>-->
 </head>
 
 
@@ -40,11 +24,17 @@ if(isset($_POST['create_user'])) {	//handle create user button press
 	//validate form
 	$valid = true;
 	if( !isset($_POST['name']) || empty($_POST['name']) ) $valid = false;
+	if(!$valid) echo "name";
 	if( !isset($_POST['password']) || empty($_POST['password']) ) $valid = false;
+	if(!$valid) echo "pass";
 	if( !isset($_POST['email']) || empty($_POST['email']) ) $valid = false;
+	if(!$valid) echo "email";
 	if( !isset($_POST['address']) || empty($_POST['address']) ) $valid = false;
+	if(!$valid) echo "address";
 	if( !isset($_POST['status']) || empty($_POST['status']) ) $valid = false;
+	if(!$valid) echo "status";
 	if( !isset($_POST['condoClass']) || empty($_POST['condoClass']) ) $valid = false;
+	if(!$valid) echo "condoClass";
 	
 	if($valid) {
 		
@@ -122,7 +112,7 @@ if(isset($_POST['create_user'])) {	//handle create user button press
                 <div class="field">
                     <label>Condo Classification</label>
                     <div class="ui left labeled icon input">
-                        <input type="text" placeholder="condoClassification" name = "condoClassification">
+                        <input type="text" placeholder="condoClassification" name = "condoClass">
                         <i class="building outline icon"></i>
                     </div>
                 </div>
@@ -188,20 +178,6 @@ if(isset($_POST['create_user'])) {	//handle create user button press
         <th> admin </th>
         <th> status </th>
         <th> condoClass </th>
-
-
-<!--<table style = "width:100%">-->
-<!--	<tr>-->
-<!--		<th></th>-->
-<!--		<th> name </th>-->
-<!--		<th> password </th>-->
-<!--		<th> email </th>-->
-<!--		<th> address </th>-->
-<!--		<th> admin </th>-->
-<!--		<th> status </th>-->
-<!--		<th> condoClass </th>-->
-<!--	</tr>-->
-	
 	
 <?php
 

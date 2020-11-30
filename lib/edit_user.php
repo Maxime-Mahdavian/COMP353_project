@@ -118,7 +118,7 @@ echo '<div style = "background-color:#aca3ec; height:100px; color:#4D39D6; paddi
                             <div class="field">
                                 <label>Condo Classification</label>
                                 <div class="ui left labeled icon input">
-                                    <input type="text" placeholder="condoClassification" name = "condoClassification" value="'.$condoClass.'">
+                                    <input type="text" placeholder="condoClassification" name = "condoClass" value="'.$condoClass.'">
                                     <i class="building outline icon"></i>
                                 </div>
                             </div>
