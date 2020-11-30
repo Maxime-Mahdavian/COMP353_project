@@ -36,8 +36,8 @@ session_start();
 
         //If count is 1, then the user is the owner of that group, and therefore cannot withdraw
         if($count==1){
-            echo "<h1>You cannot withdraw from the group, you are the owner</h1>";
-            echo "<h1>Please change owner before withdrawing from the group</h1>";
+            echo "<h1 style='margin:40px;' ><i class='red exclamation triangle icon'></i>You cannot withdraw from the group, you are the owner</h1>";
+            echo "<h1 style='margin:40px;'><i class='red exclamation triangle icon'></i>Please change owner before withdrawing from the group</h1>";
         }
         else{
             $sql = "DELETE FROM group_membership WHERE gID=".$_POST['withdraw_group']. " AND uID=" . $_SESSION['ID'];

@@ -2,10 +2,12 @@
 <html>
 <head>
     <title>Test</title>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
 
 </head>
 <body>
+<div style = "background-color:#aca3ec; height:100px; color:#4D39D6; padding:3px;"><b><br><i class="huge chess rook icon"></i></b><b align="middle" style="margin-bottom:10px; color:white; font-size:40px;">CON</b></div>
+<div style="background-color: #d5e2ff; width:100%; height:100%; background-size: cover; ">
 <?php
 //INIT
 include("config.php");
@@ -25,17 +27,23 @@ if(isset($_POST['ownerButton'])){
         $secondQuery = mysqli_query($db,$sql);
 
         if ($firstQuery and $secondQuery){
-            echo "<h1>The request has been accepted</h1>";
+            echo "<h1 style='margin:30px;'>The request has been accepted</h1>";
             echo "<form method='post' action='group_functions.php'>";
             echo "<input type='hidden' name='owner_group' value='" . $_POST['Rgroup'] . "'>";
-            echo "<input type='submit' value='Back' name='backButton'>";
+            echo "<button style='margin:30px;' class='ui blue left labeled icon button' type='submit' value='Back' name='backButton' >
+                    <i class='left arrow icon'></i>
+                    Back 
+                  </button>";
             echo "</form>";
         }
         else{
             echo "<h1>There was an error</h1>";
             echo "<form method='post' action='group_functions.php'>";
             echo "<input type='hidden' name='owner_group' value='" . $_POST['Rgroup'] . "'>";
-            echo "<input type='submit' value='Back' name='backButton'>";
+            echo "<button style='margin:30px;' class='ui blue left labeled icon button' type='submit' value='Back' name='backButton' >
+                    <i class='left arrow icon'></i>
+                    Back 
+                  </button>";
             echo "</form>";
         }
     }
@@ -45,7 +53,10 @@ if(isset($_POST['ownerButton'])){
         echo "<h1>The request has been accepted</h1>";
         echo "<form method='post' action='group_functions.php'>";
         echo "<input type='hidden' name='owner_group' value='" . $_POST['Rgroup'] . "'>";
-        echo "<input type='submit' value='Back' name='backButton'>";
+        echo "<button style='margin:30px;' class='ui blue left labeled icon button' type='submit' value='Back' name='backButton' >
+                    <i class='left arrow icon'></i>
+                    Back 
+                  </button>";
         echo "</form>";
     }
 }
@@ -57,14 +68,20 @@ elseif (isset($_POST['Kick'])){
         echo "<h1>This user has been kicked</h1>";
         echo "<form method='post' action='group_functions.php'>";
         echo "<input type='hidden' name='owner_group' value='" . $_POST['kick_group'] . "'>";
-        echo "<input type='submit' value='Back' name='backButton'>";
+        echo "<button style='margin:30px;' class='ui blue left labeled icon button' type='submit' value='Back' name='backButton' >
+                    <i class='left arrow icon'></i>
+                    Back 
+                  </button>";
         echo "</form>";
     }
     else{
         echo "<h1>Error</h1>";
         echo "<form method='post' action='group_functions.php'>";
         echo "<input type='hidden' name='owner_group' value='" . $_POST['kick_group'] . "'>";
-        echo "<input type='submit' value='Back' name='backButton'>";
+        echo "<button style='margin:30px;' class='ui blue left labeled icon button' type='submit' value='Back' name='backButton' >
+                    <i class='left arrow icon'></i>
+                    Back 
+                  </button>";
         echo "</form>";
     }
 }
@@ -80,10 +97,16 @@ elseif(isset($_POST['Make_Owner']) or $ownerCameBack){
 
     if ($result) {
         echo "<h1>The owner has been changed</h1>";
-        echo "<button><a href='group.php'>Back</a></button>";
+        echo "<button style='margin:30px;' class='ui blue left labeled icon button' type='submit' name='back' onclick='window.location.href='group.php';'>
+        <i class='left arrow icon'></i>
+        Back to Groups
+    </button>";
     } else {
         echo "<h1>Error</h1>";
-        echo "<button><a href='group.php'>Back</a></button>";
+        echo "<button style='margin:30px;' class='ui blue left labeled icon button' type='submit' name='back' onclick='window.location.href='group.php';'>
+        <i class='left arrow icon'></i>
+        Back to Groups
+    </button>";
 
     }
 

@@ -8,48 +8,60 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <title>Message Page</title>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
 </head>
 <body>
-<h1>Message</h1>
-<form action="create_message.php" method="post">
-    <input type="hidden" name="username" value="<?php echo $_SESSION['username']; ?>">
-    <input type="hidden" name="sender_ID" value="<?php echo $_SESSION['ID'];?>">
-    <input type="submit" name="create_message" value="Create Message">
-</form>
+<div style = "background-color:#aca3ec; height:100px; color:#4D39D6; padding:3px;"><b><br><i class="huge chess rook icon"></i></b><b align="middle" style="margin-bottom:10px; color:white; font-size:40px;">CON</b></div>
+<div style="background-color: #d5e2ff; width:100%; height:100%; background-size: cover; ">
+    <br><br>
+    <a style="margin:30px; font-size: 40px; color:black;" class="item">
+        Message <i class="paper plane icon"></i>
+    </a>
+    <form action="create_message.php" method="post">
+        <input type="hidden" name="username" value="<?php echo $_SESSION['username']; ?>">
+        <input type="hidden" name="sender_ID" value="<?php echo $_SESSION['ID'];?>">
+        <input style="margin:40px;" class="ui blue button" type="submit" name="create_message" value="Create New Message">
+    </form>
 
-<h1>Messages</h1>
-<table border="1">
-    <tr>
-        <th>From</th>
-        <th>Message</th>
-        <th>Time</th>
-        <th>Reply</th>
-    </tr>
-    <?php
+    <a style="margin:30px; font-size: 40px; color:black;" class="item">
+        Past Messages <i class="envelope outline icon"></i>
+    </a>
+    <table class="ui grey inverted table" style="width:100%">
+        <col style="width:20%">
+        <col style="width:55%">
+        <col style="width:15%">
+        <col style="width:10%">
+        <tr>
+            <th>From</th>
+            <th>Message</th>
+            <th>Time</th>
+            <th>Reply</th>
+        </tr>
+        <?php
 
 
-    $sql = "SELECT * FROM message WHERE receiverID=" . $_SESSION['ID'] . " ORDER BY timestamp DESC";
-    $row = mysqli_query($db, $sql);
+        $sql = "SELECT * FROM message WHERE receiverID=" . $_SESSION['ID'] . " ORDER BY timestamp DESC";
+        $row = mysqli_query($db, $sql);
 
-    while($result = mysqli_fetch_array($row)){
-        $sql = "SELECT name FROM Users, message WHERE userID=" . $result['senderID'];
-        $x = mysqli_query($db,$sql);
-        $temp = mysqli_fetch_array($x);
-        echo "<td>" . $temp['name'] . "</td>";
-        echo "<td style='width: 400px; height: 200px;'><textarea class='bodyclass' readonly>" . $result['message'] . "</textarea></td>";
-        echo "<td>" . $result['timestamp'] . "</td>";
-        echo '<form action="create_message.php" method="post">';
-        echo "<td><input type='submit' value='Reply' name='replyButton'></td>";
-        echo "<input type='hidden' name='receiver' value='" . $temp['name'] . "'>";
-        echo "<input type='hidden' name='body' value='" . $result['message'] . "'>";
-        echo "</form>";
+        while($result = mysqli_fetch_array($row)){
+            $sql = "SELECT name FROM Users, message WHERE userID=" . $result['senderID'];
+            $x = mysqli_query($db,$sql);
+            $temp = mysqli_fetch_array($x);
+            echo "<td>" . $temp['name'] . "</td>";
+            echo "<td style='width: 400px; height: 200px;'><textarea class='bodyclass' readonly>" . $result['message'] . "</textarea></td>";
+            echo "<td>" . $result['timestamp'] . "</td>";
+            echo '<form action="create_message.php" method="post">';
+            echo "<td><input class='ui black button' type='submit' value='Reply' name='replyButton'></td>";
+            echo "<input type='hidden' name='receiver' value='" . $temp['name'] . "'>";
+            echo "<input type='hidden' name='body' value='" . $result['message'] . "'>";
+            echo "</form>";
 
-        echo "</tr>";
+            echo "</tr>";
 
-    }
-    ?>
-</table>
-<a href="welcome.php">Back</a>
+        }
+        ?>
+    </table>
+    <a href="welcome.php">Back</a>
+</div>
 </body>
 </html>
