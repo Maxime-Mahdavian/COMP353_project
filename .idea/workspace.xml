@@ -20,14 +20,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c79632d8-bb1c-49a7-aa54-a77b20adaf07" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/checkInput.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comment_page.php" beforeDir="false" afterPath="$PROJECT_DIR$/comment_page.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Comment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/admin_comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/admin_comment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/comment_handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/comment_handler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/contract_functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/contract_functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/contracts.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/contracts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/create_message.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/create_message.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/edit_contract.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/edit_contract.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/edit_group.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/edit_group.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/edit_meeting.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/edit_meeting.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/meeting_function.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/meeting_function.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/post.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/view_post.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view_post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/group.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/group.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/group_functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/group_functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/welcome.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/welcome.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +66,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Documents/Question 3" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/School/Fall2020/COMP353/project_backup" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -123,7 +128,7 @@
       <workItem from="1606724065933" duration="35000" />
       <workItem from="1606754683542" duration="665000" />
       <workItem from="1606767872804" duration="1529000" />
-      <workItem from="1606917698923" duration="12893000" />
+      <workItem from="1606917698923" duration="17839000" />
     </task>
     <task id="LOCAL-00001" summary="client side group functionality added, as well as permission on posts">
       <created>1605544185286</created>
@@ -223,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606767456234</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="various bug fixes">
+      <created>1606939484624</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1606939484624</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,7 +263,8 @@
     <MESSAGE value="ui updated" />
     <MESSAGE value="contract functions added" />
     <MESSAGE value="small bug fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="small bug fixes" />
+    <MESSAGE value="various bug fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="various bug fixes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2522" y="132" width="585" height="582" key="#PHP" timestamp="1606763293039">
@@ -284,15 +297,15 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2615" y="382" width="519" height="287" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1606661184226" />
-    <state x="2405" y="-75" width="904" height="914" key="CommitChangelistDialog2" timestamp="1606767456177">
+    <state x="2403" y="-91" width="904" height="914" key="CommitChangelistDialog2" timestamp="1606939484542">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2405" y="-75" width="904" height="914" key="CommitChangelistDialog2/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1606767456177" />
-    <state x="2623" y="-14" width="428" height="472" key="FileChooserDialogImpl" timestamp="1606936728925">
+    <state x="2403" y="-91" width="904" height="914" key="CommitChangelistDialog2/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1606939484542" />
+    <state x="2621" y="-30" width="428" height="472" key="FileChooserDialogImpl" timestamp="1606941365186">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="566" y="14" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1606698295217" />
-    <state x="2623" y="-14" width="428" height="472" key="FileChooserDialogImpl/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1606936728925" />
+    <state x="2621" y="-30" width="428" height="472" key="FileChooserDialogImpl/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1606941365186" />
     <state width="1834" height="271" key="GridCell.Tab.0.bottom" timestamp="1606922380867">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -333,11 +346,11 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2365" y="151" key="SettingsEditor/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605292265078" />
-    <state x="2457" y="140" width="804" height="516" key="Vcs.Push.Dialog.v2" timestamp="1606767458519">
+    <state x="2455" y="124" width="804" height="516" key="Vcs.Push.Dialog.v2" timestamp="1606939485836">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="433" y="131" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1606721011534" />
-    <state x="2457" y="140" width="804" height="516" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1606767458519" />
+    <state x="2455" y="124" width="804" height="516" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1606939485836" />
     <state x="663" y="300" width="312" height="243" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1606696537737">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

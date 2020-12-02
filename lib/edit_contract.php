@@ -1,4 +1,5 @@
 <?php
+//INIT
 include("config.php");
 session_start();
 ?>
@@ -11,14 +12,15 @@ session_start();
 </head>
 <body>
 <?php
+//We need to add the contribution in the db
 if(isset($_POST['create_contribution'])){
 
     $sql = "INSERT INTO contribution (contractID,condoAssociationID,userID,price,reason) VALUES " .
         "(".$_POST['contractID'].",".$_SESSION['condoAssociationID'] .",". $_SESSION['ID'].",".
-        $_POST['price'].",'".$_POST['reason']."')";
+        $_POST['price'].",\"".$_POST['reason']."\")";
 
 
-    $result = mysqli_query($db, $sql);
+    $result = mysqli_query($db, $sql) or die(mysqli_error($db));
     if($result){
         echo "<h1>Contribution created</h1>";
         echo "<button><a href='contracts.php'>Back</a></button>";
@@ -28,6 +30,7 @@ if(isset($_POST['create_contribution'])){
         echo "<button><a href='contracts.php'>Back</a></button>";
     }
 }
+//Deactivate a contract
 elseif(isset($_POST['DeactivateButton'])) {
 
     $sql = "UPDATE contracts SET status= 'Inactive' WHERE contractID= " . $_POST['contractID'];
@@ -38,6 +41,8 @@ elseif(isset($_POST['DeactivateButton'])) {
         echo "<button><a href='manage_contract.php'>Back</a></button>";
     }
 }
+//Activate a contract, in real life, this would not be super realistic, since terms for contracts would probably change
+//but in this case it is reasonable to assume that they would be the same
 elseif(isset($_POST['ActivateButton'])) {
 
     $sql = "UPDATE contracts SET status= 'Active' WHERE contractID= " . $_POST['contractID'];
@@ -48,6 +53,7 @@ elseif(isset($_POST['ActivateButton'])) {
         echo "<button><a href='manage_contract.php'>Back</a></button>";
     }
 }
+//Delete a contribution
 elseif(isset($_POST['DelContributionButton'])){
 
     $sql = "DELETE FROM contribution WHERE contributionID=" . $_POST['contributionID'];
@@ -59,6 +65,7 @@ elseif(isset($_POST['DelContributionButton'])){
     }
 }
 
+//Delete a maintenance
 elseif(isset($_POST['DelMaintenanceButton'])){
 
     $sql = "DELETE FROM maintenance WHERE maintenanceID=" . $_POST['maintenanceID'];
@@ -69,7 +76,7 @@ elseif(isset($_POST['DelMaintenanceButton'])){
         echo "<button><a href='manage_contract.php'>Back</a></button>";
     }
 }
-
+//Create a contract
 elseif (isset($_POST['create_contract'])){
 
     $sql = "INSERT INTO contracts (condoAssociationID,description,awarded,price, status) VALUES " .
@@ -87,7 +94,7 @@ elseif (isset($_POST['create_contract'])){
         echo "<button><a href='manage_contract.php'>Back</a></button>";
     }
 }
-
+//Create a maintenance
 elseif (isset($_POST['create_maintenance'])){
 
     $sql = "SELECT awarded FROM contracts WHERE contractID=". $_POST['contractID'];

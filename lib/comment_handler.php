@@ -5,10 +5,6 @@ require __DIR__ . DIRECTORY_SEPARATOR . "config.php";
 require PATH_LIB . "Comment.php";
 $pdo = new Comments();
 
-if(!isset($_SESSION['username'])){
-    header("location: login.php");
-}
-
 /* [HANDLE AJAX REQUESTS] */
 switch ($_POST['req']) {
     /* [INVALID REQUEST] */

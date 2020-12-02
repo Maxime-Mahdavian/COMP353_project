@@ -1,4 +1,5 @@
 <?php
+//INIT
 include("config.php");
 session_start();
 ?>
@@ -11,13 +12,14 @@ session_start();
 </head>
 <body>
 <?php
+//Create a meeting
 if(isset($_POST['create_meeting'])){
     $admin = ($_POST['admin'] == "yes") ? 1 : 0;
     $sql = "INSERT INTO meeting (condoAssociationID, administratorMeeting, agenda, time, minutes, resolution, creator) VALUES" .
         "(".$_SESSION['condoAssociationID'].",".$admin .",'". $_POST['agenda']."','".
         $_POST['datetime']."',".$_POST['duration'].",\"".$_POST['resolution']."\",".$_SESSION['ID'].")";
 
-    $result = mysqli_query($db, $sql);
+    $result = mysqli_query($db, $sql) or die(mysqli_error($db));
     if($result){
         echo "<h1>Meeting created</h1>";
         echo "<button><a href='meeting.php'>Back</a></button>";
@@ -27,6 +29,7 @@ if(isset($_POST['create_meeting'])){
         echo "<button><a href='meeting.php'>Back</a></button>";
     }
 }
+//Update a meeting with the new info
 elseif(isset($_POST['edit_meeting'])){
     $admin = ($_POST['admin'] == "on") ? 1 : 0;
     $sql = "UPDATE meeting SET administratorMeeting=". $admin . ", agenda='" . $_POST['agenda'] . "', time='". $_POST['datetime'] .
@@ -43,6 +46,7 @@ elseif(isset($_POST['edit_meeting'])){
         echo "<button><a href='meeting.php'>Back</a></button>";
     }
 }
+//Delete a meeting
 elseif(isset($_POST['delete_meeting'])){
     $sql = "DELETE FROM meeting WHERE meetingID=". $_POST['meetingID'];
     $result = mysqli_query($db, $sql);

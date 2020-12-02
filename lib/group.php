@@ -1,4 +1,5 @@
 <?php
+//INIT
 include('config.php');
 session_start();
 ?>
@@ -30,20 +31,10 @@ session_start();
         <th>View Group post</th>
     </thead>
 <?php
-/*    //echo "<h1>" . $_SESSION['groupID'] . "</h1>";
 
-    /*foreach ($_SESSION['groupID'] as $group){
-        echo "<tr>";
-        $sql = "SELECT * FROM groups WHERE groupID=".$group;
-        $result = mysqli_query($db,$sql);
-        $row = mysqli_fetch_array($result);
-        echo "<td>" . $row['name'] . "</td>";
-        echo "<td>" . $row['description'] . "</td>";
-        echo "</tr>";
-    }*/
-
+    //Display all the info about every group
     $sql = "SELECT * FROM groups";
-    $row = mysqli_query($db, $sql);
+    $row = mysqli_query($db, $sql) or die(mysqli_error($db));
 
     while($result = mysqli_fetch_array($row)){
         echo "<td>" . $result['name'] . "</td>";
@@ -53,12 +44,14 @@ session_start();
         //$membership = mysqli_fetch_array($temp);
         $count = mysqli_num_rows($temp);
         $groupID = $result['groupID'];
+        //If count is 1, then the user is part of the group, so give them the optin to withdraw
         if($count == 1) {
             echo '<form action="group_functions.php" method="post">';
             echo "<td><input class='ui button' type='submit' value='Withdraw' name='submitButton'></td>";
             echo "<input type='hidden' name='withdraw_group' value='" . $groupID . "'>";
             echo "</form>";
         }
+        //If not, then give them the option to join
         else {
             echo '<form action="group_functions.php" method="post">';
             echo "<td><input class='ui button' type='submit' value='Join' name='submitButton'></td>";
@@ -66,6 +59,7 @@ session_start();
             echo "</form>";
         }
 
+        //If the owner matches the ID of the session, then the user is the owner of that group
         if($result['owner'] == $_SESSION['ID']){
             echo '<form action="group_functions.php" method="post">';
             echo "<input type='hidden' name='owner_group' value='" . $groupID . "'>";
@@ -76,6 +70,7 @@ session_start();
         else
             echo "<td>Not Owner</td>";
 
+        //Once again, if the count is one, then the user is part of the group, he they have the option to view/post to the group
         if($count == 1){
             echo '<form action="post.php" method="post">';
             echo "<input type='hidden' name='post_group' value='" . $result['name'] . "'>";

@@ -78,7 +78,7 @@ include('session.php');
 <!--    <h2><a href = "view_post.php">view post</a></h2>-->
 <!--    <h2><a href="group.php">View groups</a></h2>-->
 <!--    <h2><a href="meeting.php">Meetings</a></h2>-->
-<!--    <h2><a href="message.php">Message</a></h2>-->
+    <h2><a href="message.php">Message</a></h2>
 <!--    <h2><a href="contracts.php">Contracts</a></h2>-->
 <!--    <h2><a href = "logout.php">Sign Out</a></h2>-->
 </body>

@@ -28,10 +28,11 @@ session_start();
     </tr>
     <?php
 
-    //Find all meetings then display them
+    //Find all contributions for this association then display them
     $sql = "SELECT * FROM contribution WHERE condoAssociationID=". $_SESSION['condoAssociationID'] ." ORDER BY date_payed DESC";
     $row = mysqli_query($db, $sql);
 
+    //Display table
     while($result = mysqli_fetch_array($row)){
         echo "<td>" . $result['reason'] . "</td>";
 
@@ -65,7 +66,7 @@ session_start();
     </tr>
     <?php
 
-    //Find all meetings then display them
+    //Find all maintenance for the association then display them
     $sql = "SELECT * FROM maintenance WHERE condoAssociationID=". $_SESSION['condoAssociationID'] ." ORDER BY date DESC";
     $row = mysqli_query($db, $sql);
 

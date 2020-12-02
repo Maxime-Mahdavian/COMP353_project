@@ -4,12 +4,6 @@ session_start();
 
 if(isset($_SESSION['username']) and $_SESSION['administrator'] ==1) {
 
-    /* PROTECT THE ADMIN FUNCTIONS!
-    // E.G. CHECK IF ADMIN IS SIGNED IN
-    if (!isset($_SESSION['admin'])) {
-      die("ERR");
-    }
-    */
 
 // LIBRARIES
     require __DIR__ . DIRECTORY_SEPARATOR . "config.php";

@@ -1,4 +1,6 @@
 <?php
+
+//INIT
 include ('config.php');
 session_start();
 
@@ -14,7 +16,7 @@ session_start();
 <body>
 
 <?php
-//This is the form displayed if the user wants to create a meeting
+//This is the form displayed if the user wants to create a contribution
 if($_POST['ContributionButton'] == 'Create'){
     ?>
     <form action="edit_contract.php" method="post">
@@ -23,6 +25,7 @@ if($_POST['ContributionButton'] == 'Create'){
         <select name="contractID">
             <?php
 
+            //Search for all active contracts for the contractor name
             $sql = "select awarded,contractID from contracts WHERE status='Active'";
             $result = mysqli_query($db,$sql);
 
@@ -46,6 +49,7 @@ if($_POST['ContributionButton'] == 'Create'){
     <?php
 
 }
+//Form to create a contract
 elseif (isset($_POST['ContractButton'])){
     ?>
     <form action="edit_contract.php" method="post">
@@ -59,7 +63,7 @@ elseif (isset($_POST['ContractButton'])){
         <br>
         <label for="Price">Price:</label>
         <br>
-        <input type="text" name="price">
+        <input type="text" name="price" onblur="checkInput(this.value)">
         <br>
         <input type="submit" name="create_contract" value="submit">
     </form>
@@ -68,7 +72,7 @@ elseif (isset($_POST['ContractButton'])){
 <?php
     echo '<a href="manage_contract.php">Back</a>';
 }
-
+//Form to create a maintenance
 elseif (isset($_POST['MaintenanceButton'])){
     ?>
     <form action="edit_contract.php" method="post">

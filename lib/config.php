@@ -1,4 +1,7 @@
 <?php
+//This is the file for all initialization and connection to the db.
+
+
 error_reporting(E_ALL & ~E_NOTICE);
 
 define('DB_HOST', 'localhost');

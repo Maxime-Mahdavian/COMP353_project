@@ -1,4 +1,5 @@
 <?php
+//INIT -- Here we don't need a connection to the db, so we're not including the file
 session_start();
 ?>
 <!DOCTYPE html>
@@ -24,6 +25,7 @@ session_start();
 <h1>Create Message</h1>
 <br /><br />
 <?php
+//Display the form to create a message, the sender field is readonly, since we don't want a user to be able to send a message from someone else
 if(isset($_POST['create_message'])){
 ?>
 <form action="add_message.php" method="post" id="form">
@@ -37,7 +39,10 @@ if(isset($_POST['create_message'])){
 </form>
 <?php
 }
+//The form needs to change a little bit if it is a reply.
+//Now the sender and receiver are both known
 elseif(isset($_POST['replyButton'])){
+    //We need to format the reply message a little bit to include previous messages
     $msg = "\n\n\n\n------------------------------------\n". $_POST['receiver'] . ":\n" .$_POST['body'] . "\n";
 ?>
 <form action="add_message.php" method="post" id="form">
@@ -56,6 +61,8 @@ elseif(isset($_POST['replyButton'])){
 
 </body>
 </html>
+
+<!--This is a part of script to have suggestions on the name for the receiver, the second part is in search_name.php-->
 <script>
     $(document).ready(function(){
         $('#receiver').keyup(function(){
