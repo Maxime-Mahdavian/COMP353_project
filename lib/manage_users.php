@@ -34,12 +34,13 @@ session_start();
 
         </thead>
         <?php
-
+				
+				//list all users from database in a table, with attributes
         $user_query = mysqli_query($db, "SELECT * FROM Users");
-        while($user = mysqli_fetch_array($user_query)){
+        while($user = mysqli_fetch_array($user_query)){		//iterate through every user
             echo "<tr>";
-            echo '<td><form action="edit_user.php" method="post">';
-            echo '<input type="hidden" id="editNum" name="editNum" value="'.$user['userID'].'">';
+            echo '<td><form action="edit_user.php" method="post">';		//goto edit_user.php on edit button press
+            echo '<input type="hidden" id="editNum" name="editNum" value="'.$user['userID'].'">';	//also send userID
             echo '<input class="ui button" type="submit" name="edit" value="edit">';
             echo "</form></td>";
             echo "<td>".$user['name']."</td>";
@@ -79,25 +80,26 @@ session_start();
         if(!$valid) echo "condoClass";
 
         if($valid) {
-
+						
+						//assign post variables to regular variables for easy of string insertion
             $name = $_POST['name']; $password = $_POST['password'];
             $email = $_POST['email']; $address = $_POST['address'];
             $status = $_POST['status']; $condoClass = $_POST['condoClass'];
 
+						//handle html checkbox value, convert to boolean
             if(isset($_POST['admin']) && $_POST['admin'] == 'on') $admin=1;
             else $admin=0;
-
+						
+						//set condo association id to that of current user
             //admins for this condo association can only add users to this condo association
             $condoAssociationID = $_SESSION['condoAssociationID'];
 
-
+						//insert user into database
             $sql = "INSERT INTO Users (name, password, email, primary_address, administrator, status, condoAssociationID, condoClassification) VALUES ('$name', '$password', '$email', '$address', $admin, '$status', $condoAssociationID, '$condoClass')";
             if (mysqli_query($db, $sql)) echo "new user created"."<br><br>";
             else echo "failed to create new user<br><br>";
 
-            //this is to prevent more accounts being made on page
-            //refresh after successfully creating an account
-            //works because it clears $_post
+            //reload page to prevent form resubmission
             header("Location: " . $_SERVER['PHP_SELF']);
 
         } else echo "please fill out all input fields to create a user<br><br>";

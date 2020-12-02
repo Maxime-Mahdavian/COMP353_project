@@ -78,85 +78,105 @@ session_start();
 
 <?php
 
+	//print debug messages if there are any
 	if($_SESSION['print_message']) {
 			echo $_SESSION['message']."<br><br>";
-			$_SESSION['print_message'] = false;
+			$_SESSION['print_message'] = false;		//reset boolean tellin us theres a message to print
 	}
 	
-	if(isset($_POST['add_building'])) {
+	if(isset($_POST['add_building'])) { //handle add building button
 	
+		//validate fields are not empty
 		if($_POST['building_address']!='') {
 			$address = $_POST['building_address'];
+			//insert row into database
 			$sql = "INSERT INTO buildings (address) VALUES ('$address');";
 			if(mysqli_query($db, $sql)) $_SESSION['message'] = "new building added";
 			else $_SESSION['message'] = mysqli_error($db);
 		} else $_SESSION['message'] = "building was not added, please enter an address";
 		
+		//set session variable saying theres a message to print, then reload page
 		$_SESSION['print_message'] = true;
 		header("Location: " . $_SERVER['PHP_SELF']);
 	
-	} else if(isset($_POST['add_condo'])) {
+	} else if(isset($_POST['add_condo'])) { //handle add condo button
 		
+		//validate fields are not empty
 		if($_POST['floor_space']!='' && $_POST['building_number']!='') {
 			$floorSpace = $_POST['floor_space'];
 			$buildingID = $_POST['building_number'];
+			//insert row into database
 			$sql = "INSERT INTO condos (buildingID, floorspace) VALUES ($buildingID, $floorSpace);";
 			if(mysqli_query($db, $sql)) $_SESSION['message'] = "new Condo added";
 			else $_SESSION['message'] = mysqli_error($db);
 		} else $_SESSION['message'] = "condo was not added, please fill out all fields";
 		
+		//set session variable saying theres a message to print, then reload page
 		$_SESSION['print_message'] = true;
 		header("Location: " . $_SERVER['PHP_SELF']);
 	
-	} else if(isset($_POST['add_parking_space'])) {
+	} else if(isset($_POST['add_parking_space'])) {	//handle add parking space button
 		
+		//validate that fields are not empty
 		if($_POST['condo_number']!='') {
 			$condoID = $_POST['condo_number'];
+			//insert row into database
 			$sql = "INSERT INTO parkingSpaces (condoID) VALUES ($condoID);";
 			if(mysqli_query($db, $sql)) $_SESSION['message'] ="parking space added";
 			else $_SESSION['message'] = mysqli_error($db);
 		} else $_SESSION['message'] = "parking space was not added, please enter an assigned condo";
 		
+		//set session variable saying theres a message to print, then reload page
 		$_SESSION['print_message'] = true;
 		header("Location: " . $_SERVER['PHP_SELF']);
 	
-	} else if(isset($_POST['delete_building'])) {
+	} else if(isset($_POST['delete_building'])) { //handle delete building button press
 	
 		$deleteNum = $_POST['deleteNum'];
+		//remove row from table
 		$sql="DELETE FROM buildings WHERE buildingID=$deleteNum";
 		if(mysqli_query($db, $sql)) $_SESSION['message'] = "building removed";
 		else $_SESSION['message'] = mysqli_error($db);
 	
+		//set session variable saying theres a message to print, then reload page
 		$_SESSION['print_message'] = true;
+		header("Location: " . $_SERVER['PHP_SELF']);
 	
-	} else if(isset($_POST['delete_condo'])) {
+	} else if(isset($_POST['delete_condo'])) {	//handle delete condo button press
 	
 		$deleteNum = $_POST['deleteNum'];
+		//remove row from table
 		$sql="DELETE FROM condos WHERE condoID=$deleteNum";
 		if(mysqli_query($db, $sql)) $_SESSION['message'] = "condo removed";
 		else $_SESSION['message'] = mysqli_error($db);
-	
+		
+		//set session variable saying theres a message to print, then reload page
 		$_SESSION['print_message'] = true;
+		header("Location: " . $_SERVER['PHP_SELF']);
 	
-	} else if(isset($_POST['delete_parking'])) {
+	} else if(isset($_POST['delete_parking'])) {	//handle delete parking button press
 	
 		$deleteNum = $_POST['deleteNum'];
+		//remove row from table
 		$sql="DELETE FROM parkingSpaces WHERE parkingSpaceID=$deleteNum";
 		if(mysqli_query($db, $sql)) $_SESSION['message'] = "parking space removed";
 		else $_SESSION['message'] = mysqli_error($db);
-	
+		
+		//set session variable saying theres a message to print, then reload page
 		$_SESSION['print_message'] = true;
+		header("Location: " . $_SERVER['PHP_SELF']);
 	
 	}
 	
-	if(!isset($_SESSION['table'])) {
+	//set session variable determining which table is shown
+	if(!isset($_SESSION['table'])) {	//if null, initialize to none
 		$_SESSION['table'] = "none";
-	} else if(isset($_POST['show_buildings'])) {
-		$_SESSION['table'] = "buildings";
-	} else if(isset($_POST['show_condos'])) {
-		$_SESSION['table'] = condos;
-	} else if(isset($_POST['show_parking'])) {
-		$_SESSION['table'] = "parking";
+	} else if(isset($_POST['show_buildings'])) {	//if show buildings button pressed
+		$_SESSION['table'] = "buildings";						//show buildings table
+	} else if(isset($_POST['show_condos'])) {			//if show condos button pressed
+		$_SESSION['table'] = condos;								//show condos table
+	} else if(isset($_POST['show_parking'])) {		//if show parking button pressed
+		$_SESSION['table'] = "parking";							//show parking space table
 	}
 	
 ?>
@@ -175,6 +195,7 @@ session_start();
 
 
 <?php
+//make buildings table visible if sessing variable is buildings
 if($_SESSION['table']=="buildings") echo '<table class="ui selectable inverted table">';
 else echo '<table class="ui selectable inverted table" style="display:none;">';
 ?>
@@ -190,7 +211,6 @@ else echo '<table class="ui selectable inverted table" style="display:none;">';
   		echo "<tr>";
   		echo '<td><form action="manage_condos.php" method="post">';
   		echo '<input type="hidden" name="deleteNum" value="'.$building['buildingID'].'">';
-  		echo '<input type="hidden" name="show_buildings">';
   		echo '<input type="submit" name="delete_building" value="remove">';
   		echo "</form></td>";
       echo "<td>".$building['buildingID']."</td>";
@@ -201,6 +221,7 @@ else echo '<table class="ui selectable inverted table" style="display:none;">';
 </table>
 
 <?php
+//make condos table visible if sessing variable is condos
 if($_SESSION['table']=="condos") echo '<table class="ui selectable inverted table">';
 else echo '<table class="ui selectable inverted table" style="display:none;">';
 ?>
@@ -218,16 +239,15 @@ else echo '<table class="ui selectable inverted table" style="display:none;">';
   		echo "<tr>";
   		echo '<td><form action="manage_condos.php" method="post">';
   		echo '<input type="hidden" name="deleteNum" value="'.$condo['condoID'].'">';
-  		echo '<input type="hidden" name="show_condos">';
-  		echo '<input type="submit" name="delete_condo" value="remove">';
+  		echo '<input type="submit" name="delete_condo" value="remove">';		//delete button for condos
   		echo "</form>";
-  		echo '<form action="assign_condo_owner.php" method="post">';
+  		echo '<form action="assign_condo_owner.php" method="post">';	//goto assign_condo_owner.php on 'set owner' button press
   		echo '<input type="hidden" name="condoNum" value="'.$condo['condoID'].'">';
-  		echo '<input type="submit" name="assign_condo" value="Set Owner">';
+  		echo '<input type="submit" name="assign_condo" value="Set Owner">';	//button for setting new condo owner
   		echo "</form></td>";
       echo "<td>".$condo['condoID']."</td>";
-      if(empty($condo['owner'])) echo "<td>-</td>";
-      else echo "<td>".$condo['owner']."</td>";
+      if(empty($condo['owner'])) echo "<td>-</td>";		//display empty line if no owner
+      else echo "<td>".$condo['owner']."</td>";				//else display owner
       echo "<td>".$condo['buildingID']."</td>";
       echo "<td>".$condo['floorspace']."</td>";
       echo "</tr>";
@@ -238,6 +258,7 @@ else echo '<table class="ui selectable inverted table" style="display:none;">';
 
 
 <?php
+//make parking spaces table visible if sessing variable is parking
 if($_SESSION['table']=="parking") echo '<table class="ui selectable inverted table">';
 else echo '<table class="ui selectable inverted table" style="display:none;">';
 ?>
@@ -252,8 +273,7 @@ else echo '<table class="ui selectable inverted table" style="display:none;">';
   		echo "<tr>";
   		echo '<td><form action="manage_condos.php" method="post">';
   		echo '<input type="hidden" name="deleteNum" value="'.$building['buildingID'].'">';
-  		echo '<input type="hidden" name="show_parking">';
-  		echo '<input type="submit" name="delete_parking" value="remove">';
+  		echo '<input type="submit" name="delete_parking" value="remove">';		//delete button for parking spaces
   		echo "</form></td>";
       echo "<td>".$parking['parkingSpaceID']."</td>";
       echo "<td>".$parking['condoID']."</td>";

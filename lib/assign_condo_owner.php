@@ -15,16 +15,19 @@ session_start();
 
 <?php
 	
+	//save condo owner id so it can be reused on next form submission
 	$condoID = $_POST['condoNum'];
-	echo "condo Number: $condoID <br>";
+	echo "condo Number: $condoID <br>";		//display condo number for user
 
-	if(isset($_POST['userSelected'])) {
+	if(isset($_POST['userSelected'])) { //handle set owner button press
 		
-		$userID = $_POST['userID'];
+		$userID = $_POST['userID'];	//get user id from post
+		//update sql tables
 		$sql = "UPDATE condos SET ownerID=$userID WHERE condoID=$condoID";
 		if(mysqli_query($db, $sql)) $_SESSION['message'] ="condo owner has been set";
 		else $_SESSION['message'] = mysqli_error($db);
 		
+		//set session variable saying theres a message to print, then reload page
 		$_SESSION['print_message'] = true;
 		header("Location: manage_condos.php");
 		
@@ -52,12 +55,13 @@ session_start();
 	</thead
 <?php
 
+	//list all users from database in an html table
   $user_query = mysqli_query($db, "SELECT * FROM Users");
   while($user = mysqli_fetch_array($user_query)){
   		echo "<tr>";
   		echo '<td><form action="assign_condo_owner.php" method="post">';
-  		echo '<input type="hidden" name="userID" value="'.$user['userID'].'">';
-  		echo '<input type="hidden" name="condoNum" value="'.$condoID.'">';
+  		echo '<input type="hidden" name="userID" value="'.$user['userID'].'">';	//post userID so we know which one was selected
+  		echo '<input type="hidden" name="condoNum" value="'.$condoID.'">';			//re-post condoID
   		echo '<input type="submit" name="userSelected" value="Assign">';
   		echo "</form></td>";
       echo "<td>".$user['name']."</td>";
