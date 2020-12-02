@@ -72,5 +72,9 @@ if(!isset($_SESSION['username']))
             </div>
         </div>
     </form>
+<button style="margin:30px;" class="ui blue left labeled icon button" type="submit" name="back" onclick="window.location.href='welcome.php';">
+    <i class="left arrow icon"></i>
+    Back to Main Page
+</button>
 </body>
 </html>

@@ -19,10 +19,25 @@ $result = mysqli_query($db, $sql);
 while($temp = mysqli_fetch_array($result)){
     echo "<h1>" . $temp['title']."</h1><br>";
     echo "<h2> Posted on: " . $temp['timestamp']. "</h2>";
+    $sql = "SELECT name FROM `groups` g, post p WHERE (p.postID =". $temp['postID'] . " and p.groupID = g.groupID)";
+    $y = mysqli_query($db, $sql);
+    $nameOfGroup = mysqli_fetch_array($y);
+    if($temp['perm'] == "public"){
+        echo "<h2>Public</h2>";
+    }
+    elseif ($temp['perm'] == "private"){
+        echo "<h2>Private</h2>";
+    }
+    elseif($temp['perm'] == "Ad"){
+        echo "<h2>Ad</h2>";
+    }
+    else{
+        echo "<h2> Group: " . $nameOfGroup['name'] . "</h2>";
+    }
     echo "<p>" . $temp['body'] . "</p><br>";
     $prefix = '../';
     $img = preg_replace('/^' . preg_quote($prefix, '/') . '/','', $temp['img']);
-    echo "<img src=". $img . " height='200px'; width='400px'><br>";
+    echo "<img onerror='this.onerror=null; this.remove();' src=". $img . " height='200px'; width='400px'><br>";
 }
 
 ?>

@@ -8,6 +8,7 @@ session_start();
 <html>
 <head>
     <title>Contract functions</title>
+    <script src="../checkInput.js"></script>
 
 </head>
 <body>
@@ -33,7 +34,7 @@ if($_POST['ContributionButton'] == 'Create'){
         <br>
         <label for="price:">Price:</label>
         <br>
-        <input type="text" name="price">
+        <input type="text" name="price" onblur="checkInput(this.value)">
         <br>
         <label for="reason">Reason:</label>
         <br>

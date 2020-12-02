@@ -8,6 +8,7 @@ session_start();
 <html>
 <head>
     <title>Meeting functions</title>
+    <script src="../checkInput.js"></script>
 
 </head>
 <body style="background-color: #d5e2ff;">
@@ -27,14 +28,14 @@ if($_POST['meetingButton'] == 'Create'){
         <br>
         <label for="duration">Duration:</label>
         <br>
-        <input type="text" id="duration" name="duration">
+        <input type="text" id="duration" name="duration" onblur="checkInput(this.value)">
         <br>
         <label for="resolution">Resolution:</label>
         <br>
         <input type="text" id="resolution" name="resolution">
         <br>
         <label for="admin">Administrator Meeting</label>
-        <input type="checkbox" id="admin" name="admin">
+        <input type="checkbox" id="admin" name="admin" <?php if($_SESSION['admin'] == 1) echo ""; else echo "disabled"; ?>>
         <br>
         <br>
         <input type="submit" name="create_meeting" value="submit">
@@ -60,14 +61,22 @@ elseif($_POST['meetingButton'] == 'Edit'){
         <br>
         <label for="duration">Duration:</label>
         <br>
-        <input type="text" id="duration" name="duration" value="<?php echo $row['minutes'];?>">
+        <input type="text" id="duration" name="duration" value="<?php echo $row['minutes'];?>" onblur="checkInput(this.value)">
         <br>
         <label for="resolution">Resolution:</label>
         <br>
         <input type="text" id="resolution" name="resolution" value="<?php echo $row['resolution'];?>">
         <br>
         <label for="admin">Administrator Meeting</label>
-        <input type="checkbox" id="admin" name="admin" <?php if($row['administratorMeeting'] == 1)echo "checked"; else echo "";?>>
+        <input type="checkbox" id="admin" name="admin" <?php
+        if($row['administratorMeeting'] == 1)
+            echo "checked";
+        else
+            echo "";
+
+        if($_SESSION['admin'] == 0)
+            echo " disabled";
+        ?>>
         <br>
         <br>
         <input type="hidden" name="meetingID" value="<?php echo $_POST['meetingID'];?>">
