@@ -14,7 +14,7 @@ session_start();
 <?php
 //Create a meeting
 if(isset($_POST['create_meeting'])){
-    $admin = ($_POST['admin'] == "yes") ? 1 : 0;
+    $admin = ($_POST['admin'] == "on") ? 1 : 0;
     $sql = "INSERT INTO meeting (condoAssociationID, administratorMeeting, agenda, time, minutes, resolution, creator) VALUES" .
         "(".$_SESSION['condoAssociationID'].",".$admin .",'". $_POST['agenda']."','".
         $_POST['datetime']."',".$_POST['duration'].",\"".$_POST['resolution']."\",".$_SESSION['ID'].")";
