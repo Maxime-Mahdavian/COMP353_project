@@ -62,6 +62,12 @@ session_start();
     </a>
     <?php
 
+		//print debug messages if there are any
+		if($_SESSION['print_message']) {
+			echo $_SESSION['message']."<br><br>";
+			$_SESSION['print_message'] = false;		//reset boolean tellin us theres a message to print
+		}
+
     if(isset($_POST['create_user'])) {	//handle create user button press
 
         //validate form
@@ -96,13 +102,14 @@ session_start();
 
 						//insert user into database
             $sql = "INSERT INTO Users (name, password, email, primary_address, administrator, status, condoAssociationID, condoClassification) VALUES ('$name', '$password', '$email', '$address', $admin, '$status', $condoAssociationID, '$condoClass')";
-            if (mysqli_query($db, $sql)) echo "new user created"."<br><br>";
-            else echo "failed to create new user<br><br>";
+            if (mysqli_query($db, $sql)) $_SESSION['message'] = "new user created"."<br><br>";
+            else $_SESSION['message'] = "failed to create new user<br><br>";
 
-            //reload page to prevent form resubmission
-            header("Location: " . $_SERVER['PHP_SELF']);
-
-        } else echo "please fill out all input fields to create a user<br><br>";
+        } else $_SESSION['message'] = "please fill out all input fields to create a user<br><br>";
+        
+        //set session variable saying theres a message to print, then reload page
+				$_SESSION['print_message'] = true;
+        header("Location: " . $_SERVER['PHP_SELF']);
 
     }
     ?>
