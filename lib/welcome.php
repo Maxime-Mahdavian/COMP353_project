@@ -68,8 +68,14 @@ include('session.php');
         </div>
         <div class="four wide column">
     			<button style="margin:30px;" class="ui huge blue left labeled icon button" type="submit" name="pay_fee" onclick="window.location.href='pay_fee.php';">
-        		<i class="sign out alternate icon"></i>
+        		<i class="file alternate icon"></i>
         		Pay Fee
+    			</button>
+        </div>
+        <div class="four wide column">
+    			<button style="margin:30px;" class="ui huge blue left labeled icon button" type="submit" name="Association" onclick="window.location.href='condoAssociation.php';">
+        		<i class="file alternate icon"></i>
+        		Condo Association
     			</button>
         </div>
         <div class="four wide column">
