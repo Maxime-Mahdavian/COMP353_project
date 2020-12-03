@@ -40,7 +40,6 @@ if(!isset($_SESSION['username']))
 
     if(mysqli_num_rows($result) == 0){
         echo "<h1>THERE ARE NO POST</h1>";
-        echo "<a href='group.php'>Back</a>";
     }
 
     while($temp = mysqli_fetch_array($result)){

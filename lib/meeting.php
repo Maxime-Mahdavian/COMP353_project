@@ -36,7 +36,7 @@ session_start();
         <?php
 
         //Find all meetings then display them
-        $sql = "SELECT * FROM meeting ORDER BY time ASC";
+        $sql = "SELECT * FROM meeting ORDER BY time DESC";
         $row = mysqli_query($db, $sql);
 
         while($result = mysqli_fetch_array($row)){
