@@ -66,11 +66,20 @@ include('session.php');
             </a>";} ?>
             <!--            --><?php //if($_SESSION['admin'] == 1){echo "<a href = '../admin_page.html'>Admin options</a>";} else{echo "no";}?>
         </div>
+        <div class="four wide column">
+    			<button style="margin:30px;" class="ui huge blue left labeled icon button" type="submit" name="pay_fee" onclick="window.location.href='pay_fee.php';">
+        		<i class="sign out alternate icon"></i>
+        		Pay Fee
+    			</button>
+        </div>
+        <div class="four wide column">
+        	<button style="margin:30px;" class="ui huge blue left labeled icon button" type="submit" name="signout" onclick="window.location.href='logout.php';">
+        		<i class="sign out alternate icon"></i>
+        		Logout
+    			</button>
+    		</div>
     </div>
-    <button style="margin:30px;" class="ui huge blue left labeled icon button" type="submit" name="signout" onclick="window.location.href='logout.php';">
-        <i class="sign out alternate icon"></i>
-        Logout
-    </button>
+    
 
 <!--    <h2><a href="profile.php">My Profile</a></h2>-->
 <!--    <h2><a href = "poll_list.php">poll</a></h2>-->
