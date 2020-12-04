@@ -27,7 +27,7 @@ session_start();
     </form>
 
     <h1 style="margin-left:35px;">Meeting List</h1>
-    <table class="ui inverted purple table" style="width:100%">
+    <table class="ui inverted table" style="width:100%">
         <col style="width:25%">
         <col style="width:15%">
         <col style="width:5%">

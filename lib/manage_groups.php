@@ -21,10 +21,6 @@ session_start();
     Manage Groups <i class="wrench icon"></i>
 </a>
 
-Create group: 
-<br>
-<br>
-
 <?php
 
 if(isset($_POST['create_group'])) {	//handle create group button press
@@ -61,25 +57,42 @@ if(isset($_POST['create_group'])) {	//handle create group button press
 
 
 ?>
-
 <form action="manage_groups.php" method="post">
-		<label for="name">Name:</label>
-		<br>
-		<input type="text" name="name">
-		<br>
-		<label for="desc:">description:</label>
-		<br>
-		<textarea name="desc" rows="4" cols="100"></textarea>
-		<br>
-		<br>
-		<input type="submit" name="create_group" value="submit">
+    <div style="margin:30px;" class="ui two column middle aligned relaxed grid basic segment">
+        <div class="column">
+            <div style=" background-color: #c9d3d8;" class="ui form segment AVAST_PAM_loginform">
+                <h2> Create group: </h2>
+                <div class="field">
+                    <label for="name">Name:</label>
+                    <div class="ui left labeled icon input">
+                        <input style=" border: solid;" type="text" placeholder="name" name="name">
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="desc:">description:</label>
+                    <div class="ui left labeled icon input">
+                        <textarea style=" border: solid;" name="desc" rows="4" cols="100"></textarea>
+                    </div>
+                </div>
+                <input class="ui positive button" type="submit" name="create_group" value="submit">
+            </div>
+        </div>
+    </div>
 </form>
+<!--<form action="manage_groups.php" method="post">-->
+<!--		<label for="name">Name:</label>-->
+<!--		<br>-->
+<!--		<input type="text" name="name">-->
+<!--		<br>-->
+<!--		<label for="desc:">description:</label>-->
+<!--		<br>-->
+<!--		<textarea name="desc" rows="4" cols="100"></textarea>-->
+<!--		<br>-->
+<!--		<br>-->
+<!--		<input type="submit" name="create_group" value="submit">-->
+<!--</form>-->
 
-<form action="../admin_page.html" method="post">
-		<input type="submit" name="back" value="back">
-</form>
-	
-<table style = "width:100%">
+<table style = "width:100%" class="ui inverted table">
 	<tr>
 		<th></th>
 		<th> name </th>
