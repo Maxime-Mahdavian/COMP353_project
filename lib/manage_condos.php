@@ -215,7 +215,7 @@ else echo '<table class="ui selectable inverted table" style="display:none;">';
   		echo "<tr>";
   		echo '<td><form action="manage_condos.php" method="post">';
   		echo '<input type="hidden" name="deleteNum" value="'.$building['buildingID'].'">';
-  		echo '<input type="submit" name="delete_building" value="remove">';
+  		echo '<input class="ui button" type="submit" name="delete_building" value="remove">';
   		echo "</form></td>";
       echo "<td>".$building['buildingID']."</td>";
       echo "<td>".$building['address']."</td>";
@@ -245,11 +245,11 @@ else echo '<table class="ui selectable inverted table" style="display:none;">';
   		echo "<tr>";
   		echo '<td><form action="manage_condos.php" method="post">';
   		echo '<input type="hidden" name="deleteNum" value="'.$condo['condoID'].'">';
-  		echo '<input type="submit" name="delete_condo" value="remove">';		//delete button for condos
+  		echo '<input class="ui red button" type="submit" name="delete_condo" value="remove">';		//delete button for condos
   		echo "</form>";
   		echo '<form action="assign_condo_owner.php" method="post">';	//goto assign_condo_owner.php on 'set owner' button press
   		echo '<input type="hidden" name="condoNum" value="'.$condo['condoID'].'">';
-  		echo '<input type="submit" name="assign_condo" value="Set Owner">';	//button for setting new condo owner
+  		echo '<input class="ui green button" type="submit" name="assign_condo" value="Set Owner">';	//button for setting new condo owner
   		echo "</form></td>";
       echo "<td>".$condo['condoID']."</td>";
       if(empty($condo['owner'])) echo "<td>-</td>";		//display empty line if no owner
@@ -281,7 +281,7 @@ else echo '<table class="ui selectable inverted table" style="display:none;">';
   		echo "<tr>";
   		echo '<td><form action="manage_condos.php" method="post">';
   		echo '<input type="hidden" name="deleteNum" value="'.$building['buildingID'].'">';
-  		echo '<input type="submit" name="delete_parking" value="remove">';		//delete button for parking spaces
+  		echo '<input class="ui red button" type="submit" name="delete_parking" value="remove">';		//delete button for parking spaces
   		echo "</form></td>";
       echo "<td>".$parking['parkingSpaceID']."</td>";
       echo "<td>".$parking['condoID']."</td>";

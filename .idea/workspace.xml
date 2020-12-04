@@ -21,8 +21,14 @@
   <component name="ChangeListManager">
     <list default="true" id="c79632d8-bb1c-49a7-aa54-a77b20adaf07" name="Default Changelist" comment="ui updated">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/poll_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/poll_list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/poll.php" beforeDir="false" afterPath="$PROJECT_DIR$/poll.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/condoAssociation.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/condoAssociation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/contracts.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/contracts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/create_message.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/create_message.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/manage_condos.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/manage_condos.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/manage_groups.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/manage_groups.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/message.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/message.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view_post.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view_post.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +50,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.4" />
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProjectId" id="1jq6Vw4ezLLttDZgDKoDOtA5oZM" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -254,7 +260,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607043303448</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="ui updated">
+      <created>1607043953435</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1607043953435</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -288,10 +301,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="ui updated" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2522" y="132" width="585" height="582" key="#PHP" timestamp="1606763293039">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state x="483" y="113" width="585" height="582" key="#PHP" timestamp="1607050821005">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="483" y="113" width="585" height="582" key="#PHP/0.0.1536.824@0.0.1536.824" timestamp="1606719708013" />
+    <state x="483" y="113" width="585" height="582" key="#PHP/0.0.1536.824@0.0.1536.824" timestamp="1607050821005" />
     <state x="2522" y="132" width="698" height="762" key="#PHP/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1606763293039" />
     <state x="2194" y="367" width="1362" height="318" key="#SQL_Dialects" timestamp="1605535636053">
       <screen x="1920" y="0" width="1920" height="1080" />
@@ -367,10 +380,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2365" y="151" key="SettingsEditor/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605292265078" />
-    <state x="433" y="131" width="804" height="516" key="Vcs.Push.Dialog.v2" timestamp="1607043305797">
+    <state x="433" y="131" width="804" height="516" key="Vcs.Push.Dialog.v2" timestamp="1607043955895">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="433" y="131" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1607043305797" />
+    <state x="433" y="131" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1607043955895" />
     <state x="2451" y="92" width="804" height="516" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1607026266123" />
     <state x="663" y="300" width="312" height="243" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1606696537737">
       <screen x="0" y="0" width="1536" height="824" />
@@ -388,10 +401,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2490" y="145" width="766" height="730" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605192660113" />
-    <state x="577" y="218" width="433" height="172" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607043294544">
+    <state x="577" y="218" width="433" height="172" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607043948140">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="577" y="218" width="363" height="169" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1607043294544" />
+    <state x="577" y="218" width="363" height="169" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1607043948140" />
     <state x="2631" y="206" width="433" height="172" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1607012854840" />
     <state x="0" y="0" width="980" height="810" key="dock-window-1" timestamp="1607037855642">
       <screen x="0" y="0" width="1536" height="824" />
@@ -402,10 +415,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2640" y="427" width="469" height="197" key="git4idea.ui.GitResetDialog/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1606142318121" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1607036421117">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1607044985703">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1607036421117" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1607044985703" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

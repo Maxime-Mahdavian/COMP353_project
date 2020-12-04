@@ -7,6 +7,7 @@ session_start();
 <html>
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <title>Manage Groups</title>
 </head>
 <body style="background-color: #d5e2ff;">
 <div style = "background-color:#aca3ec; height:100px; color:#4D39D6; padding:3px;"><b><br><i class="huge chess rook icon"></i></b><b align="middle" style="margin-bottom:10px; color:white; font-size:40px;">CON</b></div>
@@ -109,7 +110,7 @@ if(isset($_POST['create_group'])) {	//handle create group button press
   		echo "<tr>";
   		echo '<td><form action="edit_group.php" method="post">';		//goto edit_group.php on manage group button press 
   		echo '<input type="hidden" id="groupID" name="groupID" value="'.$group['groupID'].'">';	//send group id as well
-  		echo '<input type="submit" name="manage" value="manage">';
+  		echo '<input class="ui button" type="submit" name="manage" value="manage">';
   		echo "</form></td>";
       echo "<td>".$group['name']."</td>";
       echo "<td>".$group['description']."</td>";

@@ -17,13 +17,14 @@ if(!isset($_SESSION['username']))
 <div style = "background-color:#aca3ec; height:100px; color:#4D39D6; padding:3px;"><b><br><i class="huge chess rook icon"></i></b><b align="middle" style="margin-bottom:10px; color:white; font-size:40px;">CON</b></div>
 <br>
 <br>
-<a style="margin:30px; font-size: 40px; color:black;" class="item">
-    Posts <i class="globe icon"></i>
-</a>
-<button style="margin:30px; position: fixed; top: 0; right: 0;" class="ui blue left labeled icon button" type="submit" name="back" onclick="window.location.href='welcome.php';">
+<button style="margin-left:1320px" class="ui blue left labeled icon button" type="submit" name="back" onclick="window.location.href='welcome.php';">
     <i class="left arrow icon"></i>
     Back to Main Page
 </button>
+<a style="margin:30px; font-size: 40px; color:black;" class="item">
+    Posts <i class="globe icon"></i>
+</a>
+<br><br><br>
 <div >
     <?php
     //$db = mysqli_connect('localhost', 'dummy', 'something', 'post_test') or die("Cannot connect to db");
@@ -39,41 +40,42 @@ if(!isset($_SESSION['username']))
     }
 
     if(mysqli_num_rows($result) == 0){
-        echo "<h1>THERE ARE NO POST</h1>";
+        echo "<h1 style='margin-left:40px;'>THERE ARE NO POST</h1>";
     }
 
     while($temp = mysqli_fetch_array($result)){
-        /*if($_SESSION['groupID'] != $temp['groupID'])
-            continue;*/
-        $sql = "SELECT name FROM Users x WHERE x.userID =" . $temp['userID'];
-        $x = mysqli_query($db,$sql);
-        $poster = mysqli_fetch_array($x);
-        $sql = "SELECT name FROM `groups` g, post p WHERE (p.postID =". $temp['postID'] . " and p.groupID = g.groupID)";
-        $y = mysqli_query($db, $sql);
-        $nameOfGroup = mysqli_fetch_array($y);
-        echo "<h1>" . $temp['title']."</h1><br>";
-        echo "<h2> Posted on: " . $temp['timestamp'] ." By " . $poster['name'] . "</h2>";
+        echo "<div style=' background-color: white; margin-left:40px; border: solid; border-radius: 7px; width:80%;'>";
+            /*if($_SESSION['groupID'] != $temp['groupID'])
+                continue;*/
+            $sql = "SELECT name FROM Users x WHERE x.userID =" . $temp['userID'];
+            $x = mysqli_query($db,$sql);
+            $poster = mysqli_fetch_array($x);
+            $sql = "SELECT name FROM `groups` g, post p WHERE (p.postID =". $temp['postID'] . " and p.groupID = g.groupID)";
+            $y = mysqli_query($db, $sql);
+            $nameOfGroup = mysqli_fetch_array($y);
+            echo "<div><p style='font-size: xx-large; font-weight: bold'>" . $temp['title']."</p>";
+            echo "<p> Posted on: " . $temp['timestamp'] ." By " . $poster['name'] . "</p></div>";
 
-        if($temp['perm'] == "public"){
-            echo "<h2>Public</h2>";
-        }
-        elseif ($temp['perm'] == "private"){
-            echo "<h2>Private</h2>";
-        }
-        elseif($temp['perm'] == "Ad"){
-            echo "<h2>Ad</h2>";
-        }
-        else{
-            echo "<h2> Group: " . $nameOfGroup['name'] . "</h2>";
-        }
-        echo "<p>" . $temp['body'] . "</p><br>";
-        echo "<img src=". $temp['img'] . " onerror='this.onerror=null; this.remove();' height='200px'; width='400px'><br>";
-        echo "<h3>Leave a comment:</h3>";
-        echo "<form action='../comment_page.php' method='post' id='commentForm'>";
-        echo "<input type='hidden' name='postid' value='". $temp['postID']."' />";
-        echo "<input style='left-margin:15px;' class='ui button' type='submit' name='comment'value='Comment'/>";
-        echo "</form>";
-        echo "<hr>";
+            if($temp['perm'] == "public"){
+                echo "<h2>Public</h2>";
+            }
+            elseif ($temp['perm'] == "private"){
+                echo "<h2>Private</h2>";
+            }
+            elseif($temp['perm'] == "Ad"){
+                echo "<h2>Ad</h2>";
+            }
+            else{
+                echo "<h2> Group: " . $nameOfGroup['name'] . "</h2>";
+            }
+            echo "<p>" . $temp['body'] . "</p><br>";
+            echo "<img src=". $temp['img'] . " onerror='this.onerror=null; this.remove();' height='200px'; width='400px'><br><br>";
+            echo "<form action='../comment_page.php' method='post' id='commentForm'>";
+            echo "<input type='hidden' name='postid' value='". $temp['postID']."' />";
+            echo "<input style='left-margin:1000px;' class='ui blue button' type='submit' name='comment'value='Comment'/>";
+            echo "</form>";
+            echo "<hr>";
+        echo "</div><br>";
     }
     ?>
 </div>

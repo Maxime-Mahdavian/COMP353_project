@@ -51,7 +51,7 @@ session_start();
             $x = mysqli_query($db,$sql);
             $temp = mysqli_fetch_array($x);
             echo "<td>" . $temp['name'] . "</td>";
-            echo "<td style='width: 400px; height: 200px;'><textarea class='bodyclass' readonly>" . $result['message'] . "</textarea></td>";
+            echo "<td style='width: 800px; height: 200px;'><textarea style='width: 800px ; height:150px; border: solid; border-radius: 5px' class='bodyclass' readonly>" . $result['message'] . "</textarea></td>";
             echo "<td>" . $result['timestamp'] . "</td>";
             echo '<form action="create_message.php" method="post">';
             echo "<td><input class='ui black button' type='submit' value='Reply' name='replyButton'></td>";
@@ -64,6 +64,5 @@ session_start();
         }
         ?>
     </table>
-    <a href="welcome.php">Back</a>
 </body>
 </html>

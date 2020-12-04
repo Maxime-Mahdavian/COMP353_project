@@ -65,7 +65,7 @@ session_start();
     ?>
 </table>
 
-<h1>Maintenance list</h1>
+<h1 style="margin-left:35px;">Maintenance list</h1>
 <table border="1" class="ui inverted table">
     <tr>
         <th>Rationale</th>
