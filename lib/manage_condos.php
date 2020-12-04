@@ -3,78 +3,87 @@ include('config.php');
 session_start();
 ?>
 
-
-
 <html>
 
 <head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
-<style>
-#container {
-  display: flex;                  /* establish flex container */
-  flex-direction: row;            /* default value; can be omitted */
-  flex-wrap: nowrap;              /* default value; can be omitted */
-  justify-content: space-between; /* switched from default (flex-start, see below) */
-}
-#container > div {
-  width: 300px;
-  height: 300px;
-  top: 50%;
-  left: 50%;
-  right: 50%;
-  text-align: center;
-}
-</style>
+    <title>Manage Condos </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
 </head>
 
-
 <body style="background-color: #d5e2ff;">
-<br>
-<br>
-	
-	
-<div id="container">
-  <div>
-  	<h2> Add Building </h2>
-  	<form action="manage_condos.php" method="post">
-    	<label for="building_address">address:</label>
-			<br>
-			<input type="text" name="building_address">
-			<br>
-			<br>
-			<input type="submit" name="add_building" value="confirm">
-			<br>
-		</form>
-	</div>
-  <div>
-  	<h2> Add Condo </h2>
-  	<form action="manage_condos.php" method="post">
-    	<label for="floor_space">floor Space (ft^2):</label>
-			<br>
-			<input type="text" name="floor_space">
-			<br>
-			<label for="building_number">Building Number:</label>
-			<br>
-			<input type="text" name="building_number">
-			<br>
-			<br>
-			<input type="submit" name="add_condo" value="confirm">
-			<br>
-		</form>
-	</div>
-	<div>
-	  <h2> Add Parking Space </h2>
-	  <form action="manage_condos.php" method="post">
-	   	<label for="condo_number">Assign to Condo Num:</label>
-			<br>
-			<input type="text" name="condo_number">
-			<br>
-			<br>
-			<input type="submit" name="add_parking_space" value="confirm">
-			<br>
-		</form>
-	</div>
-</div>
+<div style = "background-color:#aca3ec; height:100px; color:#4D39D6; padding:3px;"><b><br><i class="huge chess rook icon"></i></b><b align="middle" style="margin-bottom:10px; color:white; font-size:40px;">CON</b></div>
+<br><br>
+<form action="../admin_page.html" method="post">
+    <button style="margin-left:1275px" class="ui blue left labeled icon button" type="submit" name="back" >
+        <i class="left arrow icon"></i>
+        Back to Administrator Options
+    </button>
+</form>
+<a style="margin-left:30px; font-size: 40px; color:black;" class="item">
+    Manage Condos<i class="wrench icon"></i>
+</a>
+
+<form action="manage_condos.php" method="post">
+    <div style="margin:30px;" class="ui two column middle aligned relaxed grid basic segment">
+        <div class="column">
+            <div style=" background-color: #c9d3d8;" class="ui form segment AVAST_PAM_loginform">
+                <div class="field">
+                    <h2> Add Building </h2>
+                    <label for="building_address">Address:</label>
+                    <div class="ui left labeled icon input">
+                        <input style=" border: solid;" type="text" placeholder="Address" name="building_address" >
+                        <i class="building icon"></i>
+                    </div>
+                </div>
+                <input class="ui positive button" type="submit" name="add_building" value="confirm">
+            </div>
+        </div>
+    </div>
+</form>
+
+<form action="manage_condos.php" method="post">
+    <div style="margin:30px;" class="ui two column middle aligned relaxed grid basic segment">
+        <div class="column">
+            <div style=" background-color: #c9d3d8;" class="ui form segment AVAST_PAM_loginform">
+                <div class="field">
+                    <h2> Add Condo </h2>
+                    <label for="floor_space">Floor Space in ft<sup>2</sup>:</label>
+                    <div class="ui left labeled icon input">
+                        <input style=" border: solid;" type="text" placeholder="Floor Space" name="floor_space" >
+                        <i class="crop icon"></i>
+                    </div>
+                </div>
+                <div class="field">
+                    <h2> Add Condo </h2>
+                    <label for="building_number">Building Number:</label>
+                    <div class="ui left labeled icon input">
+                        <input style=" border: solid;" type="text" placeholder="Building Number" name="building_number" >
+                        <i class="building outline icon"></i>
+                    </div>
+                </div>
+                <input class="ui positive button" type="submit" name="add_condo" value="confirm">
+            </div>
+        </div>
+    </div>
+</form>
+
+<form action="manage_condos.php" method="post">
+    <div style="margin:30px;" class="ui two column middle aligned relaxed grid basic segment">
+        <div class="column">
+            <div style=" background-color: #c9d3d8;" class="ui form segment AVAST_PAM_loginform">
+                <div class="field">
+                    <h2> Add Parking Space </h2>
+                    <label for="condo_number">Address:</label>
+                    <div class="ui left labeled icon input">
+                        <input style=" border: solid;" type="text" placeholder="Address" name="condo_number" >
+                        <i class="building outline icon"></i>
+                    </div>
+                </div>
+                <input class="ui positive button" type="submit" name="add_parking_space" value="confirm">
+            </div>
+        </div>
+    </div>
+</form>
 
 <?php
 
@@ -181,16 +190,10 @@ session_start();
 	
 ?>
 
-<form action="../admin_page.html" method="post">
-	<input type="submit" name="back" value="back">
-</form>
-
-<br>
-
-<form action="manage_condos.php" method="post">
-	<input type="submit" name="show_buildings" value="list buildings">
-	<input type="submit" name="show_condos" value="list condos">
-	<input type="submit" name="show_parking" value="list parking">
+<form style="margin:30px;" action="manage_condos.php" method="post">
+	<input class="ui blue button" type="submit" name="show_buildings" value="list buildings">
+	<input class="ui blue button" type="submit" name="show_condos" value="list condos">
+	<input class="ui blue button" type="submit" name="show_parking" value="list parking">
 </form>
 
 
@@ -204,7 +207,8 @@ else echo '<table class="ui selectable inverted table" style="display:none;">';
         <th></th>
         <th>Building Number</th>
         <th> Address </th>
-		</tr>
+    </tr>
+    </thead>
 <?php
   $building_query = mysqli_query($db, "SELECT * FROM buildings");
   while($building = mysqli_fetch_array($building_query)){
@@ -232,6 +236,8 @@ else echo '<table class="ui selectable inverted table" style="display:none;">';
         <th> Owner </th>
         <th> Building Number </th>
         <th> Floor Space (ft^2)</th>
+    </tr>
+    </thead>
 <?php
   $condo_query = mysqli_query($db, " SELECT condoID,name as owner,buildingID,floorspace FROM condos,Users WHERE ownerID=userID UNION select * FROM condos WHERE ownerID IS NULL;
 ");
@@ -267,6 +273,8 @@ else echo '<table class="ui selectable inverted table" style="display:none;">';
         <th></th>
         <th> Parking Spot Number </th>
         <th> Assigned Condo Number </th>
+    </tr>
+    </thead>
 <?php
   $parking_query = mysqli_query($db, "SELECT * FROM parkingSpaces");
   while($parking = mysqli_fetch_array($parking_query)){

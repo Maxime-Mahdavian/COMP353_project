@@ -9,22 +9,39 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <title>Contracts page</title>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
 </head>
-<body>
+<body style="background-color: #d5e2ff;">
+<div style = "background-color:#aca3ec; height:100px; color:#4D39D6; padding:3px;"><b><br><i class="huge chess rook icon"></i></b><b align="middle" style="margin-bottom:10px; color:white; font-size:40px;">CON</b></div>
+<br><br>
+<form action="../admin_page.html" method="post">
+    <button style="margin-left:1275px" class="ui blue left labeled icon button" type="submit" name="back" >
+        <i class="left arrow icon"></i>
+        Back to Administrator Options
+    </button>
+</form>
+<a style="margin:30px; font-size: 40px; color:black;" class="item">
+    Manage Contracts <i class="wrench icon"></i>
+</a>
+<br>
 
 <h1 style="margin-left:35px;" >Create Contract</h1>
 <form action="contract_functions.php" method="post">
     <input style="margin-left:45px;" class="ui blue button" type="submit" value="Create" name="ContractButton" >
 </form>
 
-<h1>Create Maintenance</h1>
+<h1 style="margin-left:35px;">Create Maintenance</h1>
 <form action="contract_functions.php" method="post">
     <input style="margin-left:45px;" class="ui blue button" type="submit" value="Create" name="MaintenanceButton" >
 </form>
 
-<h1>Contract List</h1>
-<table border="1">
+<h1 style="margin-left:35px;">Contract List</h1>
+<table border="1" class="ui inverted table" style="width:100%;">
+    <col style="width:20%">
+    <col style="width:50%">
+    <col style="width:15%">
+    <col style="width:10%">
+    <col style="width:5%">
     <tr>
         <th>Contractor</th>
         <th>Description</th>
@@ -64,8 +81,13 @@ session_start();
     ?>
 </table>
 
-<h1>Contribution List</h1>
-<table border="1">
+<h1 style="margin-left:35px;">Contribution List</h1>
+<table border="1" class="ui inverted table" style="width:100%;">
+    <col style="width:30%">
+    <col style="width:20%">
+    <col style="width:15%">
+    <col style="width:20%">
+    <col style="width:5%">
     <tr>
         <th>Reason</th>
         <th>Donator</th>
@@ -104,8 +126,14 @@ session_start();
     ?>
 </table>
 
-<h1>Maintenance list</h1>
-<table border="1">
+<h1 style="margin-left:35px;">Maintenance list</h1>
+<table border="1" class="ui inverted table" style="width:100%;">
+    <col style="width:25%">
+    <col style="width:25%">
+    <col style="width:15%">
+    <col style="width:15%">
+    <col style="width:15%">
+    <col style="width:5%">
     <tr>
         <th>Rationale</th>
         <th>Contractor</th>
@@ -143,7 +171,5 @@ session_start();
     ?>
 </table>
 
-
-<a href="../admin_page.html">Back</a>
 </body>
 </html>

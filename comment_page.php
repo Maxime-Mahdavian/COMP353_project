@@ -5,10 +5,15 @@
         Comments Example Page
     </title>
     <script src="comments.js"></script>
-    <link href="theme.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
 </head>
-<body>
+<body style="background-color: #d5e2ff;">
 <div style = "background-color:#aca3ec; height:100px; color:#4D39D6; padding:3px;"><b><br><i class="huge chess rook icon"></i></b><b align="middle" style="margin-bottom:10px; color:white; font-size:40px;">CON</b></div>
+<br><br>
+<button style="margin-left:1325px" class="ui blue left labeled icon button" type="submit" name="back" onclick="window.location.href='view_post.php';">
+    <i class="left arrow icon"></i>
+    Back to Posts
+</button>
 <?php
 include("lib/config.php");
 session_start();

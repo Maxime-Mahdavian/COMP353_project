@@ -6,26 +6,20 @@ session_start();
 <html>
 
 <head>
-<style>
-
-table, th, td {
-  border: 1px solid black;
-  border-collapse: collapse;
-}
-
-th, td {
-  padding: 5px;
-}
-
-th {
-  text-align: left;
-}
-
-</style>
+    <title>Pay Fee</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
 </head>
 
-<body>
-
+<body style="background-color: #d5e2ff;">
+<div style = "background-color:#aca3ec; height:100px; color:#4D39D6; padding:3px;"><b><br><i class="huge chess rook icon"></i></b><b align="middle" style="margin-bottom:10px; color:white; font-size:40px;">CON</b></div>
+<br><br>
+<button style="margin-left:1320px" class="ui blue left labeled icon button" type="submit" name="back" onclick="window.location.href='welcome.php';">
+    <i class="left arrow icon"></i>
+    Back to Main Page
+</button>
+<a style="margin-left:30px; font-size: 40px; color:black;" class="item">
+    Pay Fee <i class="file alternate icon"></i>
+</a>
 <?php
 
 	//print debug messages if there are any
@@ -69,33 +63,65 @@ th {
 	}
 
 ?>
+<table style = "width:100%">
+    			<tr>
+    				<th></th>
+    				<th> condo Number </th>
+    			</tr>
+
+    			<?php
+    			  $condo_query = mysqli_query($db, "SELECT condoID FROM condos WHERE ownerID=".$_SESSION['ID'].";");
+      			while($condo = mysqli_fetch_array($condo_query)){
+      				echo '<td><input type="checkbox" name="condo'.$condo['condoID'].'"></td>';
+        	  	echo "<td>".$condo['condoID']."</td>";
+        	  	echo "</tr>";
+      			}
+    			?>
+</table>
 
 <form action="pay_fee.php" method="post">
-		
-		<table style = "width:100%">
-			<tr>
-				<th></th>
-				<th> condo Number </th>
-			</tr>
-		
-			<?php
-			  $condo_query = mysqli_query($db, "SELECT condoID FROM condos WHERE ownerID=".$_SESSION['ID'].";");
-  			while($condo = mysqli_fetch_array($condo_query)){
-  				echo '<td><input type="checkbox" name="condo'.$condo['condoID'].'"></td>';
-    	  	echo "<td>".$condo['condoID']."</td>";
-    	  	echo "</tr>";
-  			}
-			?>
-		</table>
-		<br>
-		<label for="amount">amount</label>
-		<br>
-		<input type="text" name="amount">
-		<br>
-		<br>
-		<input type="submit" name="create_fee" value="confirm">
-		<input type="submit" name="cancel" value="cancel">
+    <div style="margin:30px;" class="ui two column middle aligned relaxed grid basic segment">
+        <div class="column">
+            <div style=" background-color: #c9d3d8;" class="ui form segment AVAST_PAM_loginform">
+                <div class="field">
+                    <h2 for="amount"> Amount: </h2>
+                    <div class="ui left labeled icon input">
+                        <input style=" border: solid;" type="text" placeholder="Amount" name="amount" >
+                        <i class="dollar sign icon"></i>
+                    </div>
+                </div>
+                <input class="ui positive button" type="submit" name="create_fee" value="confirm">
+                <input class="ui negative button" type="submit" name="cancel" value="cancel">
+            </div>
+        </div>
+    </div>
 </form>
+<!--<form action="pay_fee.php" method="post">-->
+<!--		-->
+<!--		<table style = "width:100%">-->
+<!--			<tr>-->
+<!--				<th></th>-->
+<!--				<th> condo Number </th>-->
+<!--			</tr>-->
+<!--		-->
+<!--			--><?php
+//			  $condo_query = mysqli_query($db, "SELECT condoID FROM condos WHERE ownerID=".$_SESSION['ID'].";");
+//  			while($condo = mysqli_fetch_array($condo_query)){
+//  				echo '<td><input type="checkbox" name="condo'.$condo['condoID'].'"></td>';
+//    	  	echo "<td>".$condo['condoID']."</td>";
+//    	  	echo "</tr>";
+//  			}
+//			?>
+<!--		</table>-->
+<!--		<br>-->
+<!--		<label for="amount">amount</label>-->
+<!--		<br>-->
+<!--		<input type="text" name="amount">-->
+<!--		<br>-->
+<!--		<br>-->
+<!--		<input type="submit" name="create_fee" value="confirm">-->
+<!--		<input type="submit" name="cancel" value="cancel">-->
+<!--</form>-->
 
 
 

@@ -14,17 +14,26 @@ session_start();
 <body style="background-color: #d5e2ff;">
 <div style = "background-color:#aca3ec; height:100px; color:#4D39D6; padding:3px;"><b><br><i class="huge chess rook icon"></i></b><b align="middle" style="margin-bottom:10px; color:white; font-size:40px;">CON</b></div>
     <br><br>
-    <a style="margin:30px; font-size: 40px;" class="item">
+<button style="margin-left:1310px" class="ui blue left labeled icon button" type="submit" name="back" onclick="window.location.href='welcome.php';">
+    <i class="left arrow icon"></i>
+    Back to Main Page
+</button>
+    <a style="margin:30px; font-size: 40px; color:black;" class="item">
         Meetings<i class="calendar alternate icon"></i>
     </a>
-    <br>
     <h1 style="margin-left:35px;" >Create meeting</h1>
     <form action="meeting_function.php" method="post">
         <input style="margin-left:45px;" class="ui blue button" type="submit" value="Create" name="meetingButton" >
     </form>
 
     <h1 style="margin-left:35px;">Meeting List</h1>
-    <table class="ui inverted purple table" style="margin-left:45px;">
+    <table class="ui inverted purple table" style="width:100%">
+        <col style="width:25%">
+        <col style="width:15%">
+        <col style="width:5%">
+        <col style="width:30%">
+        <col style="width:15%">
+        <col style="width:10%">
         <tr>
             <th>Agenda</th>
             <th>Time</th>
@@ -69,9 +78,5 @@ session_start();
         }
         ?>
     </table>
-    <button style="margin:30px;" class="ui blue left labeled icon button" type="submit" name="back" onclick="window.location.href='welcome.php';">
-        <i class="left arrow icon"></i>
-        Back to Main Page
-    </button>
 </body>
 </html>
