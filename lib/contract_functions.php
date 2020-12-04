@@ -23,9 +23,9 @@ session_start();
 //This is the form displayed if the user wants to create a contribution
 if($_POST['ContributionButton'] == 'Create'){
     ?>
-    <button style="margin-left:1320px" class="ui blue left labeled icon button" type="submit" name="back" onclick="window.location.href='contracts.php';">
+    <button style="margin-left:1370px" class="ui blue left labeled icon button" type="submit" name="back" onclick="window.location.href='contracts.php';">
         <i class="left arrow icon"></i>
-        Back to Main Page
+        Back
     </button>
     <form action="edit_contract.php" method="post">
         <div style="margin:30px;" class="ui two column middle aligned relaxed grid basic segment">
@@ -97,9 +97,9 @@ if($_POST['ContributionButton'] == 'Create'){
 //Form to create a contract
 elseif (isset($_POST['ContractButton'])){
     ?>
-    <button style="margin-left:1320px" class="ui blue left labeled icon button" type="submit" name="back" onclick="window.location.href='manage_contract.php';">
+    <button style="margin-left:1370px" class="ui blue left labeled icon button" type="submit" name="back" onclick="window.location.href='manage_contract.php';">
         <i class="left arrow icon"></i>
-        Back to Main Page
+        Back
     </button>
     <form action="edit_contract.php" method="post">
         <div style="margin:30px;" class="ui two column middle aligned relaxed grid basic segment">
@@ -148,9 +148,9 @@ elseif (isset($_POST['ContractButton'])){
 //Form to create a maintenance
 elseif (isset($_POST['MaintenanceButton'])){
     ?>
-    <button style="margin-left:1320px" class="ui blue left labeled icon button" type="submit" name="back" onclick="window.location.href='manage_contract.php';">
+    <button style="margin-left:1370px" class="ui blue left labeled icon button" type="submit" name="back" onclick="window.location.href='manage_contract.php';">
         <i class="left arrow icon"></i>
-        Back to Main Page
+        Back
     </button>
 <form action="edit_contract.php" method="post">
     <div style="margin:30px;" class="ui two column middle aligned relaxed grid basic segment">

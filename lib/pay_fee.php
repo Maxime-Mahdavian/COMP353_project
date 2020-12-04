@@ -70,10 +70,9 @@ session_start();
     <div class="column">
         <div style=" background-color: #c9d3d8;" class="ui form segment AVAST_PAM_loginform">
             <div class="field">
-                <h2>For Condo Number:</h2>
+                <label style="font-size: 20px;">For Condo Number:</label>
                 <table>
                     <tr>
-                        <td></td>
                         <?php
                         $condo_query = mysqli_query($db, "SELECT condoID FROM condos WHERE ownerID=".$_SESSION['ID'].";");
                         while($condo = mysqli_fetch_array($condo_query)){

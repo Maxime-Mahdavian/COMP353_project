@@ -23,13 +23,17 @@ session_start();
 </a>
 <br>
 
-<h1 style="margin-left:35px;" >Create Contribution</h1>
+<h1 style="margin-left:40px;" >Create Contribution</h1>
 <form action="contract_functions.php" method="post">
-    <input style="margin-left:45px;" class="ui blue button" type="submit" value="Create" name="ContributionButton" >
+    <input style="margin-left:50px;" class="ui blue button" type="submit" value="Create" name="ContributionButton" >
 </form>
 
-<h1 style="margin-left:35px;">Contribution List</h1>
-<table border="1" class="ui inverted table">
+<h1 style="margin-left:40px;">Contribution List</h1>
+<table style="margin-left:50px; width:70%;" border="1" class="ui inverted table">
+    <col style="width:50%">
+    <col style="width:15%">
+    <col style="width:20%">
+    <col style="width:15%">
     <tr>
         <th>Reason</th>
         <th>Donator</th>
@@ -65,8 +69,13 @@ session_start();
     ?>
 </table>
 
-<h1 style="margin-left:35px;">Maintenance list</h1>
-<table border="1" class="ui inverted table">
+<h1 style="margin-left:40px;">Maintenance list</h1>
+<table style="margin-left:50px; width:70%;" border="1" class="ui inverted table">
+    <col style="width:45%">
+    <col style="width:15%">
+    <col style="width:15%">
+    <col style="width:10%">
+    <col style="width:15%">
     <tr>
         <th>Rationale</th>
         <th>Contractor</th>

@@ -8,9 +8,18 @@ session_start();
 <html>
 <head>
     <title>Contract functions</title>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
 </head>
-<body>
+<body style="background-color: #d5e2ff;">
+<div style = "background-color:#aca3ec; height:100px; color:#4D39D6; padding:3px;"><b><br><i class="huge chess rook icon"></i></b><b align="middle" style="margin-bottom:10px; color:white; font-size:40px;">CON</b></div>
+<br><br>
+<button style="margin-left:1370px" class="ui blue left labeled icon button" type="submit" name="back" onclick="window.location.href='manage_contract.php';">
+    <i class="left arrow icon"></i>
+    Back
+</button>
+<a style="margin-left:30px; font-size: 40px; color:black;" class="item">
+    Edit Contract <i class="file alternate icon"></i>
+</a>
 <?php
 //We need to add the contribution in the db
 if(isset($_POST['create_contribution'])){
@@ -22,12 +31,10 @@ if(isset($_POST['create_contribution'])){
 
     $result = mysqli_query($db, $sql) or die(mysqli_error($db));
     if($result){
-        echo "<h1>Contribution created</h1>";
-        echo "<button><a href='contracts.php'>Back</a></button>";
+        echo "<h1 style='margin-left:50px; color: green;'>Contribution created</h1>";
     }
     else{
-        echo "<h1>Error creating the contribution</h1>";
-        echo "<button><a href='contracts.php'>Back</a></button>";
+        echo "<h1 style='margin-left:50px; color: red;'>Error creating the contribution</h1>";
     }
 }
 //Deactivate a contract
@@ -37,8 +44,7 @@ elseif(isset($_POST['DeactivateButton'])) {
     $result = mysqli_query($db,$sql) or die (mysqli_error());
 
     if($result){
-        echo "<h1>Contract updated</h1>";
-        echo "<button><a href='manage_contract.php'>Back</a></button>";
+        echo "<h1 style='margin-left:50px; color: green;'>Contract updated</h1>";
     }
 }
 //Activate a contract, in real life, this would not be super realistic, since terms for contracts would probably change
@@ -49,8 +55,7 @@ elseif(isset($_POST['ActivateButton'])) {
     $result = mysqli_query($db,$sql) or die (mysqli_error($db));
 
     if($result){
-        echo "<h1>Contract updated</h1>";
-        echo "<button><a href='manage_contract.php'>Back</a></button>";
+        echo "<h1 style='margin-left:50px; color: green;'>Contract updated</h1>";
     }
 }
 //Delete a contribution
@@ -60,8 +65,7 @@ elseif(isset($_POST['DelContributionButton'])){
     $result = mysqli_query($db,$sql) or die(mysqli_error($db));
 
     if($result){
-        echo "<h1>Contribution Deleted</h1>";
-        echo "<button><a href='manage_contract.php'>Back</a></button>";
+        echo "<h1 style='margin-left:50px; color: green;'>Contribution Deleted</h1>";
     }
 }
 
@@ -72,8 +76,7 @@ elseif(isset($_POST['DelMaintenanceButton'])){
     $result = mysqli_query($db,$sql) or die(mysqli_error($db));
 
     if($result){
-        echo "<h1>Maintenance Deleted</h1>";
-        echo "<button><a href='manage_contract.php'>Back</a></button>";
+        echo "<h1 style='margin-left:50px; color: green;'>Maintenance Deleted</h1>";
     }
 }
 //Create a contract
@@ -86,12 +89,10 @@ elseif (isset($_POST['create_contract'])){
 
     $result = mysqli_query($db, $sql);
     if($result){
-        echo "<h1>Contract created</h1>";
-        echo "<button><a href='manage_contract.php'>Back</a></button>";
+        echo "<h1 style='margin-left:50px; color: green;'>Contract created</h1>";
     }
     else{
-        echo "<h1>Error creating the contract</h1>";
-        echo "<button><a href='manage_contract.php'>Back</a></button>";
+        echo "<h1 style='margin-left:50px; color: red;'>Error creating the contract</h1>";
     }
 }
 //Create a maintenance
@@ -109,12 +110,10 @@ elseif (isset($_POST['create_maintenance'])){
 
     $result = mysqli_query($db, $sql);
     if($result){
-        echo "<h1>Maintenance created</h1>";
-        echo "<button><a href='manage_contract.php'>Back</a></button>";
+        echo "<h1 style='margin-left:50px; color: green;'>Maintenance created</h1>";
     }
     else{
-        echo "<h1>Error creating the maintenance</h1>";
-        echo "<button><a href='manage_contract.php'>Back</a></button>";
+        echo "<h1 style='margin-left:50px; color: red;'>Error creating the maintenance</h1>";
     }
 }
 

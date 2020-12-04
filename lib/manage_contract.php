@@ -36,7 +36,7 @@ session_start();
 </form>
 
 <h1 style="margin-left:35px;">Contract List</h1>
-<table border="1" class="ui inverted table" style="width:100%;">
+<table class="ui inverted table" style="width:100%;">
     <col style="width:20%">
     <col style="width:50%">
     <col style="width:15%">
@@ -82,7 +82,7 @@ session_start();
 </table>
 
 <h1 style="margin-left:35px;">Contribution List</h1>
-<table border="1" class="ui inverted table" style="width:100%;">
+<table class="ui inverted table" style="width:100%;">
     <col style="width:30%">
     <col style="width:20%">
     <col style="width:15%">
@@ -127,7 +127,7 @@ session_start();
 </table>
 
 <h1 style="margin-left:35px;">Maintenance list</h1>
-<table border="1" class="ui inverted table" style="width:100%;">
+<table class="ui inverted table" style="width:100%;">
     <col style="width:25%">
     <col style="width:25%">
     <col style="width:15%">
