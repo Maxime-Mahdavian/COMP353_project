@@ -31,7 +31,10 @@ session_start();
     $sql = "SELECT * FROM poll_main";
     $result = mysqli_query($db, $sql);
     ?>
-    <table border='1' class="ui inverted table">
+    <table style='margin-left:45px; width:70%;' border='1' class="ui inverted table">
+        <col style="width:80%">
+        <col style="width:10%">
+        <col style="width:10%">
         <tr>
             <th>Poll</th>
             <th>Status</th>
@@ -69,7 +72,7 @@ session_start();
 
         echo "<form method='post' action='../poll.php'>";
         echo "<input type='hidden' name='poll_id' value='" . $row['poll_id'] . "'>";
-        echo "<td><input type='submit' value='Vote' name='voteButton'></td>";
+        echo "<td><input style='align:center;' class='ui button' type='submit' value='Vote' name='voteButton'></td>";
         echo "</form>";
         echo "</tr>";
     }

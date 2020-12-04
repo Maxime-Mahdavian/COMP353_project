@@ -66,13 +66,6 @@ include('session.php');
             </button>
         </div>
         <div class="four wide column">
-            <?php if($_SESSION['admin'] == 1){echo "<a style='margin:30px; width:300px;' class='ui huge blue left labeled icon button' href='../admin_page.html'>
-                <i class='wrench icon'></i>
-                Admin Options
-            </a>";} ?>
-            <!--            --><?php //if($_SESSION['admin'] == 1){echo "<a href = '../admin_page.html'>Admin options</a>";} else{echo "no";}?>
-        </div>
-        <div class="four wide column">
     			<button style="margin:30px; width:300px;" class="ui huge blue left labeled icon button" type="submit" name="pay_fee" onclick="window.location.href='pay_fee.php';">
         		<i class="file alternate icon"></i>
         		Pay Fee
@@ -83,6 +76,13 @@ include('session.php');
         		<i class="file alternate icon"></i>
         		Condo Association
     			</button>
+        </div>
+        <div class="four wide column">
+            <?php if($_SESSION['admin'] == 1){echo "<a style='margin:30px; width:300px;' class='ui huge blue left labeled icon button' href='../admin_page.html'>
+                <i class='wrench icon'></i>
+                Admin Options
+            </a>";} ?>
+            <!--            --><?php //if($_SESSION['admin'] == 1){echo "<a href = '../admin_page.html'>Admin options</a>";} else{echo "no";}?>
         </div>
         <div class="four wide column">
         </div>

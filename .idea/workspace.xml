@@ -21,14 +21,12 @@
   <component name="ChangeListManager">
     <list default="true" id="c79632d8-bb1c-49a7-aa54-a77b20adaf07" name="Default Changelist" comment="ui updated">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/assign_condo_owner.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/assign_condo_owner.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/condoAssociation.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/condoAssociation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/contracts.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/contracts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/create_message.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/create_message.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/manage_condos.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/manage_condos.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/manage_groups.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/manage_groups.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/message.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/message.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/view_post.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view_post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pay_fee.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pay_fee.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/poll_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/poll_list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/profile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/welcome.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/welcome.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,6 +124,7 @@
       <workItem from="1606767872804" duration="1529000" />
       <workItem from="1606917698923" duration="18113000" />
       <workItem from="1607003678980" duration="20192000" />
+      <workItem from="1607095160889" duration="2784000" />
     </task>
     <task id="LOCAL-00001" summary="client side group functionality added, as well as permission on posts">
       <created>1605544185286</created>
@@ -267,7 +266,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607043953435</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="ui updated">
+      <created>1607053405754</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1607053405754</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -380,10 +386,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2365" y="151" key="SettingsEditor/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605292265078" />
-    <state x="433" y="131" width="804" height="516" key="Vcs.Push.Dialog.v2" timestamp="1607043955895">
+    <state x="433" y="131" width="804" height="516" key="Vcs.Push.Dialog.v2" timestamp="1607053415486">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="433" y="131" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1607043955895" />
+    <state x="433" y="131" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1607053415486" />
     <state x="2451" y="92" width="804" height="516" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1607026266123" />
     <state x="663" y="300" width="312" height="243" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1606696537737">
       <screen x="0" y="0" width="1536" height="824" />
@@ -401,10 +407,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2490" y="145" width="766" height="730" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605192660113" />
-    <state x="577" y="218" width="433" height="172" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607043948140">
+    <state x="577" y="218" width="433" height="172" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607096512742">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="577" y="218" width="363" height="169" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1607043948140" />
+    <state x="577" y="218" width="363" height="169" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1607096512742" />
     <state x="2631" y="206" width="433" height="172" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1607012854840" />
     <state x="0" y="0" width="980" height="810" key="dock-window-1" timestamp="1607037855642">
       <screen x="0" y="0" width="1536" height="824" />

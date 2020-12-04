@@ -8,8 +8,16 @@ session_start();
 <head>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
 </head>
-<body>
-
+<body style="background-color: #d5e2ff;">
+<div style = "background-color:#aca3ec; height:100px; color:#4D39D6; padding:3px;"><b><br><i class="huge chess rook icon"></i></b><b align="middle" style="margin-bottom:10px; color:white; font-size:40px;">CON</b></div>
+<br><br>
+<button style="margin-left:1320px" class="ui blue left labeled icon button" type="submit" name="back" onclick="window.location.href='manage_condos.php';">
+    <i class="left arrow icon"></i>
+    Back
+</button>
+<a style="margin:30px; font-size: 40px; color:black;" class="item">
+    Assign Condo Owner<i class="building outline icon"></i>
+</a>
 <br>
 <br>
 
@@ -17,7 +25,7 @@ session_start();
 	
 	//save condo owner id so it can be reused on next form submission
 	$condoID = $_POST['condoNum'];
-	echo "condo Number: $condoID <br>";		//display condo number for user
+	echo "<h2 style='margin:30px;'>For condo Number: $condoID </h2><br>";		//display condo number for user
 
 	if(isset($_POST['userSelected'])) { //handle set owner button press
 		
@@ -34,15 +42,6 @@ session_start();
 	}
 	
 ?>
-
-<br>
-<br>
-
-<form action="manage_condos.php" method="post">
-	<input type="submit" name="back" value="back">
-</form>
-
-<br>
 
 <table class="ui selectable inverted table">
 	<thead>
@@ -62,7 +61,7 @@ session_start();
   		echo '<td><form action="assign_condo_owner.php" method="post">';
   		echo '<input type="hidden" name="userID" value="'.$user['userID'].'">';	//post userID so we know which one was selected
   		echo '<input type="hidden" name="condoNum" value="'.$condoID.'">';			//re-post condoID
-  		echo '<input type="submit" name="userSelected" value="Assign">';
+  		echo '<input class="ui button" type="submit" name="userSelected" value="Assign">';
   		echo "</form></td>";
       echo "<td>".$user['name']."</td>";
       echo "<td>".$user['primary_address']."</td>";

@@ -20,6 +20,8 @@ session_start();
 <a style="margin-left:30px; font-size: 40px; color:black;" class="item">
     Pay Fee <i class="file alternate icon"></i>
 </a>
+<br>
+<br>
 <?php
 
 	//print debug messages if there are any
@@ -63,21 +65,25 @@ session_start();
 	}
 
 ?>
-<table style = "width:100%">
-    			<tr>
-    				<th></th>
-    				<th> condo Number </th>
-    			</tr>
 
-    			<?php
-    			  $condo_query = mysqli_query($db, "SELECT condoID FROM condos WHERE ownerID=".$_SESSION['ID'].";");
-      			while($condo = mysqli_fetch_array($condo_query)){
-      				echo '<td><input type="checkbox" name="condo'.$condo['condoID'].'"></td>';
-        	  	echo "<td>".$condo['condoID']."</td>";
-        	  	echo "</tr>";
-      			}
-    			?>
-</table>
+<div style="margin:30px;" class="ui two column middle aligned relaxed grid basic segment">
+    <div class="column">
+        <div style=" background-color: #c9d3d8;" class="ui form segment AVAST_PAM_loginform">
+            <div class="field">
+                <h2>For Condo Number:</h2>
+                <table>
+                    <tr>
+                        <td></td>
+                        <?php
+                        $condo_query = mysqli_query($db, "SELECT condoID FROM condos WHERE ownerID=".$_SESSION['ID'].";");
+                        while($condo = mysqli_fetch_array($condo_query)){
+                            echo '<td><input class="ui checkbox" type="checkbox" name="condo'.$condo['condoID'].'"> '.$condo['condoID'].'</td>';
+                            echo "</tr>";} ?>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
 
 <form action="pay_fee.php" method="post">
     <div style="margin:30px;" class="ui two column middle aligned relaxed grid basic segment">
@@ -90,8 +96,7 @@ session_start();
                         <i class="dollar sign icon"></i>
                     </div>
                 </div>
-                <input class="ui positive button" type="submit" name="create_fee" value="confirm">
-                <input class="ui negative button" type="submit" name="cancel" value="cancel">
+                <input style="margin-left:570px;" class="ui positive button" type="submit" name="create_fee" value="confirm">
             </div>
         </div>
     </div>
@@ -99,7 +104,7 @@ session_start();
 
 <br>
 
-<table>
+<table style = "width:46%; margin-left:50px" class="ui inverted table">
 	<thead>
   	<tr>
       <th>Condo Number</th>

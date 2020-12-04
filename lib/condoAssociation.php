@@ -18,10 +18,9 @@ session_start();
     Back to Main Page
 </button>
 <a style="margin:30px; font-size: 40px; color:black;" class="item">
-    Polls<i class="archive icon"></i>
+    Condo Association Info<i class="building icon"></i>
 </a>
-<h1> Condo Association Info </h1>
-
+<br><br>
 <?php
 
 	//print debug messages if there are any

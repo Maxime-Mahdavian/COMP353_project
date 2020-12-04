@@ -36,7 +36,7 @@ session_start();
                 $status = $_POST['status']; $condoClass = $_POST['condoClass'];
 
                 $sql = "UPDATE Users SET name='$name', password='$password', email='$email', primary_address='$address', status='$status', condoClassification='$condoClass' WHERE userID = $userID;";
-                if (mysqli_query($db, $sql)) echo "profile successfully updated"."<br><br>";
+                if (mysqli_query($db, $sql)) echo "<p style='margin-left:30px; color:green;'>profile successfully updated"."</p><br><br>";
                 else echo "error: ".mysqli_error($db);
 
             } else echo "blank fields are not allowed<br><br>";
