@@ -96,34 +96,29 @@ session_start();
         </div>
     </div>
 </form>
-<!--<form action="pay_fee.php" method="post">-->
-<!--		-->
-<!--		<table style = "width:100%">-->
-<!--			<tr>-->
-<!--				<th></th>-->
-<!--				<th> condo Number </th>-->
-<!--			</tr>-->
-<!--		-->
-<!--			--><?php
-//			  $condo_query = mysqli_query($db, "SELECT condoID FROM condos WHERE ownerID=".$_SESSION['ID'].";");
-//  			while($condo = mysqli_fetch_array($condo_query)){
-//  				echo '<td><input type="checkbox" name="condo'.$condo['condoID'].'"></td>';
-//    	  	echo "<td>".$condo['condoID']."</td>";
-//    	  	echo "</tr>";
-//  			}
-//			?>
-<!--		</table>-->
-<!--		<br>-->
-<!--		<label for="amount">amount</label>-->
-<!--		<br>-->
-<!--		<input type="text" name="amount">-->
-<!--		<br>-->
-<!--		<br>-->
-<!--		<input type="submit" name="create_fee" value="confirm">-->
-<!--		<input type="submit" name="cancel" value="cancel">-->
-<!--</form>-->
 
+<br>
 
+<table>
+	<thead>
+  	<tr>
+      <th>Condo Number</th>
+      <th> Amount Paid </th>
+      <th> Date </th>
+    </tr>
+	</thead>
+  <?php		
+	//fees from the database
+  $fee_query = mysqli_query($db, "SELECT * FROM fees ORDER BY date DESC");
+  while($fee = mysqli_fetch_array($fee_query)){		//iterate through every user
+  	echo "<tr>";
+    echo "<td>".$fee['condoID']."</td>";
+    echo "<td>".$fee['amountPaid']."</td>";
+    echo "<td>".$fee['date']."</td>";
+    echo "</tr>";
+  }
+  ?>
+</table>
 
 </body>
 </html>
