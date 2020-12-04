@@ -41,7 +41,7 @@ if($_POST['ContributionButton'] == 'Create'){
                             $result = mysqli_query($db,$sql);
 
                             while($row = mysqli_fetch_array($result)){
-                                echo "<option value='" . $row['contractID'] ."'>". $row['awarded']  . "</option>";
+                                echo "<option style='border: solid;' value='" . $row['contractID'] ."'>". $row['awarded']  . "</option>";
                             }
                             ?>
                         </select>

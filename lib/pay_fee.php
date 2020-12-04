@@ -66,25 +66,42 @@ session_start();
 
 ?>
 
-<div style="margin:30px;" class="ui two column middle aligned relaxed grid basic segment">
-    <div class="column">
-        <div style=" background-color: #c9d3d8;" class="ui form segment AVAST_PAM_loginform">
-            <div class="field">
-                <label style="font-size: 20px;">For Condo Number:</label>
-                <table>
-                    <tr>
-                        <?php
-                        $condo_query = mysqli_query($db, "SELECT condoID FROM condos WHERE ownerID=".$_SESSION['ID'].";");
-                        while($condo = mysqli_fetch_array($condo_query)){
-                            echo '<td><input class="ui checkbox" type="checkbox" name="condo'.$condo['condoID'].'"> '.$condo['condoID'].'</td>';
-                            echo "</tr>";} ?>
-                </table>
+<!--<div style="margin:30px;" class="ui two column middle aligned relaxed grid basic segment">-->
+<!--    <div class="column">-->
+<!--        <div style=" background-color: #c9d3d8;" class="ui form segment AVAST_PAM_loginform">-->
+<!--            <div class="field">-->
+<!--                <label style="font-size: 20px;">For Condo Number:</label>-->
+<!--                <table>-->
+<!--                    <tr>-->
+<!--                        --><?php
+//                        $condo_query = mysqli_query($db, "SELECT condoID FROM condos WHERE ownerID=".$_SESSION['ID'].";");
+//                        while($condo = mysqli_fetch_array($condo_query)){
+//                            echo '<td><input class="checkbox" type="checkbox" name="condo'.$condo['condoID'].'"> '.$condo['condoID'].'</td>';
+//                            echo "</tr>";} ?>
+<!--                </table>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+<form action="pay_fee.php" method="post">
+    <div style="margin:30px;" class="ui two column middle aligned relaxed grid basic segment">
+        <div class="column">
+            <div style=" background-color: #c9d3d8;" class="ui form segment AVAST_PAM_loginform">
+                <div class="field">
+                    <label style="font-size: 20px;">For Condo Number:</label>
+                    <table>
+                        <tr>
+                            <?php
+                            $condo_query = mysqli_query($db, "SELECT condoID FROM condos WHERE ownerID=".$_SESSION['ID'].";");
+                            while($condo = mysqli_fetch_array($condo_query)){
+                                echo '<td><input class="checkbox" type="checkbox" name="condo'.$condo['condoID'].'"> '.$condo['condoID'].'</td>';
+                                echo "</tr>";} ?>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
-</div>
-
-<form action="pay_fee.php" method="post">
     <div style="margin:30px;" class="ui two column middle aligned relaxed grid basic segment">
         <div class="column">
             <div style=" background-color: #c9d3d8;" class="ui form segment AVAST_PAM_loginform">
