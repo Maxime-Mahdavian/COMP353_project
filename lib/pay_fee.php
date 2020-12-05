@@ -49,10 +49,9 @@ session_start();
 			$_SESSION['print_message'] = true;
 			header("Location: " . $_SERVER['PHP_SELF']);
 		} else {
-			$sql = "INSERT INTO fees(condoID, amountPaid) VALUES ($condoID, ".$_POST['amount'].")";
-			if( mysqli_query($db, $sql) ) $_SESSION['message'] = "fee payment has been recorded";
-			else $_SESSION['message'] = mysqli_error($db);
-			$_SESSION['message'] = "fee payment has been recorded";
+			$sql = "INSERT INTO fees(payee, condoID, amountPaid) VALUES (".$_SESSION['ID'].", $condoID, ".$_POST['amount'].")";
+			if( mysqli_query($db, $sql) ) { $_SESSION['message'] = "fee payment has been recorded"; }
+			else { $_SESSION['message'] = mysqli_error($db); }
 		}
 		
 		//redirect to main page
@@ -89,7 +88,7 @@ session_start();
         <div class="column">
             <div style=" background-color: #c9d3d8;" class="ui form segment AVAST_PAM_loginform">
                 <div class="field">
-                    <label style="font-size: 20px;">For Condo Number:</label>
+                    <label style="font-size: 20px;">Select a condo Number:</label>
                     <table>
                         <tr>
                             <?php
@@ -131,12 +130,24 @@ session_start();
   <?php		
 	//fees from the database
   $fee_query = mysqli_query($db, "SELECT * FROM fees ORDER BY date DESC");
-  while($fee = mysqli_fetch_array($fee_query)){		//iterate through every user
-  	echo "<tr>";
-    echo "<td>".$fee['condoID']."</td>";
-    echo "<td>".$fee['amountPaid']."</td>";
-    echo "<td>".$fee['date']."</td>";
-    echo "</tr>";
+  if($_SESSION['admin'] == 1) {
+  	while($fee = mysqli_fetch_array($fee_query)){		//iterate through every user
+  		echo "<tr>";
+  	  echo "<td>".$fee['condoID']."</td>";
+  	  echo "<td>".$fee['amountPaid']."</td>";
+  	  echo "<td>".$fee['date']."</td>";
+  	  echo "</tr>";
+  	}
+  } else {
+  	while($fee = mysqli_fetch_array($fee_query)){		//iterate through every user
+  		if($fee['payee']==$_SESSION['ID']) {
+  			echo "<tr>";
+  	  	echo "<td>".$fee['condoID']."</td>";
+  	  	echo "<td>".$fee['amountPaid']."</td>";
+  	  	echo "<td>".$fee['date']."</td>";
+  	  	echo "</tr>";
+  	  }
+  	}
   }
   ?>
 </table>
