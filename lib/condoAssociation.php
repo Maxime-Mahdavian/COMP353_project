@@ -36,9 +36,31 @@ session_start();
 	//get and print budget and financial status
 	$ca_query = mysqli_query($db,"SELECT budget,financialStatus FROM condoAssociations WHERE condoAssociationID=$caID");
 	$ca = mysqli_fetch_array($ca_query);
-	echo "<h2 style='margin-left: 30px'> budget: " . $ca['budget'] . "$<br>";
-	echo "financial status: " . $ca['financialStatus'] . "</h2>";
-	echo "<br>";
+	echo '<form action="condoAssociation.php" method="post">';
+	
+	
+	//budget field
+	if($_SESSION['admin'] == 1) { //give admins option to edit
+		if(isset($_POST['edit_budget'])) {	//if we're editing, give admins a confirm button
+			echo '	<h2 style="margin-left: 30px"><input type="submit" name="confirm_new_budget" value="confirm">'. "&nbsp;&nbsp;";
+		} else { echo '	<h2 style="margin-left: 30px"><input type="submit" name="edit_budget" value="edit">'. "&nbsp;&nbsp;"; }	//else show edit button
+	}
+	if(isset($_POST['edit_budget'])) {	//if we're editing, give admins a field
+		echo '	<input type="text" name="new_budget" value="'.$ca['budget'].'">'.'</h2><br>';
+	} else { echo "budget: " . $ca['budget'] . "$</h2><br>"; }	//else show value
+	
+	//financial status field
+	if($_SESSION['admin'] == 1) {
+		if(isset($_POST['edit_financialStatus'])) {	//if we're editing, give admins a confirm button
+			echo '	<h2 style="margin-left: 30px"><input type="submit" name="confirm_new_financialStatus" value="confirm">'. "&nbsp;&nbsp;";
+		} else { echo '	<h2 style="margin-left: 30px"><input type="submit" name="edit_financialStatus" value="edit">'. "&nbsp;&nbsp;"; }	//else show edit button
+	}
+	if(isset($_POST['edit_financialStatus'])) {	//if we're editing, give admins a field
+		echo '	<input type="text" name="new_financialStatus" value="'.$ca['financialStatus'].'">'.'</h2><br>';
+	} else { echo " financial status: " . $ca['financialStatus'] . "</h2><br>"; }	//else show value
+	
+	echo "</form>";
+	echo "<br><br>";
 	
 	//handle admin delete button press
 	if(isset($_POST['delete'])) {
@@ -100,6 +122,29 @@ session_start();
 		$_SESSION['print_message'] = true;
 		header("Location: " . $_SERVER['PHP_SELF']);
 	
+	} else if(isset($_POST['confirm_new_budget'])) {	//handle update budget
+		$new_budget = $_POST['new_budget'];	//save new budget in a more convenient varialbe
+		
+		//update table
+		$sql = "UPDATE condoAssociations SET budget=$new_budget WHERE condoAssociationID=$caID";
+		if(mysqli_query($db,$sql)) $_SESSION['message'] = "Condo association budget has been updated";	//print confirmation
+		else $_SESSION['message'] = mysqli_error($db);	//print dem errors
+		
+		//display messages and refresh page
+		$_SESSION['print_message'] = true;
+		header("Location: " . $_SERVER['PHP_SELF']);
+		
+	} else if(isset($_POST['confirm_new_financialStatus'])) {	//handle update financial status
+		$new_fs = $_POST['new_financialStatus'];	//save financial status in a more convenient variable
+		
+		//update table
+		$sql = "UPDATE condoAssociations SET financialStatus='$new_fs' WHERE condoAssociationID=$caID";
+		if(mysqli_query($db,$sql)) $_SESSION['message'] = "Condo association financial status has been updated";
+		else $_SESSION['message'] = mysqli_error($db);
+		
+		$_SESSION['print_message'] = true;
+		header("Location: " . $_SERVER['PHP_SELF']);
+		
 	}
 
 	//get all users names in condoassociation with a percent share in any building
