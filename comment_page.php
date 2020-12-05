@@ -24,28 +24,28 @@ $result = mysqli_query($db, $sql);
 while($temp = mysqli_fetch_array($result)){
 
     echo "<div style=' background-color: white; margin-left:40px; border: solid; border-radius: 7px; width:50%;'>";
-    echo "<table style='width: 100%'><tr><td><p style='font-size: xx-large; font-weight: bold'>" . $temp['title']."</p></td>";
+    echo "<table style='width: 100%'><tr><td><h1 font-weight: bold'>" . $temp['title']."</p></td>";
     echo "<td><p align='right'> Posted on: " . $temp['timestamp']. "</p></td></tr></table>";
     $sql = "SELECT name FROM `groups` g, post p WHERE (p.postID =". $temp['postID'] . " and p.groupID = g.groupID)";
     $y = mysqli_query($db, $sql);
     $nameOfGroup = mysqli_fetch_array($y);
     if($temp['perm'] == "public"){
-        echo "<h2>Public</h2>";
+        echo "<h4 style='left-margin:10px;'> Status: Public</h4>";
     }
     elseif ($temp['perm'] == "private"){
-        echo "<h2>Private</h2>";
+        echo "<h4 style='left-margin:10px;'> Status: Private</h4>";
     }
     elseif($temp['perm'] == "Ad"){
-        echo "<h2>Ad</h2>";
+        echo "<h4 style='left-margin:10px;'> Status: Ad</h4>";
     }
     else{
-        echo "<h2> Group: " . $nameOfGroup['name'] . "</h2>";
+        echo "<h4 style='left-margin:10px;'> Status: Group: " . $nameOfGroup['name'] . "</h4>";
     }
-    echo "<p>" . $temp['body'] . "</p><br>";
+    echo "<table style='width: 55%; margin-left: 20px;'><col style='width: 40%;'><tr><td style='border-radius: 5px; margin-left: 20px; border: solid;'><p style='margin-left: 5px;' align='top-left'>" . $temp['body'] . "</p></td></tr>";
     $prefix = '../';
     $img = preg_replace('/^' . preg_quote($prefix, '/') . '/','', $temp['img']);
-    echo "<img onerror='this.onerror=null; this.remove();' src=". $img . " height='200px'; width='400px'><br>";
-    echo "<br></div>";
+    echo "<tr><img style='margin-left: 20px;' onerror='this.onerror=null; this.remove();' src=". $img . " height='200px'; width='400px'></tr></table><br>";
+    echo "</div>";
 }
 
 ?>
