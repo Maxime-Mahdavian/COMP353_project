@@ -44,7 +44,7 @@ if(!isset($_SESSION['username']))
     }
 
     while($temp = mysqli_fetch_array($result)){
-        echo "<div style=' background-color: white; margin-left:40px; border: solid; border-radius: 7px; width:80%;'>";
+        echo "<div style=' margin-left: 60px; background-color: white; margin-left:40px; border: solid; border-radius: 7px; width:50%;'>";
             /*if($_SESSION['groupID'] != $temp['groupID'])
                 continue;*/
             $sql = "SELECT name FROM Users x WHERE x.userID =" . $temp['userID'];
@@ -53,26 +53,26 @@ if(!isset($_SESSION['username']))
             $sql = "SELECT name FROM `groups` g, post p WHERE (p.postID =". $temp['postID'] . " and p.groupID = g.groupID)";
             $y = mysqli_query($db, $sql);
             $nameOfGroup = mysqli_fetch_array($y);
-            echo "<div><p style='font-size: xx-large; font-weight: bold'>" . $temp['title']."</p>";
-            echo "<p> Posted on: " . $temp['timestamp'] ." By " . $poster['name'] . "</p></div>";
+            echo "<table style='width: 100%'><tr><td><h1 font-weight: bold'>" . $temp['title']."</h1></td>";
+            echo "<td><p align='right'> Posted on: " . $temp['timestamp'] ." By " . $poster['name'] . "</p></td></tr></table>";
 
             if($temp['perm'] == "public"){
-                echo "<h2>Public</h2>";
+                echo "<h4 style='left-margin:10px;'> Status: Public</h4>";
             }
             elseif ($temp['perm'] == "private"){
-                echo "<h2>Private</h2>";
+                echo "<h4 style='left-margin:10px;'> Status: Private</h4>";
             }
             elseif($temp['perm'] == "Ad"){
-                echo "<h2>Ad</h2>";
+                echo "<h4 style='left-margin:10px;'> Status: Ad</h4>";
             }
             else{
-                echo "<h2> Group: " . $nameOfGroup['name'] . "</h2>";
+                echo "<h4> Group post on: " . $nameOfGroup['name'] . "</h4>";
             }
-            echo "<p>" . $temp['body'] . "</p><br>";
-            echo "<img src=". $temp['img'] . " onerror='this.onerror=null; this.remove();' height='200px'; width='400px'><br><br>";
+            echo "<table style='width: 55%; margin-left: 20px;'><col style='width: 40%;'><tr><td style='border-radius: 5px; margin-left: 20px; border: solid;'><p style='margin-left: 20px;' align='top-left'>" . $temp['body'] . "</p></td></tr>";
+            echo "<tr><img style='margin-left: 20px;' src=". $temp['img'] . " onerror='this.onerror=null; this.remove();' height='200px'; width='400px'> </tr></table><br>";
             echo "<form action='../comment_page.php' method='post' id='commentForm'>";
             echo "<input type='hidden' name='postid' value='". $temp['postID']."' />";
-            echo "<input style='left-margin:1000px;' class='ui blue button' type='submit' name='comment'value='Comment'/>";
+            echo "<input style='left-margin:1000px;' class='ui blue button' type='submit' name='comment' value='Comment'/>";
             echo "</form>";
             echo "<hr>";
         echo "</div><br>";

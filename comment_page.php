@@ -22,8 +22,10 @@ $sql = "SELECT * FROM post WHERE postID=" . $post;
 $result = mysqli_query($db, $sql);
 
 while($temp = mysqli_fetch_array($result)){
-    echo "<h1>" . $temp['title']."</h1><br>";
-    echo "<h2> Posted on: " . $temp['timestamp']. "</h2>";
+
+    echo "<div style=' background-color: white; margin-left:40px; border: solid; border-radius: 7px; width:50%;'>";
+    echo "<table style='width: 100%'><tr><td><p style='font-size: xx-large; font-weight: bold'>" . $temp['title']."</p></td>";
+    echo "<td><p align='right'> Posted on: " . $temp['timestamp']. "</p></td></tr></table>";
     $sql = "SELECT name FROM `groups` g, post p WHERE (p.postID =". $temp['postID'] . " and p.groupID = g.groupID)";
     $y = mysqli_query($db, $sql);
     $nameOfGroup = mysqli_fetch_array($y);
@@ -43,6 +45,7 @@ while($temp = mysqli_fetch_array($result)){
     $prefix = '../';
     $img = preg_replace('/^' . preg_quote($prefix, '/') . '/','', $temp['img']);
     echo "<img onerror='this.onerror=null; this.remove();' src=". $img . " height='200px'; width='400px'><br>";
+    echo "<br></div>";
 }
 
 ?>

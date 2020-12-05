@@ -36,9 +36,9 @@ session_start();
 	//get and print budget and financial status
 	$ca_query = mysqli_query($db,"SELECT budget,financialStatus FROM condoAssociations WHERE condoAssociationID=$caID");
 	$ca = mysqli_fetch_array($ca_query);
-	echo "budget: " . $ca['budget'] . "$<br>";
-	echo "financial status: " . $ca['financialStatus'];
-	echo "<br><br>";
+	echo "<h2 style='margin-left: 30px'> budget: " . $ca['budget'] . "$<br>";
+	echo "financial status: " . $ca['financialStatus'] . "</h2>";
+	echo "<br>";
 	
 	//handle admin delete button press
 	if(isset($_POST['delete'])) {
@@ -105,30 +105,63 @@ session_start();
 	//get all users names in condoassociation with a percent share in any building
 	$sql = "SELECT  name as username, buildingID, percentShare FROM Users,percentShare WHERE condoAssociationID=$caID AND percentShare.userID=Users.userID;";
 	$user_query = mysqli_query($db,$sql);
-	echo mysqli_error($db)."<br><br>";
+	echo mysqli_error($db);
 	
 	if($_SESSION['admin'] == 1) {
-		echo '<form action="condoAssociation.php" method="post">';
-    echo '	<label for="username">Username:</label>';
-		echo '	<br>';
-		echo '	<input type="text" name="username">';
-		echo '	<br>';
-    echo '	<label for="BuildingNum">Building Number:</label>';
-		echo '	<br>';
-		echo '	<input type="text" name="buildingNum">';
-		echo '	<br>';
-    echo '	<label for="percentShare">Percent Share:</label>';
-		echo '	<br>';
-		echo '	<input type="text" name="percentShare">';
-		echo '	<br><br>';
-		echo '	<input type="submit" name="add_record" value="add">';
-		echo '	<br>';
-		echo '</form>';
-	}
-	
-	echo '<br><form action="welcome.php" method="post">';
-	echo '	<input type="submit" name="back" value="back">';
-	echo '</form><br>';
+	    ?>
+
+
+<form action="condoAssociation.php" method="post">
+    <div style="margin-left:30px;" class="ui two column middle aligned relaxed grid basic segment">
+        <div class="column">
+            <div style=" background-color: #c9d3d8;" class="ui form segment AVAST_PAM_loginform">
+                <div class="field">
+                    <label for="username" style="font-size: 20px;">Username: </label>
+                    <div class="ui left labeled icon input">
+                            <input style=" border: solid;" type="text" placeholder="Username" name="username" >
+                        <i class="user icon"></i>
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="BuildingNum">Building Number: </label>
+                    <div class="ui left labeled icon input">
+                        <input style=" border: solid;" type="text" placeholder="Amount" name="buildingNum" >
+                        <i class="building icon"></i>
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="percentShare">Percent Share:</label>
+                    <div class="ui left labeled icon input">
+                        <input style=" border: solid;" type="text" placeholder="Percent Share" name="percentShare" >
+                        <i class="percent icon"></i>
+                    </div>
+                </div>
+                <input style="margin-left:625px;" class="ui positive button" type="submit" name="add_record" value="Add">
+            </div>
+        </div>
+    </div>
+</form>
+<!---->
+<!--		echo '<form action="condoAssociation.php" method="post">';-->
+<!--    <label for="username">Username:</label>';-->
+<!--		echo '	<br>';-->
+<!--		echo '	<input type="text" name="username">';-->
+<!--		echo '	<br>';-->
+<!--    <label for="BuildingNum">Building Number:</label>';-->
+<!--		echo '	<br>';-->
+<!--		echo '	<input type="text" name="buildingNum">';-->
+<!--		echo '	<br>';-->
+<!--    <label for="percentShare">Percent Share:</label>';-->
+<!--		echo '	<br>';-->
+<!--		echo '	<input type="text" name="percentShare">';-->
+<!--		echo '	<br><br>';-->
+<!--		echo '	<input type="submit" name="add_record" value="add">';-->
+<!--		echo '	<br>';-->
+<!--		echo '</form>';-->
+<!--	}-->
+
+	<?php
+    }
 	
 	//list buildings with users percent share
 	$buildingIDs = array();

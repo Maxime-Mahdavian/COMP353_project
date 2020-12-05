@@ -71,7 +71,7 @@ if(!isset($_SESSION['username']))
                     <label><input type="checkbox" name="perm" value="group">Group</label>
                     <label><input type="checkbox" name="perm" value="private">Private</label><br>-->
 
-                    <input class="ui green button" type="submit" value="Submit">
+                    <input style="margin-left:570px;" class="ui green button" type="submit" value="Submit">
                 </div>
             </div>
         </div>

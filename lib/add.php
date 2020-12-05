@@ -17,9 +17,21 @@ if(!isset($_SESSION['username'])){
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
     <title>Post submission</title>
 </head>
-<body>
+<body style="background-color: #d5e2ff;">
+<div style = "background-color:#aca3ec; height:100px; color:#4D39D6; padding:3px;"><b><br><i class="huge chess rook icon"></i></b><b align="middle" style="margin-bottom:10px; color:white; font-size:40px;">CON</b></div>
+<br>
+<br>
+<button style="margin-left:1320px" class="ui blue left labeled icon button" type="submit" name="back" onclick="window.location.href='post.php';">
+    <i class="left arrow icon"></i>
+    Back
+</button>
+<a style="margin-left:30px; font-size: 40px; color:black;" class="item">
+    New Post <i class="bullhorn icon"></i>
+</a>
+<br>
 <?php
 //We need to keep track of whether all information for the post have been posted, and whether
 //the file with the image has been uploaded to the img/ folder
@@ -60,7 +72,7 @@ else {
 }
 
 ?>
-<h1>Submission</h1>
+<h2 style="margin-left: 30px;">Submission</h2>
 <?php
 //A post does not need an image, so if it is empty we can continue
 if(empty($_FILES['img']['tmp_name'])){
@@ -73,25 +85,26 @@ else{
 //Display success or error message depending on result
 if($hasFileBeenUploaded and $result and $isFormSet)
 {
-    echo "<h2>The file ". basename( $_FILES['uploadedfile']
-        ['name']). " has been uploaded, and your information has been added to the directory</h2>";
+    echo "<h3 style='margin-left: 45px;'>The file ". basename( $_FILES['uploadedfile']
+        ['name']). " has been uploaded, and your information has been added to the directory</h3>";
 
 
 }
 else {
     echo "<p>" . $_FILES['img']['tmp_name'] . "</p>";
     if($isFormSet == false){
-        echo "<h2>Error, did not complete the form</h2>";
+        echo "<h3 style='margin-left: 45px; color:red;'>Error, did not complete the form</h3>";
     }
     else {
-        echo "<h2>Sorry, there was a problem uploading your file.</h2>";
+        echo "<h3 style='margin-left: 45px; color:red;'>Sorry, there was a problem uploading your file.</h3>";
 
     }
 }
 ?>
 
-<a href="view_post.php">You can view post here</a><br>
-<a href="post.php">Go back</a>
+<button style="margin-left:45px" class="ui green button" type="submit" name="back" onclick="window.location.href='view_post.php';">
+    Click here to view post
+</button>
 </body>
 </html>
 <?php

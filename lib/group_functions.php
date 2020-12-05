@@ -15,6 +15,10 @@ session_start();
 <body style="background-color: #d5e2ff;">
 <div style = "background-color:#aca3ec; height:100px; color:#4D39D6; padding:3px;"><b><br><i class="huge chess rook icon"></i></b><b align="middle" style="margin-bottom:10px; color:white; font-size:40px;">CON</b></div>
 <br><br>
+<button style="margin-left:1325px" class="ui blue left labeled icon button" type="submit" name="back" onclick="window.location.href='group.php';">
+    <i class="left arrow icon"></i>
+    Back
+</button>
 <a style="margin:30px; font-size: 40px; color:black;" class="item">
     Group Functions  <i class="users icon"></i>
 </a>
@@ -26,7 +30,7 @@ session_start();
 if($_POST['submitButton'] == 'Join'){
     $sql = "INSERT  INTO group_request VALUES(". $_POST['join_group'] . "," . $_SESSION['ID'] . ")";
     $result = mysqli_query($db,$sql);
-    echo "<h1>Your request has been submitted, please wait for the owner of the group to accept your submission</h1>";
+    echo "<h1 style='margin:50px'>Your request has been submitted, please wait for the owner of the group to accept your submission</h1>";
 }
 //Withdraw from the group
 elseif ($_POST['submitButton'] == 'Withdraw'){
@@ -37,14 +41,14 @@ elseif ($_POST['submitButton'] == 'Withdraw'){
 
     //If count is 1, then the user is the owner of that group, and therefore cannot withdraw
     if($count==1){
-        echo "<h1 style='margin:40px;' ><i class='red exclamation triangle icon'></i>You cannot withdraw from the group, you are the owner</h1>";
-        echo "<h1 style='margin:40px;'><i class='red exclamation triangle icon'></i>Please change owner before withdrawing from the group</h1>";
+        echo "<h1 style='margin:50px' ><i class='red exclamation triangle icon'></i>You cannot withdraw from the group, you are the owner</h1>";
+        echo "<h1 style='margin:50px'><i class='red exclamation triangle icon'></i>Please change owner before withdrawing from the group</h1>";
     }
     //If it is not the owner, then we can move on and remove them from the table
     else{
         $sql = "DELETE FROM group_membership WHERE gID=".$_POST['withdraw_group']. " AND uID=" . $_SESSION['ID'];
         $result = mysqli_query($db,$sql);
-        echo "<h1>You have withdrawn from the group</h1>";
+        echo "<h1 style='margin:50px';>You have withdrawn from the group</h1>";
     }
 }
 //Various owner function, the back option is important since owners can move from page to page, and we need to make
@@ -134,9 +138,5 @@ $result = mysqli_query($db, $sql);
 
     ?>
 </table>
-<button style="margin:30px;" class="ui blue left labeled icon button" type="submit" name="back" onclick="window.location.href='group.php';">
-    <i class="left arrow icon"></i>
-    Back to Group
-</button>
 </body>
 </html>

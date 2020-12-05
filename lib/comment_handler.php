@@ -16,17 +16,26 @@ switch ($_POST['req']) {
     case "show":
         $comments = $pdo->get($_POST['post_id']);
         function show ($cid, $rid, $name, $time, $message, $indent = 0) { ?>
-            <div class="ccomment<?= $indent ? " creply" : "" ?>">
-                <div>
-                    <span class="cname"><?=$name?></span>
-                    <span class="ctime"><?=$time?></span>
+
+            <div style="margin-left:30px;" class="ui two column middle aligned relaxed grid basic segment">
+                <div class="column">
+                    <div style=" background-color: #c9d3d8;" class="ui form segment AVAST_PAM_loginform">
+                        <div class="ccomment ">
+                            <div class="field">
+                                <span style="font-size: 20px; class="cname"><?=$name?></span>
+                                <span class="ctime"> |   <?=$time?></span>
+                                <div class="field">
+                                    <textarea style="height: 50px;" type="text" name="nmessage" readonly><?=$message?></textarea>
+                                </div>
+                            </div>
+                            <input type="button" class="ui smaller blue button" value="Reply" onclick="comments.reply(<?=$cid?>, <?=$rid?>)"/>
+                            <?php if($_SESSION['admin'] == 1)
+                                echo '<input type="button" class="ui smaller red button" value="Delete" onclick="comments.del('.$cid.')"/>';
+                            ?>
+                            <div id="reply-<?=$cid?>"></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="cmessage"><?=$message?></div>
-                <input type="button" class="cbutton" value="Reply" onclick="comments.reply(<?=$cid?>, <?=$rid?>)"/>
-                <?php if($_SESSION['admin'] == 1)
-                    echo '<input type="button" class="cbutton" value="Delete" onclick="comments.del('.$cid.')"/>';
-                ?>
-                <div id="reply-<?=$cid?>"></div>
             </div>
         <?php }
         if (is_array($comments)) { foreach ($comments as $c) {
@@ -39,13 +48,33 @@ switch ($_POST['req']) {
 
     /* [SHOW REPLY FORM] */
     case "reply": ?>
+
         <form onsubmit="return comments.add(this)" class="creplyform">
-            <h1>Leave a reply</h1>
-            <input type="hidden" name="reply_id" value="<?=$_POST['reply_id']?>"/>
-            <input type="text" name="name" placeholder="<?php echo $_SESSION['username'];?>" value="<?php echo $_SESSION['username'];?>" disabled/>
-            <textarea name="message" placeholder="Message" required></textarea>
-            <input type="submit" class="cbutton" value="Post Comment"/>
+            <div style="margin:30px;" class="ui two column middle aligned relaxed grid basic segment">
+                <div class="column">
+                    <div style=" background-color: #c9d3d8;" class="ui form segment AVAST_PAM_loginform">
+                        <div class="field">
+                            <label style="font-size: 20px;">Leave a reply</label><br>
+                            <div class="field">
+                                <input type="hidden" name="reply_id" value="<?=$_POST['reply_id']?>"/>
+                                <input type="text" name="name" placeholder="<?php echo $_SESSION['username'];?>" value="<?php echo $_SESSION['username'];?>" disabled/>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <textarea style="height: 50px;" name="message" placeholder="Message (300 characters max)" maxlength="300" required></textarea>
+                        </div>
+                        <input style="margin-left: 500px;" class="ui positive button" type="submit" value="Post Comment">
+                    </div>
+                </div>
+            </div>
         </form>
+<!--        <form onsubmit="return comments.add(this)" class="creplyform">-->
+<!--            <h1>Leave a reply</h1>-->
+<!--            <input type="hidden" name="reply_id" value="--><?//=$_POST['reply_id']?><!--"/>-->
+<!--            <input type="text" name="name" placeholder="--><?php //echo $_SESSION['username'];?><!--" value="--><?php //echo $_SESSION['username'];?><!--" disabled/>-->
+<!--            <textarea name="message" placeholder="Message" required></textarea>-->
+<!--            <input type="submit" class="cbutton" value="Post Comment"/>-->
+<!--        </form>-->
         <?php break;
 
 

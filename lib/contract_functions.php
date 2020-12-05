@@ -59,7 +59,7 @@ if($_POST['ContributionButton'] == 'Create'){
                             <input style=" border: solid;" type="text" name="reason">
                         </div>
                     </div>
-                    <input class="ui positive button" type="submit" name="create_contribution" value="submit">
+                    <input style="margin-left:580px;" class="ui positive button" type="submit" name="create_contribution" value="submit">
                 </div>
             </div>
         </div>
@@ -121,7 +121,7 @@ elseif (isset($_POST['ContractButton'])){
                             <input style=" border: solid;" type="text" name="price" onblur="checkInput(this.value)">
                         </div>
                     </div>
-                    <input class="ui positive button" type="submit" name="create_contract" value="submit">
+                    <input style="margin-left:580px;" class="ui positive button" type="submit" name="create_contract" value="submit">
                 </div>
             </div>
         </div>
@@ -183,7 +183,7 @@ elseif (isset($_POST['MaintenanceButton'])){
                         <input style=" border: solid;" type="text" name="rationale">
                     </div>
                 </div>
-                <input class="ui positive button" type="submit" name="create_maintenance" value="submit">
+                <input style="margin-left:580px;" class="ui positive button" type="submit" name="create_maintenance" value="submit">
             </div>
         </div>
     </div>

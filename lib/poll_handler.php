@@ -1,3 +1,6 @@
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+</head>
 <?php
 require __DIR__  . DIRECTORY_SEPARATOR . "config.php";
 require PATH_LIB . "Poll.php";
@@ -47,15 +50,15 @@ switch ($_POST['req']) {
         // SHOW VOTE DOCKET
         if (is_array($poll)) {
             echo "<div class='poll-dock'>";
-            echo "<div class='poll-question'>" . $poll['question'] . "</div>";
+            echo "<h1 class='poll-question'>" . $poll['question'] . "</h1>";
 
             // SHOW VOTING FORM - ONLY FOR REGISTERED USERS
             if (isset($_SESSION['username']) && $mode=="O") {
                 echo "<form class='poll-options' onsubmit='return polljs.save();'>";
                 foreach ($poll['options'] as $oid=>$o) {
-                    printf("<div class='poll-option'><input type='radio' name='poll' id='poll-%u' value='%u'/> <label for='poll-%u'>%s</label></div>", $oid, $oid, $oid, $o);
+                    printf("<div class='poll-option'><input type='radio' name='poll' id='poll-%u' value='%u'/> <label for='poll-%u' style='font-size: 15px;'>%s</label></div>", $oid, $oid, $oid, $o);
                 }
-                echo "<input type='submit' value='Submit'/> <input type='button' value='Show Results' onclick='polljs.show(1)'/>";
+                echo "<br><input class='ui green button' type='submit' value='Submit'/> <input class='ui blue button' type='button' value='Show Results' onclick='polljs.show(1)'/>";
                 echo '</form>';
             }
 

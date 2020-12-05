@@ -31,7 +31,7 @@ if(isset($_POST['create_message'])){
                     <div class="field">
                         <label>From:</label>
                         <div class="ui left labeled icon input">
-                            <input style=" border: solid;" type="text" value="<?php echo $_POST['username']?>" name="sender" readonly >
+                            <input style=" border: solid;" type="text" value="<?php echo $_POST['username'];?>" name="sender" readonly >
                         </div>
                     </div>
                     <div class="field">
@@ -47,20 +47,11 @@ if(isset($_POST['create_message'])){
                             <textarea style=" border: solid;" form="form" type="text" name="body" class="bodyclass"></textarea>
                         </div>
                     </div>
-                    <input class="ui positive button" type="submit" name="create_message" value="Send">
+                    <input style="margin-left:570px;" class="ui positive button" type="submit" name="create_message" value="Send">
                 </div>
             </div>
         </div>
     </form>
-<!--<form action="add_message.php" method="post" id="form">-->
-<!--    <label>From:</label>-->
-<!--    <input type="text" value="--><?php //echo $_POST['username']?><!--" name="sender" readonly><br>-->
-<!--    <label>To:</label>-->
-<!--    <input type="text" name="receiver" id="receiver" placeholder="Enter Name" /><br>-->
-<!--    <div id="personList"></div>-->
-<!--    Body: <textarea form="form" type="text" name="body" class="bodyclass"></textarea><br>-->
-<!--    <input type="submit" name="create_message" value="Send">-->
-<!--</form>-->
 <?php
 }
 //The form needs to change a little bit if it is a reply.
@@ -76,7 +67,7 @@ elseif(isset($_POST['replyButton'])){
                     <div class="field">
                         <label>From:</label>
                         <div class="ui left labeled icon input">
-                            <input style=" border: solid;" type="text" value="<?php echo $_POST['username']?>" name="sender" readonly >
+                            <input style=" border: solid;" type="text" value="<?php echo $_POST['username'];?>" name="sender" readonly >
                         </div>
                     </div>
                     <div class="field">
@@ -92,20 +83,11 @@ elseif(isset($_POST['replyButton'])){
                             <textarea style=" border: solid;" form="form" type="text" name="body" class="bodyclass"><?php echo $msg; ?></textarea>
                         </div>
                     </div>
-                    <input class="ui positive button" type="submit" name="reply" value="Send">
+                    <input style="margin-left:570px;" class="ui positive button" type="submit" name="reply" value="Send">
                 </div>
             </div>
         </div>
     </form>
-<!--<form action="add_message.php" method="post" id="form">-->
-<!--    <label>From:</label>-->
-<!--    <input type="text" value="--><?php //echo $_SESSION['username']?><!--" name="sender" readonly><br>-->
-<!--    <label>To:</label>-->
-<!--    <input type="text" name="receiver" id="receiver" value="--><?php //echo $_POST['receiver'];?><!--" readonly/><br>-->
-<!--    <div id="personList"></div>-->
-<!--    Body: <textarea form="form" type="text" name="body" class="bodyclass" >--><?php //echo $msg; ?><!--</textarea><br>-->
-<!--    <input type="submit" name="reply" value="Send">-->
-<!--</form>-->
 <?php
 }
 ?>
