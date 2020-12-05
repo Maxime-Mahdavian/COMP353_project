@@ -83,7 +83,7 @@ session_start();
                                 <h2> Add Parking Space </h2>
                                 <label for="condo_number">Condo Number:</label>
                                 <div class="ui left labeled icon input">
-                                    <input style=" border: solid;" type="text" placeholder="Address" name="condo_number" >
+                                    <input style=" border: solid;" type="text" placeholder="Condo Number" name="condo_number" >
                                     <i class="building outline icon"></i>
                                 </div>
                             </div>
