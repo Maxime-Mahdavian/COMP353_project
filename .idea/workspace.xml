@@ -21,7 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c79632d8-bb1c-49a7-aa54-a77b20adaf07" name="Default Changelist" comment="ui updated">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/condoAssociation.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/condoAssociation.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +123,7 @@
       <workItem from="1607151104224" duration="985000" />
       <workItem from="1607184421909" duration="2091000" />
       <workItem from="1607193285014" duration="11505000" />
-      <workItem from="1607211249778" duration="610000" />
+      <workItem from="1607211249778" duration="934000" />
     </task>
     <task id="LOCAL-00001" summary="client side group functionality added, as well as permission on posts">
       <created>1605544185286</created>
@@ -364,7 +363,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607211519910</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="ui updated">
+      <created>1607211866318</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1607211866318</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -482,10 +488,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2365" y="151" key="SettingsEditor/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605292265078" />
-    <state x="433" y="131" width="804" height="516" key="Vcs.Push.Dialog.v2" timestamp="1607211521378">
+    <state x="433" y="131" width="804" height="516" key="Vcs.Push.Dialog.v2" timestamp="1607211869718">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="433" y="131" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1607211521378" />
+    <state x="433" y="131" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1607211869718" />
     <state x="2451" y="92" width="804" height="516" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1607026266123" />
     <state x="663" y="300" width="312" height="243" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1606696537737">
       <screen x="0" y="0" width="1536" height="824" />

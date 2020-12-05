@@ -25,7 +25,7 @@ session_start();
 
 	//print debug messages if there are any
 	if($_SESSION['print_message']) {
-		echo $_SESSION['message']."<br><br>";
+		echo "<p style='margin-left: 40px;'>".$_SESSION['message']."</p><br>";
 		$_SESSION['message'] = "";
 		$_SESSION['print_message'] = false;		//reset boolean tellin us theres a message to print
 	}
@@ -42,8 +42,8 @@ session_start();
 	//budget field
 	if($_SESSION['admin'] == 1) { //give admins option to edit
 		if(isset($_POST['edit_budget'])) {	//if we're editing, give admins a confirm button
-			echo '	<h2 style="margin-left: 30px"><input class="ui green button" type="submit" name="confirm_new_budget" value="confirm">'. "&nbsp;&nbsp;";
-		} else { echo '	<h2 style="margin-left: 30px"><input class="ui black button" type="submit" name="edit_budget" value="edit">'. "&nbsp;&nbsp;"; }	//else show edit button
+			echo '	<h2 style="margin-left: 40px"><input class="ui green button" type="submit" name="confirm_new_budget" value="confirm">'. "&nbsp;&nbsp;";
+		} else { echo '	<h2 style="margin-left: 40px"><input class="ui black button" type="submit" name="edit_budget" value="edit">'. "&nbsp;&nbsp;"; }	//else show edit button
 	}
 	if(isset($_POST['edit_budget'])) {	//if we're editing, give admins a field
 		echo '	<input type="text" name="new_budget" value="'.$ca['budget'].'">'.'</h2><br>';
@@ -52,8 +52,8 @@ session_start();
 	//financial status field
 	if($_SESSION['admin'] == 1) {
 		if(isset($_POST['edit_financialStatus'])) {	//if we're editing, give admins a confirm button
-			echo '	<h2 style="margin-left: 30px"><input class="ui green button" type="submit" name="confirm_new_financialStatus" value="confirm">'. "&nbsp;&nbsp;";
-		} else { echo '	<h2 style="margin-left: 30px"><input class="ui black button" type="submit" name="edit_financialStatus" value="edit">'. "&nbsp;&nbsp;"; }	//else show edit button
+			echo '	<h2 style="margin-left: 40px"><input class="ui green button" type="submit" name="confirm_new_financialStatus" value="confirm">'. "&nbsp;&nbsp;";
+		} else { echo '	<h2 style="margin-left: 40px"><input class="ui black button" type="submit" name="edit_financialStatus" value="edit">'. "&nbsp;&nbsp;"; }	//else show edit button
 	}
 	if(isset($_POST['edit_financialStatus'])) {	//if we're editing, give admins a field
 		echo '	<input type="text" name="new_financialStatus" value="'.$ca['financialStatus'].'">'.'</h2><br>';
