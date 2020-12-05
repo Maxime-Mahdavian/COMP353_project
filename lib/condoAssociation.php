@@ -43,7 +43,7 @@ session_start();
 	if($_SESSION['admin'] == 1) { //give admins option to edit
 		if(isset($_POST['edit_budget'])) {	//if we're editing, give admins a confirm button
 			echo '	<h2 style="margin-left: 30px"><input type="submit" name="confirm_new_budget" value="confirm">'. "&nbsp;&nbsp;";
-		} else { echo '	<h2 style="margin-left: 30px"><input type="submit" name="edit_budget" value="edit">'. "&nbsp;&nbsp;"; }	//else show edit button
+		} else { echo '	<h2 style="margin-left: 30px"><input class="ui black button" type="submit" name="edit_budget" value="edit">'. "&nbsp;&nbsp;"; }	//else show edit button
 	}
 	if(isset($_POST['edit_budget'])) {	//if we're editing, give admins a field
 		echo '	<input type="text" name="new_budget" value="'.$ca['budget'].'">'.'</h2><br>';
@@ -53,14 +53,13 @@ session_start();
 	if($_SESSION['admin'] == 1) {
 		if(isset($_POST['edit_financialStatus'])) {	//if we're editing, give admins a confirm button
 			echo '	<h2 style="margin-left: 30px"><input type="submit" name="confirm_new_financialStatus" value="confirm">'. "&nbsp;&nbsp;";
-		} else { echo '	<h2 style="margin-left: 30px"><input type="submit" name="edit_financialStatus" value="edit">'. "&nbsp;&nbsp;"; }	//else show edit button
+		} else { echo '	<h2 style="margin-left: 30px"><input class="ui black button" type="submit" name="edit_financialStatus" value="edit">'. "&nbsp;&nbsp;"; }	//else show edit button
 	}
 	if(isset($_POST['edit_financialStatus'])) {	//if we're editing, give admins a field
 		echo '	<input type="text" name="new_financialStatus" value="'.$ca['financialStatus'].'">'.'</h2><br>';
 	} else { echo " financial status: " . $ca['financialStatus'] . "</h2><br>"; }	//else show value
 	
 	echo "</form>";
-	echo "<br><br>";
 	
 	//handle admin delete button press
 	if(isset($_POST['delete'])) {
