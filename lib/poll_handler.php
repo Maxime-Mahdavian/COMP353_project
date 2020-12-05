@@ -69,7 +69,7 @@ switch ($_POST['req']) {
                 foreach ($poll['options'] as $oid=>$o) {
                     $percent = ($votes[$oid]/$votes['total'])*100;
                     printf("<div class='poll-stats'><input type='text' style='width: 270px; border: solid; border-radius: 5px' value='%s' readonly/> %0.2f%% (%u votes)</div><br>", $o, $percent, $votes[$oid]);
-                    printf("<div class='poll-bar-outside'><div class='poll-bar-inside' style='width:%0.2f%%;'></div></div>", $percent);
+                    printf("<div class='poll-bar-outside'><div class='poll-bar-inside' style='width:%0.2f%%'></div></div>", $percent);
                 }
                 echo "</div>";
             }

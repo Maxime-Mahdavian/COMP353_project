@@ -81,7 +81,7 @@ session_start();
                         <div style=" background-color: #c9d3d8; width: 100%;" class="ui form segment AVAST_PAM_loginform">
                             <div class="field">
                                 <h2> Add Parking Space </h2>
-                                <label for="condo_number">Address:</label>
+                                <label for="condo_number">Condo Number:</label>
                                 <div class="ui left labeled icon input">
                                     <input style=" border: solid;" type="text" placeholder="Address" name="condo_number" >
                                     <i class="building outline icon"></i>
