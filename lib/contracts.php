@@ -108,6 +108,5 @@ session_start();
     }
     ?>
 </table>
-<a href="welcome.php">Back</a>
 </body>
 </html>

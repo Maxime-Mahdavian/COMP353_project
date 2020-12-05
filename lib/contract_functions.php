@@ -32,8 +32,9 @@ if($_POST['ContributionButton'] == 'Create'){
             <div class="column">
                 <div style=" background-color: #c9d3d8;" class="ui form segment AVAST_PAM_loginform">
                     <div class="field">
-                        <label for="contractID">Contractor:</label>
-                        <select name="contractID">
+                        <h1>Contibution</h1>
+                        <label for="contractID" style="margin-left: 10px">Contractor:</label>
+                        <select style="margin-left: 10px; border:solid;" name="contractID">
                             <?php
 
                             //Search for all active contracts for the contractor name
@@ -47,16 +48,16 @@ if($_POST['ContributionButton'] == 'Create'){
                         </select>
                     </div>
                     <div class="field">
-                        <label for="price:">Price:</label>
-                        <div class="ui left labeled icon input">
+                        <label for="price:" style="margin-left: 10px">Price:</label>
+                        <div style="margin-left: 10px" class="ui left labeled icon input">
                             <input style=" border: solid;" type="text" name="price" onblur="checkInput(this.value)">
                             <i class="dollar sign icon"></i>
                         </div>
                     </div>
                     <div class="field">
-                        <label for="reason">Reason:</label>
-                        <div class="ui left labeled icon input">
-                            <input style=" border: solid;" type="text" name="reason">
+                        <label for="reason" style="margin-left: 10px">Reason:</label>
+                        <div style="width: 676px" class="ui input">
+                            <input style=" margin-left: 10px; border: solid; width: 500px" type="text" name="reason">
                         </div>
                     </div>
                     <input style="margin-left:580px;" class="ui positive button" type="submit" name="create_contribution" value="submit">
@@ -105,19 +106,20 @@ elseif (isset($_POST['ContractButton'])){
         <div style="margin:30px;" class="ui two column middle aligned relaxed grid basic segment">
             <div class="column">
                 <div style=" background-color: #c9d3d8;" class="ui form segment AVAST_PAM_loginform">
-                    <div class="field">
+                    <h1>Contract</h1>
+                    <div style="margin-left: 10px" class="field">
                         <label for="awarded">Contractor:</label>
-                        <input style=" border: solid;" type="text" name="awarded">
+                        <input style=" border: solid; width:667px" type="text" name="awarded">
                     </div>
                     <div class="field">
-                        <label for="description:">Description:</label>
-                        <div class="ui left labeled icon input">
+                        <label style="margin-left: 10px" for="description:">Description:</label>
+                        <div style="margin-left: 10px" class="ui left labeled icon input">
                             <input style=" border: solid;" type="text" name="description">
                         </div>
                     </div>
                     <div class="field">
-                        <label for="Price">Price:</label>
-                        <div class="ui left labeled icon input">
+                        <label style="margin-left: 10px" for="Price">Price:</label>
+                        <div style="margin-left: 10px" class="ui left labeled icon input">
                             <input style=" border: solid;" type="text" name="price" onblur="checkInput(this.value)">
                         </div>
                     </div>
@@ -156,9 +158,10 @@ elseif (isset($_POST['MaintenanceButton'])){
     <div style="margin:30px;" class="ui two column middle aligned relaxed grid basic segment">
         <div class="column">
             <div style=" background-color: #c9d3d8;" class="ui form segment AVAST_PAM_loginform">
-                <div class="field">
+                <h1>Maintenance</h1>
+                <div style="margin-left: 10px" class="field">
                     <label for="contractID">Contractor:</label>
-                    <select name="contractID">
+                    <select style=" border: solid; width:667px;" name="contractID">
                         <?php
 
                         $sql = "select awarded,contractID from contracts WHERE status='Active'";
@@ -171,15 +174,15 @@ elseif (isset($_POST['MaintenanceButton'])){
                     </select>
                 </div>
                 <div class="field">
-                    <label for="Price">Price:</label>
-                    <div class="ui left labeled icon input">
+                    <label style="margin-left: 10px" for="Price">Price:</label>
+                    <div style="margin-left: 10px" class="ui left labeled icon input">
                         <input style=" border: solid;" type="text" name="cost">
                         <i class="dollar sign icon"></i>
                     </div>
                 </div>
                 <div class="field">
-                    <label for="reason">Rationale:</label>
-                    <div class="ui left labeled icon input">
+                    <label for="reason" style="margin-left: 10px">Rationale:</label>
+                    <div style="margin-left: 10px" class="ui left labeled icon input">
                         <input style=" border: solid;" type="text" name="rationale">
                     </div>
                 </div>

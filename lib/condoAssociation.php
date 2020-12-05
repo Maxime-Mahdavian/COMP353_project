@@ -222,9 +222,10 @@ session_start();
 		
 		//create a table for each building
 		echo "<h1> Building $b </h1>";
-		echo "<table><thead><tr>";
+		echo "<table class='ui table inverted' style='margin-left: 50px; width:30%;'>";
+		echo "<col style='width: 20%'><col style='width:50%px;'><col style='width: 30%;'>";
 		if($_SESSION['admin'] == 1) //allow only admins to edit/delete 
-			echo "<th></th><th></th>";
+			echo "<th></th>";
 		echo "<th> Username </th>";
 		echo "<th> Percent Share </th></tr>";
 		
@@ -234,14 +235,14 @@ session_start();
 				if($_SESSION['admin'] == 1) { //allow only admins to edit/delete
 					echo '<td><form action="edit_percentShare.php" method="post">';
 					echo '<input type="hidden" name="editNum" value="'.$user['username'].",".$b.",".$user['percentShare'].'">';
-					echo '<input type="submit" name="edit" value="edit">';
-					echo '</form></td>';
-					echo '<td><form action="condoAssociation.php" method="post">';
+					echo '<input class="ui button" type="submit" name="edit" value="edit">';
+					echo '</form>';
+					echo '<form action="condoAssociation.php" method="post">';
 					echo '<input type="hidden" name="deleteNum" value="'.$user['username'].",".$b.'">';
-					echo '<input type="submit" name="delete" value="delete">';
+					echo '<input class="ui red button" type="submit" name="delete" value="delete">';
 					echo '</form></td>';
 				}
-				echo "<td>".$user['username']."</td>";
+				echo "<td align='center'>".$user['username']."</td>";
 				echo "<td>".$user['percentShare']."</td>";
 				echo "</tr>";
 			}

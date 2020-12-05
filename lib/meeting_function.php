@@ -28,7 +28,7 @@ if($_POST['meetingButton'] == 'Create'){
     <form action="edit_meeting.php" method="post">
         <div class="ui two column middle aligned relaxed grid basic segment">
             <div class="column">
-                <div style=" background-color: #c9d3d8;" class="ui form segment AVAST_PAM_loginform">
+                <div style=" margin-left:40px; background-color: #c9d3d8;" class="ui form segment AVAST_PAM_loginform">
                     <div class="field">
                         <label>Agenda</label>
                         <div class="ui left labeled icon input">

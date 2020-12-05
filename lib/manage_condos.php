@@ -23,68 +23,78 @@ session_start();
     Manage Condos<i class="wrench icon"></i>
 </a>
 
-<form action="manage_condos.php" method="post">
-    <div style="margin:30px;" class="ui two column middle aligned relaxed grid basic segment">
-        <div class="column">
-            <div style=" background-color: #c9d3d8;" class="ui form segment AVAST_PAM_loginform">
-                <div class="field">
-                    <h2> Add Building </h2>
-                    <label for="building_address">Address:</label>
-                    <div class="ui left labeled icon input">
-                        <input style=" border: solid;" type="text" placeholder="Address" name="building_address" >
-                        <i class="building icon"></i>
+<table style="width: 100%;">
+    <col style="width: 33%;">
+    <col style="width: 34%;">
+    <col style="width: 33%;"
+    <tr style="border:solid;">
+        <td>
+            <form style="width: 100%;" action="manage_condos.php" method="post">
+                <div style="margin:30px;" class="ui two column middle aligned relaxed grid basic segment">
+                    <div class="column" style="width: 100%;">
+                        <div style=" background-color: #c9d3d8; width: 100%;" class="ui form segment AVAST_PAM_loginform">
+                            <div class="field">
+                                <h2> Add Building </h2>
+                                <label for="building_address">Address:</label>
+                                <div class="ui left labeled icon input">
+                                    <input style=" border: solid;" type="text" placeholder="Address" name="building_address" >
+                                    <i class="building icon"></i>
+                                </div>
+                            </div>
+                            <input class="ui positive button" type="submit" name="add_building" value="confirm">
+                        </div>
                     </div>
                 </div>
-                <input class="ui positive button" type="submit" name="add_building" value="confirm">
-            </div>
-        </div>
-    </div>
-</form>
-
-<form action="manage_condos.php" method="post">
-    <div style="margin:30px;" class="ui two column middle aligned relaxed grid basic segment">
-        <div class="column">
-            <div style=" background-color: #c9d3d8;" class="ui form segment AVAST_PAM_loginform">
-                <div class="field">
-                    <h2> Add Condo </h2>
-                    <label for="floor_space">Floor Space in ft<sup>2</sup>:</label>
-                    <div class="ui left labeled icon input">
-                        <input style=" border: solid;" type="text" placeholder="Floor Space" name="floor_space" >
-                        <i class="crop icon"></i>
+            </form>
+        </td>
+        <td>
+            <form style="width: 100%;" action="manage_condos.php" method="post">
+                <div style="margin:30px;" class="ui two column middle aligned relaxed grid basic segment">
+                    <div class="column" style="width: 100%;">
+                        <div style=" background-color: #c9d3d8; width: 100%;" class="ui form segment AVAST_PAM_loginform">
+                            <div class="field">
+                                <h2> Add Condo </h2>
+                                <label for="floor_space">Floor Space in ft<sup>2</sup>:</label>
+                                <div class="ui left labeled icon input">
+                                    <input style=" border: solid;" type="text" placeholder="Floor Space" name="floor_space" >
+                                    <i class="crop icon"></i>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <h2> Add Condo </h2>
+                                <label for="building_number">Building Number:</label>
+                                <div class="ui left labeled icon input">
+                                    <input style=" border: solid;" type="text" placeholder="Building Number" name="building_number" >
+                                    <i class="building outline icon"></i>
+                                </div>
+                            </div>
+                            <input class="ui positive button" type="submit" name="add_condo" value="confirm">
+                        </div>
                     </div>
                 </div>
-                <div class="field">
-                    <h2> Add Condo </h2>
-                    <label for="building_number">Building Number:</label>
-                    <div class="ui left labeled icon input">
-                        <input style=" border: solid;" type="text" placeholder="Building Number" name="building_number" >
-                        <i class="building outline icon"></i>
+            </form>
+        </td>
+        <td>
+            <form style="width: 100%;" action="manage_condos.php" method="post">
+                <div style="margin:30px;" class="ui two column middle aligned relaxed grid basic segment">
+                    <div class="column" style="width: 100%;">
+                        <div style=" background-color: #c9d3d8; width: 100%;" class="ui form segment AVAST_PAM_loginform">
+                            <div class="field">
+                                <h2> Add Parking Space </h2>
+                                <label for="condo_number">Address:</label>
+                                <div class="ui left labeled icon input">
+                                    <input style=" border: solid;" type="text" placeholder="Address" name="condo_number" >
+                                    <i class="building outline icon"></i>
+                                </div>
+                            </div>
+                            <input class="ui positive button" type="submit" name="add_parking_space" value="confirm">
+                        </div>
                     </div>
                 </div>
-                <input class="ui positive button" type="submit" name="add_condo" value="confirm">
-            </div>
-        </div>
-    </div>
-</form>
-
-<form action="manage_condos.php" method="post">
-    <div style="margin:30px;" class="ui two column middle aligned relaxed grid basic segment">
-        <div class="column">
-            <div style=" background-color: #c9d3d8;" class="ui form segment AVAST_PAM_loginform">
-                <div class="field">
-                    <h2> Add Parking Space </h2>
-                    <label for="condo_number">Address:</label>
-                    <div class="ui left labeled icon input">
-                        <input style=" border: solid;" type="text" placeholder="Address" name="condo_number" >
-                        <i class="building outline icon"></i>
-                    </div>
-                </div>
-                <input class="ui positive button" type="submit" name="add_parking_space" value="confirm">
-            </div>
-        </div>
-    </div>
-</form>
-
+            </form>
+        </td>
+    </tr>
+</table>
 <?php
 
 	//print debug messages if there are any
@@ -183,17 +193,17 @@ session_start();
 	} else if(isset($_POST['show_buildings'])) {	//if show buildings button pressed
 		$_SESSION['table'] = "buildings";						//show buildings table
 	} else if(isset($_POST['show_condos'])) {			//if show condos button pressed
-		$_SESSION['table'] = condos;								//show condos table
+		$_SESSION['table'] = "condos";								//show condos table
 	} else if(isset($_POST['show_parking'])) {		//if show parking button pressed
 		$_SESSION['table'] = "parking";							//show parking space table
 	}
 	
 ?>
 
-<form style="margin:30px;" action="manage_condos.php" method="post">
+<form style="margin-left:170px;" action="manage_condos.php" method="post">
 	<input class="ui blue button" type="submit" name="show_buildings" value="list buildings">
-	<input class="ui blue button" type="submit" name="show_condos" value="list condos">
-	<input class="ui blue button" type="submit" name="show_parking" value="list parking">
+	<input style="margin-left:420px;" class="ui blue button" type="submit" name="show_condos" value="list condos">
+	<input style="margin-left:420px;" class="ui blue button" type="submit" name="show_parking" value="list parking">
 </form>
 
 

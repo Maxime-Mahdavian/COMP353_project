@@ -17,7 +17,7 @@ switch ($_POST['req']) {
         $comments = $pdo->get($_POST['post_id']);
         function show ($cid, $rid, $name, $time, $message, $indent = 0) { ?>
 
-            <div style="margin-left:30px;" class="ui two column middle aligned relaxed grid basic segment">
+            <div style="margin-left:60px; width: 1700px;" class="ui two column middle aligned relaxed grid basic segment">
                 <div class="column">
                     <div style=" background-color: #c9d3d8;" class="ui form segment AVAST_PAM_loginform">
                         <div class="ccomment ">
@@ -32,7 +32,7 @@ switch ($_POST['req']) {
                             <?php if($_SESSION['admin'] == 1)
                                 echo '<input type="button" class="ui smaller red button" value="Delete" onclick="comments.del('.$cid.')"/>';
                             ?>
-                            <div id="reply-<?=$cid?>"></div>
+                            <div class="creply" style="width: 700px;" id="reply-<?=$cid?>"></div>
                         </div>
                     </div>
                 </div>
@@ -49,9 +49,9 @@ switch ($_POST['req']) {
     /* [SHOW REPLY FORM] */
     case "reply": ?>
 
-        <form onsubmit="return comments.add(this)" class="creplyform">
-            <div style="margin:30px;" class="ui two column middle aligned relaxed grid basic segment">
-                <div class="column">
+        <form style="margin-left:20px;" onsubmit="return comments.add(this)" class="creplyform">
+            <div style="margin-left:20px;" class="ui two column middle aligned relaxed grid basic segment">
+                <div style="margin-left:20px;" class="column">
                     <div style=" background-color: #c9d3d8;" class="ui form segment AVAST_PAM_loginform">
                         <div class="field">
                             <label style="font-size: 20px;">Leave a reply</label><br>
