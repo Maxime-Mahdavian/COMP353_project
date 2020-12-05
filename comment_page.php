@@ -24,7 +24,7 @@ $result = mysqli_query($db, $sql);
 while($temp = mysqli_fetch_array($result)){
 
     echo "<div style=' background-color: white; margin-left:40px; border: solid; border-radius: 7px; width:50%;'>";
-    echo "<table style='width: 100%'><tr><td><h1 font-weight: bold'>" . $temp['title']."</p></td>";
+    echo "<table style='width: 100%'><tr><td><h1 style='margin-left:5px; font-weight: bold'>" . $temp['title']."</p></td>";
     echo "<td><p align='right'> Posted on: " . $temp['timestamp']. "</p></td></tr></table>";
     $sql = "SELECT name FROM `groups` g, post p WHERE (p.postID =". $temp['postID'] . " and p.groupID = g.groupID)";
     $y = mysqli_query($db, $sql);
