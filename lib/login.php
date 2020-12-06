@@ -31,7 +31,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         }
         $_SESSION['groupID'] = $listofGroups;
 
-        header("location: welcome.php");
+        header("location: ./welcome.php");
 
     }else {
         $error = "Your Login Name or Password is invalid";
