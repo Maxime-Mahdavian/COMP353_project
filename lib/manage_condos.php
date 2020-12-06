@@ -201,8 +201,8 @@ session_start();
 		$_SESSION['print_message'] = true;
 		//header("Location: " . $_SERVER['PHP_SELF']);
 		$URL="manage_condos.php";
-            	echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
-            	echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
+    echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
+    echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
 	
 	}
 	
@@ -309,7 +309,7 @@ else echo '<table class="ui selectable inverted table" style="display:none;">';
   while($parking = mysqli_fetch_array($parking_query)){
   		echo "<tr>";
   		echo '<td><form action="manage_condos.php" method="post">';
-  		echo '<input type="hidden" name="deleteNum" value="'.$building['buildingID'].'">';
+  		echo '<input type="hidden" name="deleteNum" value="'.$parking['parkingSpaceID'].'">';
   		echo '<input class="ui red button" type="submit" name="delete_parking" value="remove">';		//delete button for parking spaces
   		echo "</form></td>";
       echo "<td>".$parking['parkingSpaceID']."</td>";
