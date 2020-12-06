@@ -67,7 +67,7 @@ elseif(isset($_POST['replyButton'])){
                     <div class="field">
                         <label>From:</label>
                         <div class="ui left labeled icon input">
-                            <input style=" border: solid;" type="text" value="<?php echo $_POST['username'];?>" name="sender" readonly >
+                            <input style=" border: solid;" type="text" value="<?php echo $_SESSION['username'];?>" name="sender" readonly >
                         </div>
                     </div>
                     <div class="field">

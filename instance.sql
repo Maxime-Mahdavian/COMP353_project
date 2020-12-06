@@ -226,12 +226,16 @@ DROP TABLE IF EXISTS `fees`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `fees` (
+  `feeID` int(11) NOT NULL AUTO_INCREMENT,
   `condoID` int(10) unsigned DEFAULT NULL,
   `amountPaid` float DEFAULT NULL,
-  `date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `payee` int(11) NOT NULL,
+  PRIMARY KEY (`feeID`),
   KEY `condoID` (`condoID`),
-  CONSTRAINT `fees_ibfk_1` FOREIGN KEY (`condoID`) REFERENCES `condos` (`condoID`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  KEY `payee` (`payee`),
+  CONSTRAINT `fees_ibfk_1` FOREIGN KEY (`condoID`) REFERENCES `condos` (`condoID`) ON DELETE CASCADE,
+  CONSTRAINT `fees_ibfk_2` FOREIGN KEY (`payee`) REFERENCES `Users` (`userID`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -240,7 +244,6 @@ CREATE TABLE `fees` (
 
 LOCK TABLES `fees` WRITE;
 /*!40000 ALTER TABLE `fees` DISABLE KEYS */;
-INSERT INTO `fees` VALUES (1,800,'2020-08-20 00:36:24'),(3,900,'2020-06-28 15:36:38'),(4,100,'2020-12-01 13:45:48'),(5,600,'2020-11-10 21:00:00'),(6,900,'2020-07-22 15:40:00'),(7,1000,'2020-09-15 13:15:30'),(8,1400,'2020-10-10 19:38:06'),(9,600,'2020-11-30 21:50:15'),(10,50,'2020-11-19 15:22:36'),(11,500,'2020-10-28 02:15:49'),(12,460,'2020-10-23 22:39:08'),(13,900,'2020-08-10 23:25:21'),(14,632,'2020-11-18 00:40:35'),(15,890,'2020-10-31 15:39:47'),(16,1300,'2020-10-22 15:14:57'),(17,2000,'2020-08-17 15:45:09'),(18,750,'2020-11-25 18:03:25'),(19,960,'2020-11-21 18:53:40'),(20,1000,'2020-09-16 19:40:58'),(21,750,'2020-11-17 22:41:13'),(15,990,'2020-09-14 20:44:28');
 /*!40000 ALTER TABLE `fees` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -374,7 +377,7 @@ CREATE TABLE `meeting` (
   PRIMARY KEY (`meetingID`),
   KEY `creator` (`creator`),
   CONSTRAINT `meeting_ibfk_1` FOREIGN KEY (`creator`) REFERENCES `Users` (`userID`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -405,7 +408,7 @@ CREATE TABLE `message` (
   KEY `receiverID` (`receiverID`),
   CONSTRAINT `message_ibfk_1` FOREIGN KEY (`senderID`) REFERENCES `Users` (`userID`),
   CONSTRAINT `message_ibfk_2` FOREIGN KEY (`receiverID`) REFERENCES `Users` (`userID`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -414,7 +417,7 @@ CREATE TABLE `message` (
 
 LOCK TABLES `message` WRITE;
 /*!40000 ALTER TABLE `message` DISABLE KEYS */;
-INSERT INTO `message` VALUES (5,1,2,'This is a message','2020-11-25 18:30:42'),(6,2,1,'This is another message back','2020-11-25 18:32:42'),(7,3,1,'test','2020-11-25 18:33:42'),(8,30,1,'other test','2020-11-25 18:35:42'),(9,2,1,'This is a really really really really really long message, we shall see how this handles such a message of tremendous length','2020-11-25 18:38:42'),(12,1,2,'Hello, how\'s it going','2020-11-25 18:40:42'),(13,2,1,'Will you see this my friend i wonder','2020-11-25 19:02:58'),(14,1,2,'\r\nYes, i\'ve seen it, thank yoy very much my dear friend\r\n\r\n------------------------------------\r\nWill you see this my friend i wonder\r\n','2020-11-25 19:47:36'),(15,1,2,'\r\nIt is indeed a long message my friend\r\n\r\n------------------------------------\r\nJohn Doe:\r\nThis is a really really really really really long message, we shall see how this handles such a message of tremendous length\r\n','2020-11-25 20:00:47'),(16,2,1,'It seems to be working\r\n\r\n\r\n------------------------------------\r\nMax:\r\n\r\nIt is indeed a long message my friend\r\n\r\n------------------------------------\r\nJohn Doe:\r\nThis is a really really really really really long message, we shall see how this handles such a message of tremendous length\r\n\r\n','2020-11-25 20:01:26');
+INSERT INTO `message` VALUES (5,1,2,'This is a message','2020-11-25 18:30:42'),(6,2,1,'This is another message back','2020-11-25 18:32:42'),(7,3,1,'test','2020-11-25 18:33:42'),(8,30,1,'other test','2020-11-25 18:35:42'),(9,2,1,'This is a really really really really really long message, we shall see how this handles such a message of tremendous length','2020-11-25 18:38:42'),(12,1,2,'Hello, how\'s it going','2020-11-25 18:40:42'),(13,2,1,'Will you see this my friend i wonder','2020-11-25 19:02:58'),(14,1,2,'\r\nYes, i\'ve seen it, thank yoy very much my dear friend\r\n\r\n------------------------------------\r\nWill you see this my friend i wonder\r\n','2020-11-25 19:47:36'),(15,1,2,'\r\nIt is indeed a long message my friend\r\n\r\n------------------------------------\r\nJohn Doe:\r\nThis is a really really really really really long message, we shall see how this handles such a message of tremendous length\r\n','2020-11-25 20:00:47'),(16,2,1,'It seems to be working\r\n\r\n\r\n------------------------------------\r\nMax:\r\n\r\nIt is indeed a long message my friend\r\n\r\n------------------------------------\r\nJohn Doe:\r\nThis is a really really really really really long message, we shall see how this handles such a message of tremendous length\r\n\r\n','2020-11-25 20:01:26'),(17,1,38,'','2020-12-06 14:37:00');
 /*!40000 ALTER TABLE `message` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -613,4 +616,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-12-03 15:10:04
+-- Dump completed on 2020-12-06 10:14:45
