@@ -22,7 +22,10 @@
 
 	if(isset($_POST['cancel'])) {	//if cancel button is pressed, send back to manage_users
 		
-		header("Location: " . "manage_users.php");
+		//header("Location: " . "manage_users.php");
+		$URL="manage_users.php";
+            	echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
+            	echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
 		
 	} else if(isset($_POST['confirm'])) {	//if confirm is pressed, apply changes in form
 	
@@ -52,7 +55,10 @@
 			else echo "error: ".mysqli_error($db);
 			
 			//go back to manage_users
-			header("Location: " . "manage_users.php");
+			//header("Location: " . "manage_users.php");
+			$URL="manage_users.php";
+            		echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
+            		echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
 		
 		} else echo "blank fields are not allowed<br><br>";
 	
@@ -64,7 +70,10 @@
 		if (mysqli_query($db, $sql)) echo "User deleted successfully<br>";
 		else echo "Error deleting User: " . mysqli_error($db);
 		
-		header("Location: " . "manage_users.php");
+		//header("Location: " . "manage_users.php");
+		$URL="manage_users.php";
+            	echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
+            	echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
 	
 	}
 

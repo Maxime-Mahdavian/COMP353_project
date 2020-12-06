@@ -1,3 +1,8 @@
+<?php
+//INIT
+include("config.php");
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,18 +14,15 @@
 <div style = "background-color:#aca3ec; height:100px; color:#4D39D6; padding:3px;"><b><br><i class="huge chess rook icon"></i></b><b align="middle" style="margin-bottom:10px; color:white; font-size:40px;">CON</b></div>
 <br>
 <br>
-<button style="margin-left:1325px" class="ui blue left labeled icon button" type="submit" name="back" onclick="window.location.href='group_functions.php';">
-    <i class="left arrow icon"></i>
-    Back
-</button>
+<form action="group_functions.php" method="post">
+<input style="margin-left:1325px" class="ui blue left labeled icon button" type="submit" name="backButton" value="Back">
+<input type='hidden' name='owner_group' value='<?php echo $_POST['Rgroup']?>'>
+</form>
 <a style="margin-left:30px; font-size: 40px;" class="item">
     Owner Functions<i class="wrench icon"></i>
 </a>
 <br>
 <?php
-//INIT
-include("config.php");
-session_start();
 
 //If the owner comes back when they decline deleting a user
 $ownerCameBack = true;

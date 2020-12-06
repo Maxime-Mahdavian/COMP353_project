@@ -74,7 +74,11 @@ session_start();
 		else $_SESSION['message'] = mysqli_error($db);
 		//set session variable saying theres a message to print, then reload page
 		$_SESSION['print_message'] = true;
-		header("Location: " . $_SERVER['PHP_SELF']);
+		//header("Location: " . $_SERVER['PHP_SELF']);
+
+		$URL="condoAssociation.php";
+            	echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
+            	echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
 	
 	} else if(isset($_POST['add_record'])) {	//handle create record
 	
@@ -95,7 +99,10 @@ session_start();
     	if(mysqli_num_rows($result)==0) {
     		$_SESSION['message'] = "record not added, no user with that name exists";
     		$_SESSION['print_message'] = true;
-				header("Location: " . $_SERVER['PHP_SELF']);
+				//header("Location: " . $_SERVER['PHP_SELF']);
+		$URL="condoAssociation.php";
+            	echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
+            	echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
     	}
     	
 			//make sure building exists
@@ -105,7 +112,11 @@ session_start();
     	if(mysqli_num_rows($result)==0) {
     		$_SESSION['message'] = "record not added, no building with that number exists";
     		$_SESSION['print_message'] = true;
-				header("Location: " . $_SERVER['PHP_SELF']);
+				//header("Location: " . $_SERVER['PHP_SELF']);
+		$URL="condoAssociation.php";
+		echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
+		echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
+
     	}
 		
 			//insert into table
@@ -119,7 +130,11 @@ session_start();
 		} else { $_SESSION['message'] = "could not create record, please fill out all fields"; }
 	
 		$_SESSION['print_message'] = true;
-		header("Location: " . $_SERVER['PHP_SELF']);
+		//header("Location: " . $_SERVER['PHP_SELF']);
+
+		$URL="condoAssociation.php";
+            	echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
+            	echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
 	
 	} else if(isset($_POST['confirm_new_budget'])) {	//handle update budget
 		$new_budget = $_POST['new_budget'];	//save new budget in a more convenient varialbe
@@ -131,7 +146,10 @@ session_start();
 		
 		//display messages and refresh page
 		$_SESSION['print_message'] = true;
-		header("Location: " . $_SERVER['PHP_SELF']);
+		//header("Location: " . $_SERVER['PHP_SELF']);
+		$URL="condoAssociation.php";
+            	echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
+            	echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
 		
 	} else if(isset($_POST['confirm_new_financialStatus'])) {	//handle update financial status
 		$new_fs = $_POST['new_financialStatus'];	//save financial status in a more convenient variable
@@ -142,7 +160,10 @@ session_start();
 		else $_SESSION['message'] = mysqli_error($db);
 		
 		$_SESSION['print_message'] = true;
-		header("Location: " . $_SERVER['PHP_SELF']);
+		//header("Location: " . $_SERVER['PHP_SELF']);
+		$URL="condoAssociation.php";
+            	echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
+            	echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
 		
 	}
 

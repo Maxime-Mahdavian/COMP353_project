@@ -56,7 +56,7 @@ if(!isset($_SESSION['username']))
 
                             //For each groupID in $_SESSION, we need to find the name of the group to display
                                 foreach($_SESSION['groupID'] as $group){
-                                    $sql = "SELECT name FROM groups WHERE groupID=" . $group;
+                                    $sql = "SELECT name FROM `groups` WHERE groupID=" . $group;
                                     $row = mysqli_query($db, $sql);
                                     $result = mysqli_fetch_array($row);
                                     if(isset($_POST['post_group']) and $_POST['post_group'] == $result['name'])

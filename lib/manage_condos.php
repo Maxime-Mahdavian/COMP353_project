@@ -116,7 +116,10 @@ session_start();
 		
 		//set session variable saying theres a message to print, then reload page
 		$_SESSION['print_message'] = true;
-		header("Location: " . $_SERVER['PHP_SELF']);
+		//header("Location: " . $_SERVER['PHP_SELF']);
+		$URL="manage_condos.php";
+            	echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
+            	echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
 	
 	} else if(isset($_POST['add_condo'])) { //handle add condo button
 		
@@ -132,7 +135,10 @@ session_start();
 		
 		//set session variable saying theres a message to print, then reload page
 		$_SESSION['print_message'] = true;
-		header("Location: " . $_SERVER['PHP_SELF']);
+		//header("Location: " . $_SERVER['PHP_SELF']);
+		$URL="manage_condos.php";
+            	echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
+            	echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
 	
 	} else if(isset($_POST['add_parking_space'])) {	//handle add parking space button
 		
@@ -147,7 +153,10 @@ session_start();
 		
 		//set session variable saying theres a message to print, then reload page
 		$_SESSION['print_message'] = true;
-		header("Location: " . $_SERVER['PHP_SELF']);
+		//header("Location: " . $_SERVER['PHP_SELF']);
+		$URL="manage_condos.php";
+            	echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
+            	echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
 	
 	} else if(isset($_POST['delete_building'])) { //handle delete building button press
 	
@@ -159,7 +168,10 @@ session_start();
 	
 		//set session variable saying theres a message to print, then reload page
 		$_SESSION['print_message'] = true;
-		header("Location: " . $_SERVER['PHP_SELF']);
+		//header("Location: " . $_SERVER['PHP_SELF']);
+		$URL="manage_condos.php";
+            	echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
+            	echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
 	
 	} else if(isset($_POST['delete_condo'])) {	//handle delete condo button press
 	
@@ -171,19 +183,26 @@ session_start();
 		
 		//set session variable saying theres a message to print, then reload page
 		$_SESSION['print_message'] = true;
-		header("Location: " . $_SERVER['PHP_SELF']);
+		//header("Location: " . $_SERVER['PHP_SELF']);
+		$URL="manage_condos.php";
+            	echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
+            	echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
 	
 	} else if(isset($_POST['delete_parking'])) {	//handle delete parking button press
 	
 		$deleteNum = $_POST['deleteNum'];
 		//remove row from table
-		$sql="DELETE FROM parkingSpaces WHERE parkingSpaceID=$deleteNum";
+		$sql="DELETE FROM parkingSpaces WHERE parkingSpaceID=" . $deleteNum;
 		if(mysqli_query($db, $sql)) $_SESSION['message'] = "parking space removed";
 		else $_SESSION['message'] = mysqli_error($db);
-		
+
+
 		//set session variable saying theres a message to print, then reload page
 		$_SESSION['print_message'] = true;
-		header("Location: " . $_SERVER['PHP_SELF']);
+		//header("Location: " . $_SERVER['PHP_SELF']);
+		$URL="manage_condos.php";
+            	echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
+            	echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
 	
 	}
 	

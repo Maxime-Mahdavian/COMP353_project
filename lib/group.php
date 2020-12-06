@@ -37,7 +37,7 @@ session_start();
 <?php
 
     //Display all the info about every group
-    $sql = "SELECT * FROM groups";
+    $sql = "SELECT * FROM `groups`";
     $row = mysqli_query($db, $sql) or die(mysqli_error($db));
 
     while($result = mysqli_fetch_array($row)){

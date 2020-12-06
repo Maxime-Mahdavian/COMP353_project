@@ -1,3 +1,7 @@
+<?php
+include("lib/config.php");
+session_start();
+?>
 <!DOCTYYPE html>
 <html>
 <head>
@@ -16,8 +20,6 @@
     Back to Posts
 </button>
 <?php
-include("lib/config.php");
-session_start();
 $post = $_POST['postid'];
 $sql = "SELECT * FROM post WHERE postID=" . $post;
 $result = mysqli_query($db, $sql);

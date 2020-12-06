@@ -1,11 +1,13 @@
-<head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
-</head>
 <?php
 require __DIR__  . DIRECTORY_SEPARATOR . "config.php";
 require PATH_LIB . "Poll.php";
 session_start();
 $pollDB = new Poll();
+?>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+</head>
+<?php
 
 // DUMMY USER SESSION
 /*$_SESSION['user'] = [

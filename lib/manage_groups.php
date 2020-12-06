@@ -38,18 +38,21 @@ if(isset($_POST['create_group'])) {	//handle create group button press
 		$owner = $_SESSION['ID'];
 		
 		//add group row to database
-		$sql = "INSERT INTO groups (name, description, owner) VALUES ('$name', '$description', $owner)";
+		$sql = "INSERT INTO `groups` (name, description, owner) VALUES ('$name', '$description', $owner)";
 		if (mysqli_query($db, $sql)) echo "new group created"."<br><br>";
 		else echo mysqli_error($db)."<br><br>";
 		
 		//reload page to prevent form resubmission
-		header("Location: " . $_SERVER['PHP_SELF']);
+		//header("Location: " . $_SERVER['PHP_SELF']);
+		$URL="manage_groups.php";
+            	echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
+            	echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
 	
 	} else echo "please fill out all input fields to create a group<br><br>";
 	
 } else if(isset($_POST['delete_group'])) {
 
-	$sql = "DELETE FROM groups WHERE groupID=".$_POST['groupToDelete']."";
+	$sql = "DELETE FROM `groups` WHERE groupID=".$_POST['groupToDelete']."";
 	if (mysqli_query($db, $sql)) echo "group deleted"."<br><br>";
 	else echo mysqli_error($db)."<br><br>";
 
@@ -105,7 +108,7 @@ if(isset($_POST['create_group'])) {	//handle create group button press
 <?php
 
 	//list all groups from database
-  $group_query = mysqli_query($db, "SELECT groups.name, groups.description, groups.groupID, Users.name as owner_name FROM groups,Users WHERE groups.owner=Users.userID;");
+  $group_query = mysqli_query($db, "SELECT `groups`.name, `groups`.description, `groups`.groupID, Users.name as owner_name FROM `groups`,Users WHERE `groups`.owner=Users.userID;");
   while($group = mysqli_fetch_array($group_query)){
   		echo "<tr>";
   		echo '<td><form action="edit_group.php" method="post">';		//goto edit_group.php on manage group button press 

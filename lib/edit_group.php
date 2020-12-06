@@ -36,7 +36,7 @@ session_start();
 
         } else if(isset($_POST['set_owner'])) { //handle set owner buttons
 
-            $sql = "UPDATE groups SET owner=".$_POST['selectedUserID']." WHERE groupID=$groupToEdit";
+            $sql = "UPDATE `groups` SET owner=".$_POST['selectedUserID']." WHERE groupID=$groupToEdit";
         		$result = mysqli_query($db, $sql);
             if($result) echo "<p style='margin-left:30px; color:green;'>A new owner has been set</p><br><br>";
         		else echo mysqli_error($db)."<br><br>";
@@ -49,7 +49,7 @@ session_start();
 <!--            get and display group name and owner name-->
             <div class="field">
                 <label style="font-size: 20px;">Group: <?php
-                    $group_query = mysqli_query($db, "SELECT groups.name FROM groups,Users WHERE groups.owner=Users.userID AND groups.groupID=$groupToEdit;");
+                    $group_query = mysqli_query($db, "SELECT `groups`.name FROM `groups`,Users WHERE `groups`.owner=Users.userID AND `groups`.groupID=$groupToEdit;");
                     $group = mysqli_fetch_array($group_query);
                     echo ' '.$group['name'].'';
                     ?>
@@ -58,7 +58,7 @@ session_start();
             <div class="field">
                 <div class="field">
                     <label style="font-size: 20px;">Owner: <?php
-                    $group_query = mysqli_query($db, "SELECT Users.name as owner_name FROM groups,Users WHERE groups.owner=Users.userID AND groups.groupID=$groupToEdit;");
+                    $group_query = mysqli_query($db, "SELECT Users.name as owner_name FROM `groups`,Users WHERE `groups`.owner=Users.userID AND `groups`.groupID=$groupToEdit;");
                     $group = mysqli_fetch_array($group_query);
                     echo ' '.$group['owner_name'].'';
                 ?>

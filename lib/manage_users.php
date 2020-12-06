@@ -114,7 +114,10 @@ session_start();
         
         //set session variable saying theres a message to print, then reload page
 				$_SESSION['print_message'] = true;
-        header("Location: " . $_SERVER['PHP_SELF']);
+        //header("Location: " . $_SERVER['PHP_SELF']);
+	$URL="manage_users.php";
+       	echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
+       	echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
 
     }
     ?>

@@ -23,7 +23,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['ID'] = $row['userID'];
         $_SESSION['condoAssociationID'] = $row['condoAssociationID'];
 
-        $sql = "SELECT groupID FROM groups g, group_membership m WHERE g.groupID = m.gID AND m.uID=". $_SESSION['ID'];
+        $sql = "SELECT groupID FROM `groups` g, group_membership m WHERE g.groupID = m.gID AND m.uID=". $_SESSION['ID'];
         $result2 = mysqli_query($db,$sql);
         $listofGroups = [];
         while($answer = mysqli_fetch_array($result2)){
@@ -31,7 +31,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         }
         $_SESSION['groupID'] = $listofGroups;
 
-        header("location: ./welcome.php");
+        header("location: welcome.php");
 
     }else {
         $error = "Your Login Name or Password is invalid";

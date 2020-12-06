@@ -47,7 +47,11 @@ session_start();
   	else if(empty($_POST['amount'])) {	//check that we have an amount
 			$_SESSION['message'] = "please enter an amount";
 			$_SESSION['print_message'] = true;
-			header("Location: " . $_SERVER['PHP_SELF']);
+			//header("Location: " . $_SERVER['PHP_SELF']);
+
+			$URL="pay_fee.php";
+            		echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
+            		echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
 		} else {
 			$sql = "INSERT INTO fees(payee, condoID, amountPaid) VALUES (".$_SESSION['ID'].", $condoID, ".$_POST['amount'].")";
 			if( mysqli_query($db, $sql) ) { $_SESSION['message'] = "fee payment has been recorded"; }
@@ -56,11 +60,19 @@ session_start();
 		
 		//redirect to main page
 		$_SESSION['print_message'] = true;
-		header("Location: " . $_SERVER['PHP_SELF']);
+		//header("Location: " . $_SERVER['PHP_SELF']);
+		
+		$URL="pay_fee.php";
+            	echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
+            	echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
 	
 	} if(isset($_POST['cancel'])) {	//handle cancel button press
 		//redirect to main page
-		header("Location: welcome.php");
+		//header("Location: welcome.php");
+		
+		$URL="welcome.php";
+            	echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
+            	echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
 	}
 
 ?>

@@ -17,8 +17,16 @@ session_start();
         $userID = $_SESSION['ID'];
 
 
-        if(isset($_POST['cancel'])) header("Location: " . $_SERVER['PHP_SELF']);
-        else if(isset($_POST['back'])) header("Location: " . "welcome.php");
+        if(isset($_POST['cancel'])){
+		$URL="profile.php";
+            	echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
+            	echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
+	} 
+        else if(isset($_POST['back'])){
+		$URL="welcome.php";
+            	echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
+            	echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
+	} 
         else if(isset($_POST['confirm'])) {
 
             $valid = true;

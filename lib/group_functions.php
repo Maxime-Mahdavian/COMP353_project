@@ -107,7 +107,7 @@ $result = mysqli_query($db, $sql);
     <?php
     while($row = mysqli_fetch_array($result)){
         echo "<tr>";
-        $sql = "SELECT owner FROM groups g where groupID=". $_POST['owner_group']." and owner=". $row['userID'];
+        $sql = "SELECT owner FROM `groups` g where groupID=". $_POST['owner_group']." and owner=". $row['userID'];
         if(mysqli_num_rows(mysqli_query($db,$sql)) == 1){
             echo "<td>" . $row['name'] . "</td>";
             echo "<td>Owner</td>";

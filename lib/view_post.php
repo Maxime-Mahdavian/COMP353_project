@@ -66,7 +66,7 @@ if(!isset($_SESSION['username']))
                 echo "<h4 style='left-margin:10px;'> Status: Ad</h4>";
             }
             else{
-                echo "<h4 style='left-margin:10px;> Group post on: " . $nameOfGroup['name'] . "</h4>";
+                echo "<h4 style='left-margin:10px;'> Group post on: " . $nameOfGroup['name'] . "</h4>";
             }
             echo "<table style='width: 61%; margin-left: 20px;'><col style='width: 40%;'><tr><td style='border-radius: 5px; margin-left: 20px; border: solid;'><p style='margin-left: 5px;' align='top-left'>" . $temp['body'] . "</p></td></tr>";
             echo "<tr><img style='margin-left: 20px;' src=". $temp['img'] . " onerror='this.onerror=null; this.remove();' height='200px'; width='400px'> </tr></table><br>";
