@@ -80,6 +80,7 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Database Script.instance.sql" />
       <item itemvalue="Database Script.console_1.sql" />
       <item itemvalue="PHP Built-in Web Server.test" />
     </list>
@@ -129,7 +130,7 @@
       <workItem from="1607151104224" duration="985000" />
       <workItem from="1607184421909" duration="2091000" />
       <workItem from="1607193285014" duration="11505000" />
-      <workItem from="1607211249778" duration="934000" />
+      <workItem from="1607211249778" duration="2307000" />
     </task>
     <task id="LOCAL-00001" summary="client side group functionality added, as well as permission on posts">
       <created>1605544185286</created>
@@ -376,7 +377,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607211866318</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="ui updated">
+      <created>1607212349159</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1607212349159</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -494,10 +502,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2365" y="151" key="SettingsEditor/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605292265078" />
-    <state x="433" y="131" width="804" height="516" key="Vcs.Push.Dialog.v2" timestamp="1607211869718">
+    <state x="433" y="131" width="804" height="516" key="Vcs.Push.Dialog.v2" timestamp="1607212357560">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="433" y="131" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1607211869718" />
+    <state x="433" y="131" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1607212357560" />
     <state x="2451" y="92" width="804" height="516" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1607026266123" />
     <state x="663" y="300" width="312" height="243" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1606696537737">
       <screen x="0" y="0" width="1536" height="824" />
@@ -515,10 +523,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2490" y="145" width="766" height="730" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605192660113" />
-    <state x="577" y="218" width="433" height="172" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607211365708">
+    <state x="577" y="218" width="433" height="172" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607212354329">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="577" y="218" width="363" height="169" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1607211365708" />
+    <state x="577" y="218" width="363" height="169" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1607212354329" />
     <state x="2631" y="206" width="433" height="172" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1607012854840" />
     <state x="0" y="0" width="980" height="810" key="dock-window-1" timestamp="1607037855642">
       <screen x="0" y="0" width="1536" height="824" />
