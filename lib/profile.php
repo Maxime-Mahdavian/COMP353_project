@@ -82,7 +82,7 @@ session_start();
                                 <div class="field">
                                     <label>Password</label>
                                     <div class="ui left labeled icon input">
-                                        <input style=" border: solid;" type="password" name = "password" value="'.$password.'">
+                                        <input style=" border: solid;" type="text" name = "password" value="'.$password.'">
                                         <i class="lock icon"></i>
                                     </div>
                                 </div>
