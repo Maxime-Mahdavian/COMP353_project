@@ -17,22 +17,22 @@ switch ($_POST['req']) {
         $comments = $pdo->get($_POST['post_id']);
         function show ($cid, $rid, $name, $time, $message, $indent = 0) { ?>
 
-            <div style="margin-left:60px; width: 1700px;" class="ui two column middle aligned relaxed grid basic segment">
-                <div class="column">
-                    <div style=" background-color: #c9d3d8;" class="ui form segment AVAST_PAM_loginform">
-                        <div class="ccomment ">
-                            <div class="field">
-                                <span style="font-size: 20px; class="cname"><?=$name?></span>
-                                <span class="ctime"> |   <?=$time?></span>
+            <div class="ccomment<?= $indent ? " creply" : "" ?>">
+                <div style="margin-left:60px; width: 1700px;" class="ui two column middle aligned relaxed grid basic segment">
+                    <div class="column">
+                        <div style=" background-color: #c9d3d8;" class="ui form segment AVAST_PAM_loginform">
                                 <div class="field">
-                                    <textarea style="height: 50px;" type="text" name="nmessage" readonly><?=$message?></textarea>
+                                    <span style="font-size: 20px; class="cname"><?=$name?></span>
+                                    <span class="ctime"> |   <?=$time?></span>
+                                    <div class="field">
+                                        <textarea style="height: 50px;" type="text" name="nmessage" readonly><?=$message?></textarea>
+                                    </div>
                                 </div>
-                            </div>
-                            <input type="button" class="ui smaller blue button" value="Reply" onclick="comments.reply(<?=$cid?>, <?=$rid?>)"/>
-                            <?php if($_SESSION['admin'] == 1)
-                                echo '<input type="button" class="ui smaller red button" value="Delete" onclick="comments.del('.$cid.')"/>';
-                            ?>
-                            <div class="creply" style="width: 700px;" id="reply-<?=$cid?>"></div>
+                                <input type="button" class="ui smaller blue button" value="Reply" onclick="comments.reply(<?=$cid?>, <?=$rid?>)"/>
+                                <?php if($_SESSION['admin'] == 1)
+                                    echo '<input type="button" class="ui smaller red button" value="Delete" onclick="comments.del('.$cid.')"/>';
+                                ?>
+                                <div class="creply" style="width: 700px;" id="reply-<?=$cid?>"></div>
                         </div>
                     </div>
                 </div>
@@ -50,8 +50,8 @@ switch ($_POST['req']) {
     case "reply": ?>
 
         <form style="margin-left:20px;" onsubmit="return comments.add(this)" class="creplyform">
-            <div style="margin-left:20px;" class="ui two column middle aligned relaxed grid basic segment">
-                <div style="margin-left:20px;" class="column">
+            <div style="margin-left:20px; width: 1400px;" class="ui two column middle aligned relaxed grid basic segment">
+                <div class="column">
                     <div style=" background-color: #c9d3d8;" class="ui form segment AVAST_PAM_loginform">
                         <div class="field">
                             <label style="font-size: 20px;">Leave a reply</label><br>
@@ -63,7 +63,7 @@ switch ($_POST['req']) {
                         <div class="field">
                             <textarea style="height: 50px;" name="message" placeholder="Message (300 characters max)" maxlength="300" required></textarea>
                         </div>
-                        <input style="margin-left: 500px;" class="ui positive button" type="submit" value="Post Comment">
+                        <input class="ui positive button" type="submit" value="Post Comment">
                     </div>
                 </div>
             </div>
