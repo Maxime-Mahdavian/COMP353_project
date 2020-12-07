@@ -47,11 +47,22 @@ session_start();
   	else if(empty($_POST['amount'])) {	//check that we have an amount
 			$_SESSION['message'] = "please enter an amount";
 			$_SESSION['print_message'] = true;
-			//header("Location: " . $_SERVER['PHP_SELF']);
 
 			$URL="pay_fee.php";
-            		echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
-            		echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
+      echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
+      echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
+      exit();
+      
+    } else if(floatval($_POST['amount'])<=0) {
+    
+    	$_SESSION['message'] = "amount must be a number greater than 0";
+			$_SESSION['print_message'] = true;
+
+			$URL="pay_fee.php";
+      echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
+      echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
+      exit();
+    
 		} else {
 			$sql = "INSERT INTO fees(payee, condoID, amountPaid) VALUES (".$_SESSION['ID'].", $condoID, ".$_POST['amount'].")";
 			if( mysqli_query($db, $sql) ) { $_SESSION['message'] = "fee payment has been recorded"; }
