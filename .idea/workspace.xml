@@ -21,10 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c79632d8-bb1c-49a7-aa54-a77b20adaf07" name="Default Changelist" comment="ui updated">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin_page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/comment_page.php" beforeDir="false" afterPath="$PROJECT_DIR$/comment_page.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Comment.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/comment_handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/comment_handler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/owner_functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/owner_functions.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/theme.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +59,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.data.extractors.current.export.id" value="Comma-separated (CSV)_id" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Documents/School/Fall2020/COMP353/project_backup" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Documents/School/Fall2020/COMP353/project_backup" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -83,6 +82,7 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Database Script.instance.sql" />
       <item itemvalue="Database Script.console_1.sql" />
       <item itemvalue="PHP Built-in Web Server.test" />
     </list>

@@ -27,9 +27,15 @@ $percentShare = $input[2];
 
 if(isset($_POST['confirm'])) {
 
-    if(empty($_POST['new_percentShare'])) {
+    if(empty($_POST['new_percentShare'])) { //make sure field isnt empty
+        
         $_SESSION['message'] = "did not update, field was empty";
-    }else {
+    
+    } else if(floatval($_POST['new_percentShare'])<=0) {	//validate that field is numeric
+    
+    	$_SESSION['message'] =  "did not update, percent share value must be nueric, and greater than zero";
+    
+    } else {
         //update table
         $sql = "UPDATE percentShare SET percentShare=".$_POST['new_percentShare']." WHERE buildingID=$buildingID AND userID=(Select userID FROM Users WHERE name='$username')";
         if(mysqli_query($db,$sql)) $_SESSION['message'] = "record succesfully updated";

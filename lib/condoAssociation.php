@@ -99,9 +99,8 @@ session_start();
     		$_SESSION['message'] = "record not added, no user with that name exists";
     		$_SESSION['print_message'] = true;
     		
-				$URL="condoAssociation.php";
-    		echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
-        echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
+    		header("Location: " . $_SERVER['PHP_SELF']);
+				exit();
     	}
     	
 			//make sure building exists
@@ -111,11 +110,16 @@ session_start();
     	if(mysqli_num_rows($result)==0) {
     		$_SESSION['message'] = "record not added, no building with that number exists";
     		$_SESSION['print_message'] = true;
-				//header("Location: " . $_SERVER['PHP_SELF']);
-		$URL="condoAssociation.php";
-		echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
-		echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
-
+				header("Location: " . $_SERVER['PHP_SELF']);
+				exit();
+    	}
+    	
+    	//make sure percent value is numeric
+    	if(floatval($percentShare)<=0) {
+    		$_SESSION['message'] = "record not added, percent share value must be numeric, and greater than 0";
+    		$_SESSION['print_message'] = true;
+				header("Location: " . $_SERVER['PHP_SELF']);
+				exit();
     	}
 		
 			//insert into table
@@ -123,17 +127,14 @@ session_start();
 			$result = mysqli_query($db,$sql);
 			$user = mysqli_fetch_array($result);
 			$sql = " insert into percentShare (userID,buildingID,percentShare) VALUES (".$user['userID'].",$buildingNum,$percentShare)";
-			if(mysqli_query($db,$sql)) { $_SESSION['message'] = "record added"; }
-			else { $_SESSION['message'] = mysqli_error($db); }
+			if(mysqli_query($db,$sql)) { $_SESSION['message'] .= "record added"; }
+			else { $_SESSION['message'] .= mysqli_error($db); }
 			
-		} else { $_SESSION['message'] = "could not create record, please fill out all fields"; }
+		} else { $_SESSION['message'] .= "could not create record, please fill out all fields"; }
 	
 		$_SESSION['print_message'] = true;
-		//header("Location: " . $_SERVER['PHP_SELF']);
-
-		$URL="condoAssociation.php";
-            	echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
-            	echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
+		header("Location: " . $_SERVER['PHP_SELF']);
+		exit();
 	
 	} else if(isset($_POST['confirm_new_budget'])) {	//handle update budget
 		$new_budget = $_POST['new_budget'];	//save new budget in a more convenient varialbe
