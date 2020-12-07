@@ -125,6 +125,27 @@ session_start();
 		
 		//validate fields are not empty
 		if($_POST['floor_space']!='' && $_POST['building_number']!='') {
+			
+			if(floatval($_POST['floor_space'])<=0) {	//validate floorspace field is numeric
+				$_SESSION['message'] = "condo not added, floor space must be a number greater than 0";
+    		$_SESSION['print_message'] = true;
+				$URL="manage_condos.php";
+    		echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
+    		echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
+				exit();
+			}
+			
+			if(floatval($_POST['building_number'])<=0) {	//validate that buiulding number field is numeric
+				$_SESSION['message'] = "condo not added, building number must be a number greater than 0";
+    		$_SESSION['print_message'] = true;
+				$URL="manage_condos.php";
+    		echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
+    		echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
+				exit();
+			}
+    
+    	$_SESSION['message'] =  "did not update, percent share value must be nueric, and greater than zero";
+			
 			$floorSpace = $_POST['floor_space'];
 			$buildingID = $_POST['building_number'];
 			//insert row into database
