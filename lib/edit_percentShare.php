@@ -38,11 +38,16 @@ if(isset($_POST['confirm'])) {
 
     //return to condoAssociation.php
     $_SESSION['print_message'] = true;
-    header("Location: condoAssociation.php");
+    
+    $URL="condoAssociation.php";
+    echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
+    echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
 
 } else if(isset($_POST['cancel'])) {
 
-    header("Location: condoAssociation.php");
+    $URL="condoAssociation.php";
+    echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
+    echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
 
 }
 

@@ -76,10 +76,10 @@ html, body{
     height: 200px;
 }
 .ccomment {
-    border: 2px solid #ccc;
+    /*border: 2px solid #cccccc;*/
     border-radius: 10px;
-    padding: 15px;
-    margin: 10px;
+    padding: 0px;
+    margin: 0px;
 }
 .ccomment.creply {
     margin-left: 1000px;
@@ -94,7 +94,7 @@ html, body{
     margin: 0 5px;
 }
 .ctime {
-    color: #aaa;
+    /*color: #aaa;*/
     font-size: 0.9em;
 }
 .cmessage {
@@ -104,26 +104,26 @@ html, body{
 
 /* [REPLY FORM] */
 .creplyform {
-    background: #f2f2f2;
-    border: 2px solid #ccc;
+    /*background: #f2f2f2;*/
+    /*border: 2px solid #ccc;*/
     border-radius: 10px;
     padding: 15px;
-    margin: 10px;
+    /*margin: 10px;*/
 }
 .creplyform h1 {
     font-size: 1.3em;
 }
 .creplyform input[type=text], .creplyform textarea{
     width: 100%;
-    margin: 5px;
+    /*margin: 5px;*/
     padding: 10px;
 }
 .cbutton{
     background: #db4104;
     border: 0;
     color: #fff;
-    padding: 5px;
-    margin: 10px 0;
+    /*padding: 5px;*/
+    /*margin: 10px 0;*/
     cursor: pointer;
 }
 
