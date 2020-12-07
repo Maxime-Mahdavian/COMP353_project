@@ -135,8 +135,8 @@ session_start();
 				exit();
 			}
 			
-			if(floatval($_POST['building_number'])<=0) {	//validate that buiulding number field is numeric
-				$_SESSION['message'] = "condo not added, building number must be a number greater than 0";
+			if(intval($_POST['building_number'])<=0) {	//validate that buiulding number field is numeric
+				$_SESSION['message'] = "condo not added, building number must be a integer greater than 0";
     		$_SESSION['print_message'] = true;
 				$URL="manage_condos.php";
     		echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
@@ -166,6 +166,17 @@ session_start();
 		//validate that fields are not empty
 		if($_POST['condo_number']!='') {
 			$condoID = $_POST['condo_number'];
+			
+			if(intval($_POST['$condoID'])<=0) {	//validate condo_number field is numeric
+				$_SESSION['message'] = "parking space not added, condo number must be a number greater than zero";
+    		$_SESSION['print_message'] = true;
+				$URL="manage_condos.php";
+    		echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
+    		echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
+				exit();
+			}
+			
+			
 			//insert row into database
 			$sql = "INSERT INTO parkingSpaces (condoID) VALUES ($condoID);";
 			if(mysqli_query($db, $sql)) $_SESSION['message'] ="parking space added";
