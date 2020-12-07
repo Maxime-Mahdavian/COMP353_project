@@ -21,8 +21,11 @@
   <component name="ChangeListManager">
     <list default="true" id="c79632d8-bb1c-49a7-aa54-a77b20adaf07" name="Default Changelist" comment="ui updated">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/create_message.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/create_message.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/session.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/session.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comment_page.php" beforeDir="false" afterPath="$PROJECT_DIR$/comment_page.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/comment_handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/comment_handler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/owner_functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/owner_functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/theme.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +60,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.data.extractors.current.export.id" value="Comma-separated (CSV)_id" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Documents/School/Fall2020/COMP353/project_backup" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/School/Fall2020/COMP353/project_backup" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -76,11 +79,10 @@
       <script-mode>FILE</script-mode>
       <method v="2" />
     </configuration>
-    <configuration name="test" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" document_root="$PROJECT_DIR$" port="8080">
+    <configuration name="test" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" document_root="$PROJECT_DIR$" port="1254">
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Database Script.instance.sql" />
       <item itemvalue="Database Script.console_1.sql" />
       <item itemvalue="PHP Built-in Web Server.test" />
     </list>
@@ -131,6 +133,8 @@
       <workItem from="1607184421909" duration="2091000" />
       <workItem from="1607193285014" duration="11505000" />
       <workItem from="1607211249778" duration="2307000" />
+      <workItem from="1607305797037" duration="9000" />
+      <workItem from="1607343240286" duration="2010000" />
     </task>
     <task id="LOCAL-00001" summary="client side group functionality added, as well as permission on posts">
       <created>1605544185286</created>
@@ -431,11 +435,11 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2641" y="295" width="464" height="430" key="#Web_Browsers/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605193520546" />
-    <state x="2332" y="158" width="1084" height="768" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607265326754">
+    <state x="2330" y="142" width="1084" height="768" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607286638173">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="250" y="74" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1606719743682" />
-    <state x="2332" y="158" width="1084" height="768" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1607265326754" />
+    <state x="2330" y="142" width="1084" height="768" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1607286638173" />
     <state x="2670" y="211" width="410" height="630" key="#com.intellij.ide.util.MemberChooser" timestamp="1605195329300">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -456,31 +460,31 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="449" y="167" key="DUMP_DIALOG_DIMENSION_KEY/0.0.1536.824@0.0.1536.824" timestamp="1607198434492" />
-    <state x="669" y="88" width="428" height="472" key="FileChooserDialogImpl" timestamp="1607198433659">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="2615" y="-78" width="428" height="472" key="FileChooserDialogImpl" timestamp="1607343347001">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="669" y="88" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1607198433659" />
-    <state x="2621" y="-30" width="428" height="472" key="FileChooserDialogImpl/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1606941365186" />
-    <state width="1834" height="271" key="GridCell.Tab.0.bottom" timestamp="1607267134432">
+    <state x="2615" y="-78" width="428" height="472" key="FileChooserDialogImpl/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1607343347001" />
+    <state width="1834" height="271" key="GridCell.Tab.0.bottom" timestamp="1607289554674">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1024" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607200007636" />
-    <state width="1834" height="271" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1607267134432" />
-    <state width="1834" height="271" key="GridCell.Tab.0.center" timestamp="1607267134432">
+    <state width="1834" height="271" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1607289554674" />
+    <state width="1834" height="271" key="GridCell.Tab.0.center" timestamp="1607289554674">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1024" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1607200007636" />
-    <state width="1834" height="271" key="GridCell.Tab.0.center/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1607267134432" />
-    <state width="1834" height="271" key="GridCell.Tab.0.left" timestamp="1607267134432">
+    <state width="1834" height="271" key="GridCell.Tab.0.center/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1607289554674" />
+    <state width="1834" height="271" key="GridCell.Tab.0.left" timestamp="1607289554674">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1024" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1607200007634" />
-    <state width="1834" height="271" key="GridCell.Tab.0.left/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1607267134432" />
-    <state width="1834" height="271" key="GridCell.Tab.0.right" timestamp="1607267134432">
+    <state width="1834" height="271" key="GridCell.Tab.0.left/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1607289554674" />
+    <state width="1834" height="271" key="GridCell.Tab.0.right" timestamp="1607289554674">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1024" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1607200007636" />
-    <state width="1834" height="271" key="GridCell.Tab.0.right/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1607267134432" />
+    <state width="1834" height="271" key="GridCell.Tab.0.right/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1607289554674" />
     <state x="2105" y="85" width="1540" height="882" key="MergeDialog" timestamp="1606917710479">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -489,15 +493,15 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2637" y="216" width="499" height="556" key="NewPhpClassDialog/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605191050335" />
-    <state x="2618" y="8" width="401" height="139" key="NewPhpFileDialog" timestamp="1606681813208">
+    <state x="2614" y="-24" width="401" height="139" key="NewPhpFileDialog" timestamp="1607343814780">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2618" y="8" width="401" height="139" key="NewPhpFileDialog/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1606681813208" />
-    <state x="589" y="156" width="437" height="643" key="RollbackChangesDialog" timestamp="1607149583345">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="2614" y="-24" width="401" height="139" key="NewPhpFileDialog/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1607343814780" />
+    <state x="2654" y="188" width="437" height="643" key="RollbackChangesDialog" timestamp="1607285252430">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="589" y="156" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1607149583345" />
-    <state x="2656" y="204" width="437" height="643" key="RollbackChangesDialog/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1605731928277" />
+    <state x="2654" y="188" width="437" height="643" key="RollbackChangesDialog/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1607285252430" />
     <state x="2365" y="151" key="SettingsEditor" timestamp="1605292265078">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
