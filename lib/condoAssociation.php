@@ -98,8 +98,9 @@ session_start();
     	if(mysqli_num_rows($result)==0) {
     		$_SESSION['message'] = "record not added, no user with that name exists";
     		$_SESSION['print_message'] = true;
-    		
-    		header("Location: " . $_SERVER['PHP_SELF']);
+    		$URL="condoAssociation.php";
+    		echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
+    		echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
 				exit();
     	}
     	
@@ -110,7 +111,9 @@ session_start();
     	if(mysqli_num_rows($result)==0) {
     		$_SESSION['message'] = "record not added, no building with that number exists";
     		$_SESSION['print_message'] = true;
-				header("Location: " . $_SERVER['PHP_SELF']);
+				$URL="condoAssociation.php";
+    		echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
+    		echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
 				exit();
     	}
     	
@@ -118,7 +121,9 @@ session_start();
     	if(floatval($percentShare)<=0) {
     		$_SESSION['message'] = "record not added, percent share value must be numeric, and greater than 0";
     		$_SESSION['print_message'] = true;
-				header("Location: " . $_SERVER['PHP_SELF']);
+				$URL="condoAssociation.php";
+    		echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
+    		echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
 				exit();
     	}
 		
