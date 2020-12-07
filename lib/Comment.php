@@ -25,8 +25,8 @@ class Comments {
             );
             return true;
         }
-            // ERROR
-            // THROW ERROR MESSAGE
+            // ERROR - DO SOMETHING HERE
+            // THROW ERROR MESSAGE OR SOMETHING
         catch (Exception $ex) {
             print_r($ex);
             die();

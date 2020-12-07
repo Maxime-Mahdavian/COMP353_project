@@ -28,12 +28,14 @@ $sql = "SELECT * FROM post WHERE postID=" . $post;
 $result = mysqli_query($db, $sql);
 
 while($temp = mysqli_fetch_array($result)){
-echo "<h1>" . $temp['title']."</h1><br>";
-echo "<h2> Posted on: " . $temp['timestamp']. "</h2>";
+    echo "<div style=' background-color: white; margin-left:40px; border: solid; border-radius: 7px; width:50%;'>";
+    echo "<table style='width: 100%'><tr><td><h1 style='margin-left:5px; font-weight: bold'>" . $temp['title']."</p></td>";
+    echo "<td><p align='right'> Posted on: " . $temp['timestamp']. "</p></td></tr></table>";
 echo "<p>" . $temp['body'] . "</p><br>";
 $prefix = '../';
 $img = preg_replace('/^' . preg_quote($prefix, '/') . '/','', $temp['img']);
-echo "<img src=". $img . " height='200px'; width='400px'><br>";
+    echo "<tr><img style='margin-left: 20px;' onerror='this.onerror=null; this.remove();' src=". $img . " height='200px'; width='400px'></tr></table><br>";
+    echo "<br></div>";
 }
 
 ?>
