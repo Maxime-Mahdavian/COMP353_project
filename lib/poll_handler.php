@@ -3,12 +3,6 @@ require __DIR__  . DIRECTORY_SEPARATOR . "config.php";
 require PATH_LIB . "Poll.php";
 session_start();
 $pollDB = new Poll();
-?>
-<head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
-    <link href="theme.css">
-</head>
-<?php
 
 // DUMMY USER SESSION
 /*$_SESSION['user'] = [
@@ -72,7 +66,7 @@ switch ($_POST['req']) {
                 foreach ($poll['options'] as $oid=>$o) {
                     $percent = ($votes[$oid]/$votes['total'])*100;
                     printf("<div class='poll-stats'><input type='text' style='width: 270px; border: solid; border-radius: 5px' value='%s' readonly/> %0.2f%% (%u votes)</div><br>", $o, $percent, $votes[$oid]);
-                    printf("<div class='poll-bar-outside' style='background-color: white; border-radius: 5px; width:350px;'><input class='poll-bar-inside' style='height:20px;background-color:red;width:%0.2f%%'></input></div><br>", $percent);
+                    printf("<div class='poll-bar-outside' style='background-color: white; border-radius: 5px; width:350px;'><input class='poll-bar-inside' style='height:20px;background-color:red;width:%0.2f%%'></div><br>", $percent);
                 }
                 echo "</div>";
             }

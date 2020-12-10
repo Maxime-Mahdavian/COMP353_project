@@ -25,7 +25,7 @@ session_start();
 //This is the form displayed if the user wants to create a meeting
 if($_POST['meetingButton'] == 'Create'){
     ?>
-    <form action="edit_meeting.php" method="post">
+    <form action="edit_meeting.php" method="post" onsubmit="return checkInput(document.getElementById('duration').value, 'duration');">
         <div class="ui two column middle aligned relaxed grid basic segment">
             <div class="column">
                 <div style=" margin-left:40px; background-color: #c9d3d8;" class="ui form segment AVAST_PAM_loginform">
@@ -46,7 +46,7 @@ if($_POST['meetingButton'] == 'Create'){
                     <div class="field">
                         <label>Duration</label>
                         <div class="ui left labeled icon input">
-                            <input style=" border: solid;" type="text" id="duration" name="duration" onblur="checkInput(this.value)" placeholder="XX minutes">
+                            <input style=" border: solid;" type="text" id="duration" name="duration" placeholder="XX minutes">
                             <i class="hourglass half icon"></i>
                         </div>
                     </div>
@@ -57,7 +57,7 @@ if($_POST['meetingButton'] == 'Create'){
                         </div>
                     </div>
                     <div class="ui checkbox">
-                        <input style=" border: solid;" type="checkbox" id="admin" name="admin" <?php if($_SESSION['admin'] == 1) echo ""; else echo "disabled"; ?>">
+                        <input style=" border: solid;" type="checkbox" id="admin" name="admin" <?php if($_SESSION['admin'] == 1) echo ""; else echo "disabled"; ?>>
                         <label for="admin">Administrator </label>
                     </div>
                     <br>

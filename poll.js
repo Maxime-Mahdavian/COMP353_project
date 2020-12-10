@@ -38,7 +38,7 @@ var polljs = {
             var xhr = new XMLHttpRequest();
             xhr.open('POST', "lib/poll_handler.php", true);
             xhr.onload = function(){
-                if (this.response=="OK") {
+                if (this.response==="OK") {
                     polljs.show();
                 } else {
                     alert("ERROR SAVING VOTE!");

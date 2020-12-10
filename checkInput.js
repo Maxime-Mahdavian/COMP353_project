@@ -1,10 +1,7 @@
-function checkInput(input){
-
-    var x = document.getElementsByName("duration");
+function checkInput(input, field){
 
     if(isNaN(input)){
-        console.log(x);
-        alert("Must input number");
+        alert("Must input number for " + field);
         return false;
     }
     return true;
