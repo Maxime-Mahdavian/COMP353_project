@@ -14,13 +14,17 @@ session_start();
 <body style="background-color: #d5e2ff;">
 <div style = "background-color:#aca3ec; height:100px; color:#4D39D6; padding:3px;"><b><br><i class="huge chess rook icon"></i></b><b align="middle" style="margin-bottom:10px; color:white; font-size:40px;">CON</b></div>
 <br><br>
+<div align="right">
 <button style="margin-left:1325px" class="ui blue left labeled icon button" type="submit" name="back" onclick="window.location.href='meeting.php';">
     <i class="left arrow icon"></i>
     Back to Meetings
 </button>
+</div>
+<div>
 <a style="margin-left:30px; font-size: 40px; color:black;" class="item">
     Edit Meeting<i class="calendar icon"></i>
 </a>
+</div>
 <?php
 //This is the form displayed if the user wants to create a meeting
 if($_POST['meetingButton'] == 'Create'){
@@ -63,7 +67,9 @@ if($_POST['meetingButton'] == 'Create'){
                     <br>
                     <br>
 
-                    <input class="ui positive button" type="submit" name="create_meeting" value="submit">
+                    <div align="right">
+                        <input class="ui positive button" type="submit" name="create_meeting" value="submit">
+                    </div>
                 </div>
             </div>
         </div>
@@ -123,7 +129,9 @@ elseif($_POST['meetingButton'] == 'Edit'){
                     <br>
                     <br>
                     <input type="hidden" name="meetingID" value="<?php echo $_POST['meetingID'];?>">
-                    <input class="ui positive button" type="submit" name="edit_meeting" value="submit">
+                    <div align="right">
+                        <input class="ui positive button" type="submit" name="edit_meeting" value="submit">
+                    </div>
                 </div>
             </div>
         </div>

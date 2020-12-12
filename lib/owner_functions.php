@@ -18,9 +18,11 @@ session_start();
 <input style="margin-left:1325px" class="ui blue left labeled icon button" type="submit" name="backButton" value="Back">
 <input type='hidden' name='owner_group' value='<?php /*echo $_POST['Rgroup']*/?>'>
 </form>-->
-<a style="margin-left:30px; font-size: 40px;" class="item">
-    Owner Functions<i class="wrench icon"></i>
-</a>
+<div>
+    <a style="margin-left:30px; font-size: 40px;" class="item">
+        Owner Functions<i class="wrench icon"></i>
+    </a>
+</div>
 
 <br>
 <?php
@@ -42,14 +44,14 @@ if(isset($_POST['ownerButton'])){
             echo "<h1 style='margin:50px;'>The request has been accepted</h1>";
             echo "<form method='post' action='group_functions.php'>";
             echo "<input type='hidden' name='owner_group' value='" . $_POST['Rgroup'] . "'>";
-            echo "<input style='position: fixed; left: 1380px; top: 140px' type='submit' value='Back' name='backButton' class='ui blue left labeled icon button'>";
+            echo "<div align='right'><input style='position: fixed; left: 1380px; top: 140px' type='submit' value='Back' name='backButton' class='ui blue left labeled icon button'></div>";
             echo "</form>";
         }
         else{
             echo "<h1 style='margin:50px;' ><i class='red exclamation triangle icon'></i>There was an error</h1>";
             echo "<form method='post' action='group_functions.php'>";
             echo "<input type='hidden' name='owner_group' value='" . $_POST['Rgroup'] . "'>";
-            echo "<input style='position: fixed; left: 1380px; top: 140px' type='submit' value='Back' name='backButton' class='ui blue left labeled icon button'>";
+            echo "<div align='right'><input style='position: fixed; left: 1380px; top: 140px' type='submit' value='Back' name='backButton' class='ui blue left labeled icon button'></div>";
             echo "</form>";
         }
     }
@@ -59,7 +61,7 @@ if(isset($_POST['ownerButton'])){
         echo "<h1 style='margin:50px;'>The request has been accepted</h1>";
         echo "<form method='post' action='group_functions.php'>";
         echo "<input type='hidden' name='owner_group' value='" . $_POST['Rgroup'] . "'>";
-        echo "<input style='position: fixed; left: 1380px; top: 140px' type='submit' value='Back' name='backButton' class='ui blue left labeled icon button'>";
+        echo "<div align='right'><input style='position: fixed; left: 1380px; top: 140px' type='submit' value='Back' name='backButton' class='ui blue left labeled icon button'></div>";
         echo "</form>";
     }
 }
@@ -71,7 +73,7 @@ elseif (isset($_POST['Kick'])){
         echo "<h1 style='margin:50px;'>This user has been kicked</h1>";
         echo "<form method='post' action='group_functions.php'>";
         echo "<input type='hidden' name='owner_group' value='" . $_POST['kick_group'] . "'>";
-        echo "<input style='position: fixed; left: 1380px; top: 140px' type='submit' value='Back' name='backButton' class='ui blue left labeled icon button'>";
+        echo "<div align='right'><input style='position: fixed; left: 1380px; top: 140px' type='submit' value='Back' name='backButton' class='ui blue left labeled icon button'></div>";
 
         echo "</form>";
     }
@@ -79,7 +81,7 @@ elseif (isset($_POST['Kick'])){
         echo "<h1 style='margin:50px;' ><i class='red exclamation triangle icon'></i>Error</h1>";
         echo "<form method='post' action='group_functions.php'>";
         echo "<input type='hidden' name='owner_group' value='" . $_POST['kick_group'] . "'>";
-        echo "<input style='position: fixed; left: 1380px; top: 140px' type='submit' value='Back' name='backButton' class='ui blue left labeled icon button'>";
+        echo "<div align='right'><input style='position: fixed; left: 1380px; top: 140px' type='submit' value='Back' name='backButton' class='ui blue left labeled icon button'></div>";
         echo "</form>";
     }
 }
@@ -102,7 +104,7 @@ elseif(isset($_POST['Make_Owner']) or $ownerCameBack){
     }
     echo "<form method='post' action='group.php'>";
     echo "<input type='hidden' name='owner_group' value='" . $_POST['owner_group'] . "'>";
-    echo "<input style='position: fixed; left: 1380px; top: 140px' type='submit' value='Back' name='backButton' class='ui blue left labeled icon button'>";
+    echo "<div align='right'><input style='position: fixed; left: 1380px; top: 140px' type='submit' value='Back' name='backButton' class='ui blue left labeled icon button'></div>";
     echo "</form>";
 
 }

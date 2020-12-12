@@ -52,10 +52,10 @@ switch ($_POST['req']) {
 
     /* [SHOW REPLY FORM] */
     case "reply": ?>
-        <form style="margin-left:20px;" onsubmit="return comments.add(this)" class="creplyform">
+        <form style="margin-left:20px; " onsubmit="return comments.add(this)" class="creplyform">
             <div style="margin-left:20px; width: 1400px;" class="ui two column middle aligned relaxed grid basic segment">
                 <div style="margin-left:20px;" class="column">
-                    <div style=" background-color: #c9d3d8;" class="ui form segment AVAST_PAM_loginform">
+                    <div style=" background-color: #d5e2ff;" class="ui form segment AVAST_PAM_loginform">
                         <div class="field">
                             <label style="font-size: 20px;">Leave a reply</label><br>
                             <div class="field">
@@ -66,7 +66,9 @@ switch ($_POST['req']) {
                         <div class="field">
                             <textarea style="height: 50px;" name="message" placeholder="Message (300 characters max)" maxlength="300" required></textarea>
                         </div>
-                        <input class="cbutton ui positive button" type="submit" value="Post Comment">
+                        <div align="right">
+                            <input class="cbutton ui positive button" type="submit" value="Post Comment">
+                        </div>
                     </div>
                 </div>
             </div>

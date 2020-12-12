@@ -13,14 +13,18 @@ session_start();
 <div style = "background-color:#aca3ec; height:100px; color:#4D39D6; padding:3px;"><b><br><i class="huge chess rook icon"></i></b><b align="middle" style="margin-bottom:10px; color:white; font-size:40px;">CON</b></div>
 <br><br>
 <form action="../admin_page.html" method="post">
-    <button style="margin-left:1275px" class="ui blue left labeled icon button" type="submit" name="back" >
-        <i class="left arrow icon"></i>
-        Back to Administrator Options
-    </button>
+    <div align="right">
+        <button style="margin-left:1275px" class="ui blue left labeled icon button" type="submit" name="back" >
+            <i class="left arrow icon"></i>
+            Back to Administrator Options
+        </button>
+    </div>
 </form>
-<a style="margin:30px; font-size: 40px; color:black;" class="item">
-    Manage Groups <i class="wrench icon"></i>
-</a>
+<div>
+    <a style="margin:30px; font-size: 40px; color:black;" class="item">
+        Manage Groups <i class="wrench icon"></i>
+    </a>
+</div>
 
 <?php
 
@@ -78,7 +82,9 @@ if(isset($_POST['create_group'])) {	//handle create group button press
                         <textarea style=" border: solid;" name="desc" rows="4" cols="100"></textarea>
                     </div>
                 </div>
-                <input class="ui positive button" type="submit" name="create_group" value="submit">
+                <div align="right">
+                    <input class="ui positive button" type="submit" name="create_group" value="submit">
+                </div>
             </div>
         </div>
     </div>

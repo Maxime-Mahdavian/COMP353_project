@@ -15,13 +15,17 @@ if(!isset($_SESSION['username']))
 <div style = "background-color:#aca3ec; height:100px; color:#4D39D6; padding:3px;"><b><br><i class="huge chess rook icon"></i></b><b align="middle" style="margin-bottom:10px; color:white; font-size:40px;">CON</b></div>
     <br>
     <br>
-<button style="margin-left:1320px" class="ui blue left labeled icon button" type="submit" name="back" onclick="window.location.href='welcome.php';">
-    <i class="left arrow icon"></i>
-    Back to Main Page
-</button>
+<div align="right">
+    <button align="right" class="ui blue left labeled icon button" type="submit" name="back" onclick="window.location.href='welcome.php';">
+        <i class="left arrow icon"></i>
+        Back to Main Page
+    </button>
+</div>
+<div>
     <a style="margin-left:30px; font-size: 40px; color:black;" class="item">
         New Post <i class="bullhorn icon"></i>
     </a>
+</div>
 
     <form enctype="multipart/form-data" action="add.php" method="post" id="form">
         <div style="margin:30px;" class="ui two column middle aligned relaxed grid basic segment">
@@ -70,8 +74,9 @@ if(!isset($_SESSION['username']))
                     <!--Permission: <label><input type="checkbox" name="perm" value="public">Public</label>
                     <label><input type="checkbox" name="perm" value="group">Group</label>
                     <label><input type="checkbox" name="perm" value="private">Private</label><br>-->
-
-                    <input style="margin-left:570px;" class="ui green button" type="submit" value="Submit">
+                    <div align="right">
+                        <input  class="ui green button" type="submit" value="Submit">
+                    </div>
                 </div>
             </div>
         </div>

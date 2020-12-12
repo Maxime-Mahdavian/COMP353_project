@@ -13,13 +13,17 @@ session_start();
 <body style="background-color: #d5e2ff;">
 <div style = "background-color:#aca3ec; height:100px; color:#4D39D6; padding:3px;"><b><br><i class="huge chess rook icon"></i></b><b align="middle" style="margin-bottom:10px; color:white; font-size:40px;">CON</b></div>
 <br><br>
-<button style="margin-left:1370px" class="ui blue left labeled icon button" type="submit" name="back" onclick="window.location.href='lib/poll_list.php';">
-    <i class="left arrow icon"></i>
-    Back
-</button>
-<a style="margin:30px; font-size: 40px; color:black;" class="item">
-    Poll Vote<i class="archive icon"></i>
-</a>
+<div align="right">
+    <button style="margin-left:1370px" class="ui blue left labeled icon button" type="submit" name="back" onclick="window.location.href='lib/poll_list.php';">
+        <i class="left arrow icon"></i>
+        Back
+    </button>
+</div>
+<div>
+    <a style="margin:30px; font-size: 40px; color:black;" class="item">
+        Poll Vote<i class="archive icon"></i>
+    </a>
+</div>
 
 
 <!--    [THE POLL DOCKET] -->

@@ -19,8 +19,34 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c79632d8-bb1c-49a7-aa54-a77b20adaf07" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/instance.sql" beforeDir="false" afterPath="$PROJECT_DIR$/instance.sql" afterDir="false" />
+    <list default="true" id="c79632d8-bb1c-49a7-aa54-a77b20adaf07" name="Default Changelist" comment="ui updated">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comment_page.php" beforeDir="false" afterPath="$PROJECT_DIR$/comment_page.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/add_message.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/add_message.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/assign_condo_owner.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/assign_condo_owner.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/comment_handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/comment_handler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/condoAssociation.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/condoAssociation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/contract_functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/contract_functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/contracts.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/contracts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/create_message.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/create_message.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/edit_contract.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/edit_contract.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/edit_group.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/edit_group.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/group.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/group.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/group_functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/group_functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/manage_condos.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/manage_condos.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/manage_contract.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/manage_contract.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/manage_groups.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/manage_groups.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/manage_users.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/manage_users.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/meeting.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/meeting.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/meeting_function.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/meeting_function.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/message.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/message.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/owner_functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/owner_functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pay_fee.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pay_fee.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/poll_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/poll_list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/post.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view_post.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view_post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/poll.php" beforeDir="false" afterPath="$PROJECT_DIR$/poll.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +68,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.4" />
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProjectId" id="1jq6Vw4ezLLttDZgDKoDOtA5oZM" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -55,7 +81,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.data.extractors.current.export.id" value="Comma-separated (CSV)_id" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Documents/instance.sql" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Documents/instance.sql" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -78,6 +104,7 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Database Script.instance.sql" />
       <item itemvalue="Database Script.console_1.sql" />
       <item itemvalue="PHP Built-in Web Server.test" />
     </list>
@@ -435,10 +462,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="various bug fix" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2518" y="100" width="585" height="582" key="#PHP" timestamp="1607265358449">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state x="483" y="113" width="585" height="582" key="#PHP" timestamp="1607735947819">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="483" y="113" width="585" height="582" key="#PHP/0.0.1536.824@0.0.1536.824" timestamp="1607050821005" />
+    <state x="483" y="113" width="585" height="582" key="#PHP/0.0.1536.824@0.0.1536.824" timestamp="1607735947819" />
     <state x="2518" y="100" width="698" height="762" key="#PHP/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1607265358449" />
     <state x="2194" y="367" width="1362" height="318" key="#SQL_Dialects" timestamp="1605535636053">
       <screen x="1920" y="0" width="1920" height="1080" />
@@ -562,6 +589,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2640" y="427" width="469" height="197" key="git4idea.ui.GitResetDialog/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1606142318121" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1607737479805">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1607737479805" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1607140404409">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -572,7 +603,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/lib/manage_users.php</url>
-          <line>80</line>
+          <line>84</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
