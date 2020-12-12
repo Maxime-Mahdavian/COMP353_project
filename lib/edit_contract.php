@@ -13,13 +13,17 @@ session_start();
 <body style="background-color: #d5e2ff;">
 <div style = "background-color:#aca3ec; height:100px; color:#4D39D6; padding:3px;"><b><br><i class="huge chess rook icon"></i></b><b align="middle" style="margin-bottom:10px; color:white; font-size:40px;">CON</b></div>
 <br><br>
-<button style="margin-left:1370px" class="ui blue left labeled icon button" type="submit" name="back" onclick="window.location.href='contracts.php';">
-    <i class="left arrow icon"></i>
-    Back
-</button>
-<a style="margin-left:30px; font-size: 40px; color:black;" class="item">
-    Edit Contract <i class="file alternate icon"></i>
-</a>
+<div align="right">
+    <button style="margin-left:1370px" class="ui blue left labeled icon button" type="submit" name="back" onclick="window.location.href='contracts.php';">
+        <i class="left arrow icon"></i>
+        Back
+    </button>
+</div>
+<div align="right">
+    <a style="margin-left:30px; font-size: 40px; color:black;" class="item">
+        Edit Contract <i class="file alternate icon"></i>
+    </a>
+</div>
 <?php
 //We need to add the contribution in the db
 if(isset($_POST['create_contribution'])){

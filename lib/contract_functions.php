@@ -23,11 +23,13 @@ session_start();
 //This is the form displayed if the user wants to create a contribution
 if($_POST['ContributionButton'] == 'Create'){
     ?>
+<div align="right">
     <button style="margin-left:1370px" class="ui blue left labeled icon button" type="submit" name="back" onclick="window.location.href='contracts.php';">
         <i class="left arrow icon"></i>
         Back
     </button>
-    <form action="edit_contract.php" method="post">
+</div>
+    <form action="edit_contract.php" method="post" onsubmit="return checkInput(document.getElementById('price').value, 'price')">
         <div style="margin:30px;" class="ui two column middle aligned relaxed grid basic segment">
             <div class="column">
                 <div style=" background-color: #c9d3d8;" class="ui form segment AVAST_PAM_loginform">
@@ -50,7 +52,7 @@ if($_POST['ContributionButton'] == 'Create'){
                     <div class="field">
                         <label for="price:" style="margin-left: 10px">Price:</label>
                         <div style="margin-left: 10px" class="ui left labeled icon input">
-                            <input style=" border: solid;" type="text" name="price" onblur="checkInput(this.value)">
+                            <input style=" border: solid;" type="text" name="price" id="price" ">
                             <i class="dollar sign icon"></i>
                         </div>
                     </div>
@@ -60,7 +62,9 @@ if($_POST['ContributionButton'] == 'Create'){
                             <input style=" margin-left: 10px; border: solid; width: 500px" type="text" name="reason">
                         </div>
                     </div>
-                    <input style="margin-left:580px;" class="ui positive button" type="submit" name="create_contribution" value="submit">
+                    <div align="right">
+                        <input style="margin-left:580px;" class="ui positive button" type="submit" name="create_contribution" value="submit">
+                    </div>
                 </div>
             </div>
         </div>
@@ -98,11 +102,13 @@ if($_POST['ContributionButton'] == 'Create'){
 //Form to create a contract
 elseif (isset($_POST['ContractButton'])){
     ?>
+<div align="right">
     <button style="margin-left:1370px" class="ui blue left labeled icon button" type="submit" name="back" onclick="window.location.href='manage_contract.php';">
         <i class="left arrow icon"></i>
         Back
     </button>
-    <form action="edit_contract.php" method="post">
+</div>
+    <form action="edit_contract.php" method="post" onsubmit="return checkInput(document.getElementById('price').value, 'price');">
         <div style="margin:30px;" class="ui two column middle aligned relaxed grid basic segment">
             <div class="column">
                 <div style=" background-color: #c9d3d8;" class="ui form segment AVAST_PAM_loginform">
@@ -120,10 +126,12 @@ elseif (isset($_POST['ContractButton'])){
                     <div class="field">
                         <label style="margin-left: 10px" for="Price">Price:</label>
                         <div style="margin-left: 10px" class="ui left labeled icon input">
-                            <input style=" border: solid;" type="text" name="price" onblur="checkInput(this.value)">
+                            <input style=" border: solid;" type="text" name="price" id="price">
                         </div>
                     </div>
-                    <input style="margin-left:580px;" class="ui positive button" type="submit" name="create_contract" value="submit">
+                    <div align="right">
+                        <input style="margin-left:580px;" class="ui positive button" type="submit" name="create_contract" value="submit">
+                    </div>
                 </div>
             </div>
         </div>
@@ -150,11 +158,14 @@ elseif (isset($_POST['ContractButton'])){
 //Form to create a maintenance
 elseif (isset($_POST['MaintenanceButton'])){
     ?>
+<div align="right">
     <button style="margin-left:1370px" class="ui blue left labeled icon button" type="submit" name="back" onclick="window.location.href='manage_contract.php';">
         <i class="left arrow icon"></i>
         Back
     </button>
-<form action="edit_contract.php" method="post">
+</div>
+
+<form action="edit_contract.php" method="post" onsubmit="return checkInput(document.getElementById('cost').value, 'cost');">
     <div style="margin:30px;" class="ui two column middle aligned relaxed grid basic segment">
         <div class="column">
             <div style=" background-color: #c9d3d8;" class="ui form segment AVAST_PAM_loginform">
@@ -176,7 +187,7 @@ elseif (isset($_POST['MaintenanceButton'])){
                 <div class="field">
                     <label style="margin-left: 10px" for="Price">Price:</label>
                     <div style="margin-left: 10px" class="ui left labeled icon input">
-                        <input style=" border: solid;" type="text" name="cost">
+                        <input style=" border: solid;" type="text" name="cost" id="cost">
                         <i class="dollar sign icon"></i>
                     </div>
                 </div>
@@ -186,7 +197,9 @@ elseif (isset($_POST['MaintenanceButton'])){
                         <input style=" border: solid;" type="text" name="rationale">
                     </div>
                 </div>
-                <input style="margin-left:580px;" class="ui positive button" type="submit" name="create_maintenance" value="submit">
+                <div align="right">
+                    <input style="margin-left:580px;" class="ui positive button" type="submit" name="create_maintenance" value="submit">
+                </div>
             </div>
         </div>
     </div>
